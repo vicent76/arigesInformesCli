@@ -1,0 +1,31 @@
+.fondoImagenLogin {
+    padding: 30px;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../../imagenes/fondo2.PNG");
+    /* Center and scale the image nicely */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loginForm {
+    padding: 30px;
+    align-content: center;
+}
+.imagenLogo {
+    height: 30px;
+    width: auto;
+}
+
+.recuadro {
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 5px;
+    max-width: 350px;
+}
+
+.cololetra {
+    color: indigo;
+}

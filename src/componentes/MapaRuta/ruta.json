@@ -1,0 +1,835 @@
+{
+    "geocoded_waypoints": [
+        {
+            "geocoder_status": "OK",
+            "place_id": "EjNDYXJyZXIgZGVsIFBhbGxldGVyLCBuNiwgcDYsIDQ2MDA4IFZhbMOobmNpYSwgU3BhaW4iOBo2CjASLgoUChIJjzjtRUZPYA0R1ziXiXQ4XRgQBioUChIJS4iaPURPYA0RgKCPiAsfVXsSAnA2",
+            "types": [
+                "subpremise"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJf1O_VEpPYA0R1S5JUOKVUyk",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "EidBdi4gZGVsIENpZCwgVmFsw6huY2lhLCBWYWxlbmNpYSwgU3BhaW4iLiosChQKEgkn26hIck9gDRGkUWkojfHTsxIUChIJb7Dv8ExPYA0ROR1_HwFRo7Q",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJidsSb7RIYA0Rhy92AwNCHGg",
+            "types": [
+                "route"
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 39.4703757,
+                    "lng": -0.3720168
+                },
+                "southwest": {
+                    "lat": 39.465614,
+                    "lng": -0.4060834
+                }
+            },
+            "copyrights": "Map data ©2023 Google, Inst. Geogr. Nacional",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "1.4 km",
+                        "value": 1425
+                    },
+                    "duration": {
+                        "text": "8 mins",
+                        "value": 472
+                    },
+                    "end_address": "C/ de Xàtiva, València, Valencia, Spain",
+                    "end_location": {
+                        "lat": 39.4676423,
+                        "lng": -0.3773272
+                    },
+                    "start_address": "C. del Palleter, 6, p6, 46008 València, Valencia, Spain",
+                    "start_location": {
+                        "lat": 39.4684861,
+                        "lng": -0.3858701
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "90 m",
+                                "value": 90
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 37
+                            },
+                            "end_location": {
+                                "lat": 39.4677797,
+                                "lng": -0.3853657
+                            },
+                            "html_instructions": "Head <b>southeast</b> on <b>C. del Palleter</b> toward <b>C/<wbr/> de Conca</b>",
+                            "polyline": {
+                                "points": "au{oFtjjA@Af@[`Am@`@W"
+                            },
+                            "start_location": {
+                                "lat": 39.4684861,
+                                "lng": -0.3858701
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 235
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 98
+                            },
+                            "end_location": {
+                                "lat": 39.4659257,
+                                "lng": -0.3840447
+                            },
+                            "html_instructions": "Continue onto <b>C/<wbr/> d'Alzira</b>",
+                            "polyline": {
+                                "points": "sp{oFpgjAh@_@hBiApCgBLILIPKFEBCPM"
+                            },
+                            "start_location": {
+                                "lat": 39.4677797,
+                                "lng": -0.3853657
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 156
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 43
+                            },
+                            "end_location": {
+                                "lat": 39.465614,
+                                "lng": -0.3822787
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>C. Pintor Benedito</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "ae{oFf_jALaAf@eFB[D["
+                            },
+                            "start_location": {
+                                "lat": 39.4659257,
+                                "lng": -0.3840447
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "35 m",
+                                "value": 35
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 9
+                            },
+                            "end_location": {
+                                "lat": 39.4656891,
+                                "lng": -0.3818804
+                            },
+                            "html_instructions": "Slight <b>left</b> to stay on <b>C. Pintor Benedito</b>",
+                            "maneuver": "turn-slight-left",
+                            "polyline": {
+                                "points": "ac{oFftiAE_@Io@"
+                            },
+                            "start_location": {
+                                "lat": 39.465614,
+                                "lng": -0.3822787
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "56 m",
+                                "value": 56
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 14
+                            },
+                            "end_location": {
+                                "lat": 39.4660654,
+                                "lng": -0.3814479
+                            },
+                            "html_instructions": "Continue straight onto <b>Plaça d'Espanya</b>",
+                            "maneuver": "straight",
+                            "polyline": {
+                                "points": "qc{oFvqiA_@k@k@i@"
+                            },
+                            "start_location": {
+                                "lat": 39.4656891,
+                                "lng": -0.3818804
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.5 km",
+                                "value": 479
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 113
+                            },
+                            "end_location": {
+                                "lat": 39.46978379999999,
+                                "lng": -0.3786589
+                            },
+                            "html_instructions": "Continue onto <b>C/<wbr/> de Sant Vicent Màrtir</b>",
+                            "polyline": {
+                                "points": "}e{oF`oiAMM_Ao@eAu@aBoAYSAAQMII]Ym@g@MKIGIECCGCYMYKQIOEc@UQQKKQMQMq@c@OKOIo@c@"
+                            },
+                            "start_location": {
+                                "lat": 39.4660654,
+                                "lng": -0.3814479
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 167
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 64
+                            },
+                            "end_location": {
+                                "lat": 39.4692496,
+                                "lng": -0.3768362000000001
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Carrer del Periodista Azzati</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "c}{oFr}hAZwBXiAr@iD"
+                            },
+                            "start_location": {
+                                "lat": 39.46978379999999,
+                                "lng": -0.3786589
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 186
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 82
+                            },
+                            "end_location": {
+                                "lat": 39.4675869,
+                                "lng": -0.3770937
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Av. del Marqués de Sotelo</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "yy{oFfrhApDTnAH@?F@HB@?r@J"
+                            },
+                            "start_location": {
+                                "lat": 39.4692496,
+                                "lng": -0.3768362000000001
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "21 m",
+                                "value": 21
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 12
+                            },
+                            "end_location": {
+                                "lat": 39.4676423,
+                                "lng": -0.3773272
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>C/<wbr/> de Xàtiva</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "mo{oFxshAIn@"
+                            },
+                            "start_location": {
+                                "lat": 39.4675869,
+                                "lng": -0.3770937
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "2.7 km",
+                        "value": 2727
+                    },
+                    "duration": {
+                        "text": "7 mins",
+                        "value": 425
+                    },
+                    "end_address": "Av. del Cid, València, Valencia, Spain",
+                    "end_location": {
+                        "lat": 39.46957370000001,
+                        "lng": -0.4053602
+                    },
+                    "start_address": "C/ de Xàtiva, València, Valencia, Spain",
+                    "start_location": {
+                        "lat": 39.4676423,
+                        "lng": -0.3773272
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 216
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 45
+                            },
+                            "end_location": {
+                                "lat": 39.4681894,
+                                "lng": -0.3797368
+                            },
+                            "html_instructions": "Head <b>west</b> on <b>C/<wbr/> de Xàtiva</b> toward <b>Carrer de Bailèn</b>",
+                            "polyline": {
+                                "points": "wo{oFhuhACNCLEVIr@M|@]hCW`BQlA"
+                            },
+                            "start_location": {
+                                "lat": 39.4676423,
+                                "lng": -0.3773272
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 148
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 27
+                            },
+                            "end_location": {
+                                "lat": 39.4687615,
+                                "lng": -0.3812949
+                            },
+                            "html_instructions": "Continue onto <b>C/<wbr/> de Guillem de Castro</b>",
+                            "polyline": {
+                                "points": "es{oFjdiACLAHKh@?B]tAIXITIT_@fACJ"
+                            },
+                            "start_location": {
+                                "lat": 39.4681894,
+                                "lng": -0.3797368
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 259
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 29
+                            },
+                            "end_location": {
+                                "lat": 39.4703719,
+                                "lng": -0.3834445
+                            },
+                            "html_instructions": "Keep <b>right</b> to stay on <b>C/<wbr/> de Guillem de Castro</b>",
+                            "maneuver": "keep-right",
+                            "polyline": {
+                                "points": "wv{oF`niAEBEBUXQTABSX}@nAm@|@KLeBjCQZA@ABCF?@?B"
+                            },
+                            "start_location": {
+                                "lat": 39.4687615,
+                                "lng": -0.3812949
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 km",
+                                "value": 706
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 93
+                            },
+                            "end_location": {
+                                "lat": 39.469067,
+                                "lng": -0.3914585
+                            },
+                            "html_instructions": "<b>C/<wbr/> de Guillem de Castro</b> turns slightly <b>left</b> and becomes <b>C/<wbr/> d'Àngel Guimerà</b>",
+                            "polyline": {
+                                "points": "y`|oFn{iA?@AH@\\@~B?fA@b@?J@V@Z?R@H@H@TLbA?BZlCDb@Ht@@H@FNjAFd@Fl@PxA@F?@PhABX?@^zCNjA|@zG"
+                            },
+                            "start_location": {
+                                "lat": 39.4703719,
+                                "lng": -0.3834445
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 333
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 51
+                            },
+                            "end_location": {
+                                "lat": 39.4682907,
+                                "lng": -0.3952007
+                            },
+                            "html_instructions": "Continue onto <b>Carrer de Linares</b>",
+                            "polyline": {
+                                "points": "ux{oFrmkAFXBHBNf@zENvArAbK"
+                            },
+                            "start_location": {
+                                "lat": 39.469067,
+                                "lng": -0.3914585
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 km",
+                                "value": 662
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 65
+                            },
+                            "end_location": {
+                                "lat": 39.4693748,
+                                "lng": -0.4027536
+                            },
+                            "html_instructions": "Continue onto <b>Av. del Cid</b>",
+                            "polyline": {
+                                "points": "ys{oF~dlA?r@?tA?lA?R?NCf@Ex@ObBSfB[pCUjBALADC`@CXKxAE`@a@tDYlC]lD"
+                            },
+                            "start_location": {
+                                "lat": 39.4682907,
+                                "lng": -0.3952007
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 292
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 64
+                            },
+                            "end_location": {
+                                "lat": 39.4700777,
+                                "lng": -0.4059443
+                            },
+                            "html_instructions": "Keep <b>right</b> to stay on <b>Av. del Cid</b>",
+                            "maneuver": "keep-right",
+                            "polyline": {
+                                "points": "qz{oFdtmAMCEd@ABIp@sAxKMfAKbA"
+                            },
+                            "start_location": {
+                                "lat": 39.4693748,
+                                "lng": -0.4027536
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "48 m",
+                                "value": 48
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 24
+                            },
+                            "end_location": {
+                                "lat": 39.4696617,
+                                "lng": -0.4060834
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Av. de les Tres Creus</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "__|oFbhnA\\JF@B@D@J@VF"
+                            },
+                            "start_location": {
+                                "lat": 39.4700777,
+                                "lng": -0.4059443
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "63 m",
+                                "value": 63
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 27
+                            },
+                            "end_location": {
+                                "lat": 39.46957370000001,
+                                "lng": -0.4053602
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Av. del Cid</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "k|{oF~hnAPoC"
+                            },
+                            "start_location": {
+                                "lat": 39.4696617,
+                                "lng": -0.4060834
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "3.2 km",
+                        "value": 3190
+                    },
+                    "duration": {
+                        "text": "11 mins",
+                        "value": 676
+                    },
+                    "end_address": "Carrer de Colón, 46004 València, Valencia, Spain",
+                    "end_location": {
+                        "lat": 39.4690926,
+                        "lng": -0.3720168
+                    },
+                    "start_address": "Av. del Cid, València, Valencia, Spain",
+                    "start_location": {
+                        "lat": 39.46957370000001,
+                        "lng": -0.4053602
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.8 km",
+                                "value": 787
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 122
+                            },
+                            "end_location": {
+                                "lat": 39.4680765,
+                                "lng": -0.3964617
+                            },
+                            "html_instructions": "Head <b>east</b> on <b>Av. del Cid</b> toward <b>Carrer de Josep Maestre</b>",
+                            "polyline": {
+                                "points": "y{{oFndnA`@mEPgBT_CD]Dk@MSB[XmCh@}EFa@`@mDHy@?ADa@Fy@Fq@t@yGD]Fq@JsA"
+                            },
+                            "start_location": {
+                                "lat": 39.46957370000001,
+                                "lng": -0.4053602
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.5 km",
+                                "value": 544
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 96
+                            },
+                            "end_location": {
+                                "lat": 39.467027,
+                                "lng": -0.3902771
+                            },
+                            "html_instructions": "Continue straight to stay on <b>Av. del Cid</b>",
+                            "maneuver": "straight",
+                            "polyline": {
+                                "points": "or{oFzllAJ}BLiBP}At@uHVcCPwBPcBReBRwADSDe@"
+                            },
+                            "start_location": {
+                                "lat": 39.4680765,
+                                "lng": -0.3964617
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 326
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 48
+                            },
+                            "end_location": {
+                                "lat": 39.4663618,
+                                "lng": -0.3865802
+                            },
+                            "html_instructions": "Continue onto <b>C/<wbr/> de St. Josep de Calassanç</b>",
+                            "polyline": {
+                                "points": "}k{oFffkAFy@v@}HFk@@MBUp@mFDm@"
+                            },
+                            "start_location": {
+                                "lat": 39.467027,
+                                "lng": -0.3902771
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "51 m",
+                                "value": 51
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 8
+                            },
+                            "end_location": {
+                                "lat": 39.4662742,
+                                "lng": -0.3859987
+                            },
+                            "html_instructions": "Continue onto <b>Plaça del Bisbe Amigó</b>",
+                            "polyline": {
+                                "points": "wg{oFbojAJqADa@"
+                            },
+                            "start_location": {
+                                "lat": 39.4663618,
+                                "lng": -0.3865802
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 202
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 38
+                            },
+                            "end_location": {
+                                "lat": 39.465855,
+                                "lng": -0.3837124
+                            },
+                            "html_instructions": "Continue onto <b>C/<wbr/> de Sant Francesc de Borja</b>",
+                            "polyline": {
+                                "points": "eg{oFnkjABYBUj@uF@GLyALaA"
+                            },
+                            "start_location": {
+                                "lat": 39.4662742,
+                                "lng": -0.3859987
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 km",
+                                "value": 126
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 24
+                            },
+                            "end_location": {
+                                "lat": 39.465614,
+                                "lng": -0.3822787
+                            },
+                            "html_instructions": "Continue onto <b>C. Pintor Benedito</b>",
+                            "polyline": {
+                                "points": "sd{oFd}iAf@eFB[D["
+                            },
+                            "start_location": {
+                                "lat": 39.465855,
+                                "lng": -0.3837124
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "35 m",
+                                "value": 35
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 9
+                            },
+                            "end_location": {
+                                "lat": 39.4656891,
+                                "lng": -0.3818804
+                            },
+                            "html_instructions": "Slight <b>left</b> to stay on <b>C. Pintor Benedito</b>",
+                            "maneuver": "turn-slight-left",
+                            "polyline": {
+                                "points": "ac{oFftiAE_@Io@"
+                            },
+                            "start_location": {
+                                "lat": 39.465614,
+                                "lng": -0.3822787
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "56 m",
+                                "value": 56
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 14
+                            },
+                            "end_location": {
+                                "lat": 39.4660654,
+                                "lng": -0.3814479
+                            },
+                            "html_instructions": "Continue straight onto <b>Plaça d'Espanya</b>",
+                            "maneuver": "straight",
+                            "polyline": {
+                                "points": "qc{oFvqiA_@k@k@i@"
+                            },
+                            "start_location": {
+                                "lat": 39.4656891,
+                                "lng": -0.3818804
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.5 km",
+                                "value": 479
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 113
+                            },
+                            "end_location": {
+                                "lat": 39.46978379999999,
+                                "lng": -0.3786589
+                            },
+                            "html_instructions": "Continue onto <b>C/<wbr/> de Sant Vicent Màrtir</b>",
+                            "polyline": {
+                                "points": "}e{oF`oiAMM_Ao@eAu@aBoAYSAAQMII]Ym@g@MKIGIECCGCYMYKQIOEc@UQQKKQMQMq@c@OKOIo@c@"
+                            },
+                            "start_location": {
+                                "lat": 39.4660654,
+                                "lng": -0.3814479
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 167
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 64
+                            },
+                            "end_location": {
+                                "lat": 39.4692496,
+                                "lng": -0.3768362000000001
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Carrer del Periodista Azzati</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "c}{oFr}hAZwBXiAr@iD"
+                            },
+                            "start_location": {
+                                "lat": 39.46978379999999,
+                                "lng": -0.3786589
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "64 m",
+                                "value": 64
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 22
+                            },
+                            "end_location": {
+                                "lat": 39.469226,
+                                "lng": -0.3760889
+                            },
+                            "html_instructions": "Continue onto <b>Plaça de l'Ajuntament</b>",
+                            "polyline": {
+                                "points": "yy{oFfrhAB[?yB"
+                            },
+                            "start_location": {
+                                "lat": 39.4692496,
+                                "lng": -0.3768362000000001
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.4 km",
+                                "value": 353
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 118
+                            },
+                            "end_location": {
+                                "lat": 39.4690926,
+                                "lng": -0.3720168
+                            },
+                            "html_instructions": "<b>Plaça de l'Ajuntament</b> turns slightly <b>right</b> and becomes <b>Carrer de Roger de Llòria</b>",
+                            "polyline": {
+                                "points": "uy{oFpmhAJg@@S@Q@_@AE?C@cCAeBAo@?c@AwH?I@I?E?E@C@IHQ"
+                            },
+                            "start_location": {
+                                "lat": 39.469226,
+                                "lng": -0.3760889
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "au{oFtjjA`M_Ij@_@PMLaAj@aGD[E_@Io@_@k@y@w@eCeBoCsBcBwA_@UuAi@c@UQQ]YcBgAo@c@ZwBlAsFjG`@JBr@JIn@G\\OjAuAvJQdA{@zCc@rAKF}@lA}EfHYh@APDhGBrA~@xIv@tGt@`GlAfJJb@j@jFbBzM?jFCv@U|CgArJUzC_BrOMCEd@Kt@aB`NKbA\\JJBPBVFPoCr@uH`@iEMSB[bAkJr@kGTmCnA}LXgFfAsKh@{Fd@iEXkBL_BdAmKv@{GPsBt@mHbAaKHw@OoA_@k@k@i@mA}@gDeC[UgByAe@]mAg@s@[]]eBkA_Am@ZwBXiAr@iDB[?yBJg@Be@?e@A}G?oJBYHQ"
+            },
+            "summary": "C/ de Sant Vicent Màrtir",
+            "warnings": [],
+            "waypoint_order": [
+                0,
+                1
+            ]
+        }
+    ],
+    "status": "OK"
+}
