@@ -31,7 +31,7 @@ export default function LoginPagina() {
             <Grid container className='fondoImagenLogin'>
                 <Grid item xs={12} md={12} className='cololetra'>
                     <Typography variant='h3'>
-                        AriAgro Web
+                        Ariges Informes
                     </Typography>
                     <Typography variant='h6'>
                         Gestión Comercial
