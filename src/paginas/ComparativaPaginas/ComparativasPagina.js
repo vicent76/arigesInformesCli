@@ -8,13 +8,6 @@ import { leerVariedades, leerVariedadesProducto } from '../../servicios/Variedad
 import { leerClientes } from '../../servicios/Clientes';
 import { leerEmpresa } from '../../servicios/Empresas';
 import { leerDatos } from '../../servicios/comparativa';
-import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
-import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment"
-import "dayjs/locale/es";
-import dayjs from "dayjs";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-
-dayjs.locale("es");
 
 export default function ComparativasPagina() {
   const [open, setOpen] = useState(false);
@@ -32,17 +25,6 @@ export default function ComparativasPagina() {
   //
   const [selectedEmpresas, setSelectedEmpresas] = useState([]);
   const [error, setError] = useState(false);
-
-
-  const [date, setDate] = useState(dayjs());
-  const [dateFormat, setDateFormat] = useState(dayjs(new Date()).format("MM-DD"));
-
-  const handleDateChange = (newDate) => {
-    if (newDate) {
-      setDateFormat(dayjs(newDate).format("MM-DD")); // Guarda solo mes y día
-    }
-  };
-
 
   const obtenerProductos = async (codvarie) => {
     if(codvarie) {
@@ -74,7 +56,7 @@ export default function ComparativasPagina() {
     setEmpresas(empresasLeidas);
   };
 
-  const obtenDatosComparativa = async (producto, variedad, cliente, empresas, dateFormat) => {
+  const obtenDatosComparativa = async (producto, variedad, cliente, empresas) => {
     try {
       if (selectedEmpresas.length < 2) {
         setError(true);
@@ -83,7 +65,7 @@ export default function ComparativasPagina() {
         setOpen(false);//cerramos el modal
         setLoadingComparativa(true); // Indicar que está cargando
         setErrorComparativa(null); // Resetear errores previos
-        const payload = { producto, variedad, cliente, empresas, dateFormat };
+        const payload = { producto, variedad, cliente, empresas };
         const { data: datos } = await leerDatos(payload);
         setDatosComparativa(datos);
       }
@@ -216,25 +198,11 @@ export default function ComparativasPagina() {
                 )}
               />
             </Grid>
-            {/* Calendario */}
-            <Grid item xs={12} md={12}>
-             
-              <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">
-                <DatePicker
-                  value={date}
-                  label="HASTA FECHA"
-                  onChange={handleDateChange}
-                  views={["month", "day"]} 
-                  renderInput={(params) => <TextField {...params} fullWidth />}
-                />
-              </LocalizationProvider>
-            
-            </Grid>
           </Grid>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpen(false)}>Cancelar</Button>
-          <Button onClick={() => obtenDatosComparativa(codprodu, codvarie, codclien, codempre, dateFormat)}>Crear</Button>
+          <Button onClick={() => obtenDatosComparativa(codprodu, codvarie, codclien, codempre)}>Crear</Button>
         </DialogActions>
       </Dialog>
     </>

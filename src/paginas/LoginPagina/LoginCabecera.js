@@ -12,7 +12,7 @@ export const LoginCabecera = () => {
                 </Grid>
                 <Grid item xs={10} className='cololetra'>
                     <Typography variant='h6' component='h6'>
-                        arigesInformes
+                        Artiges Informes
                     </Typography>
                     <Typography variant='subtitle2'>
                         (C) Ariadna Software SL (2024)

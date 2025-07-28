@@ -39,10 +39,9 @@ const GeneralContext = props => {
         }
     }
 
-    const setSession = (empresa, usuario, token) => {
+    const setSession = (empresa, usuario) => {
         setCookie('arpw_empresa', JSON.stringify(empresa), 1);
-        setCookie('arpw_usuario', JSON.stringify(usuario), 1);
-        setCookie('arpw_token', token, 1);
+        if(usuario) setCookie('arpw_usuario', JSON.stringify(usuario), 1);
     };
 
     const getSession = () => {
@@ -50,11 +49,9 @@ const GeneralContext = props => {
         if (empresa) {empresa = JSON.parse(empresa)} else {return null}
         let usuario = getCookie('arpw_usuario')
         if (usuario) {usuario = JSON.parse(usuario)} else {return null}
-        let token = getCookie('arpw_token')
         let session = {
             usuario,
-            empresa,
-            token
+            empresa
         }
         return session;
     };

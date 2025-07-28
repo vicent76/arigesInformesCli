@@ -86,7 +86,7 @@ export const MenuLateral = (props) => {
                                     ''
                                     :
                                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                        arigesInformes  VRS: {version}
+                                        AriAgroWeb  VRS: {version}
                                     </Typography>
                                 }
 

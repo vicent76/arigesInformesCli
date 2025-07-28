@@ -48,7 +48,6 @@ requestAnimationFrame(movePanelToRight);
   options.toolbar.showSaveButton = true;  // Habilita el botón de guardado
 
 
-
   let viewer = new window.Stimulsoft.Viewer.StiViewer(options, "StiViewer", false);
   let file = "/reports/Comparativa.mrt";
   let report = new window.Stimulsoft.Report.StiReport();
@@ -159,8 +158,7 @@ const prepararDatos = (datosComparativa) => {
     );
 
     let principalData = {
-      hFecha: variedadUnica.hFecha || '',
-      cliente: variedadUnica.nomclien || '',
+      cliente: variedadUnica.nomclien,
       filtoVariedad: variedadUnica.filtoVariedad,
       producto: variedadUnica.nomprodu || 'Producto no disponible',
       variedad: variedadUnica.nomvarie || 'Variedad no disponible',
@@ -168,10 +166,10 @@ const prepararDatos = (datosComparativa) => {
       nomempre: empresaPrincipal.nomempre,
       codprodu: variedadPrincipal?.codprodu,
       codvarie: variedadPrincipal?.codvarie,
-      impornet: variedadPrincipal?.impornet || 0,
+      palets: variedadPrincipal?.totpalet || 0,
       cajas: variedadPrincipal?.numcajas || 0,
       pesoNeto: variedadPrincipal?.pesoneto || 0,
-      porcentajeimpornet: 0,
+      porcentajePalets: 0,
       porcentajeCajas: 0,
       porcentajePesoNeto: 0
     };
@@ -182,12 +180,12 @@ const prepararDatos = (datosComparativa) => {
     // Inicializar la propiedad de grupo por codprodu
     if (!grupoPorCodprodu[principalData.codprodu]) {
       grupoPorCodprodu[principalData.codprodu] = {
-        impornet: 0,
+        palets: 0,
         cajas: 0,
         pesoNeto: 0
       };
     }
-    grupoPorCodprodu[principalData.codprodu].impornet += principalData.impornet;
+    grupoPorCodprodu[principalData.codprodu].palets += principalData.palets;
     grupoPorCodprodu[principalData.codprodu].cajas += principalData.cajas;
     grupoPorCodprodu[principalData.codprodu].pesoNeto += principalData.pesoNeto;
 
@@ -205,15 +203,15 @@ const prepararDatos = (datosComparativa) => {
 
       principalData[`codempre${index + 1}`] = empresa.codempre;
       principalData[`nomempre${index + 1}`] = empresa.nomempre;
-      principalData[`impornet${index + 1}`] = variedadComparada?.impornet || 0;
+      principalData[`palets${index + 1}`] = variedadComparada?.totpalet || 0;
       principalData[`cajas${index + 1}`] = variedadComparada?.numcajas || 0;
       principalData[`pesoNeto${index + 1}`] = variedadComparada?.pesoneto || 0;
-      principalData[`porcentajeimpornet${index + 1}`] = porcentaje(principalData.impornet, variedadComparada?.impornet || 0).toString().replace(/\./g, ',');
+      principalData[`porcentajePalets${index + 1}`] = porcentaje(principalData.palets, variedadComparada?.totpalet || 0).toString().replace(/\./g, ',');
       principalData[`porcentajeCajas${index + 1}`] = porcentaje(principalData.cajas, variedadComparada?.numcajas || 0).toString().replace(/\./g, ',');
       principalData[`porcentajePesoNeto${index + 1}`] = porcentaje(principalData.pesoNeto, variedadComparada?.pesoneto || 0).toString().replace(/\./g, ',');
 
       // Agregar las propiedades booleanas si las sumas son 0
-      principalData[`isimpornetZero${index + 1}`] = grupoPorCodprodu[principalData.codprodu].impornet === 0;
+      principalData[`isPaletsZero${index + 1}`] = grupoPorCodprodu[principalData.codprodu].palets === 0;
       principalData[`isCajasZero${index + 1}`] = grupoPorCodprodu[principalData.codprodu].cajas === 0;
       principalData[`isPesoNetoZero${index + 1}`] = grupoPorCodprodu[principalData.codprodu].pesoNeto === 0;
     });
@@ -222,13 +220,13 @@ const prepararDatos = (datosComparativa) => {
     if (empresasComparadas.length == 1) {
       principalData[`codempre${2}`] = 0;
       principalData[`nomempre${2}`] = '';
-      principalData[`impornet${2}`] = 0;
+      principalData[`palets${2}`] = 0;
       principalData[`cajas${2}`] = 0;
       principalData[`pesoNeto${2}`] = 0;
-      principalData[`porcentajeimpornet${2}`] = 0;
+      principalData[`porcentajePalets${2}`] = 0;
       principalData[`porcentajeCajas${2}`] = 0;
       principalData[`porcentajePesoNeto${2}`] = 0;
-      principalData[`isimpornetZero${2}`] = grupoPorCodprodu[principalData.codprodu].impornet === 0;
+      principalData[`isPaletsZero${2}`] = grupoPorCodprodu[principalData.codprodu].palets === 0;
       principalData[`isCajasZero${2}`] = grupoPorCodprodu[principalData.codprodu].cajas === 0;
       principalData[`isPesoNetoZero${2}`] = grupoPorCodprodu[principalData.codprodu].pesoNeto === 0;
     }
@@ -241,8 +239,8 @@ const prepararDatos = (datosComparativa) => {
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = 'datosReporte.json';
-  link.click();
- */
+  link.click(); */
+
   return { Comparativa: datosReporte, condicion: [obj] };
 };
 
