@@ -1,74 +1,121 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, TextField, Autocomplete, Grid, IconButton, Toolbar, Tooltip, Typography, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
+import { AppBar, TextField, Grid, IconButton, Toolbar, Tooltip, Typography, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { MenuLateral } from '../../componentes/MenuLateral/MenuLateral';
 import ComparativaDesktop from './ComparativaDesktop';
-import { leerProductos, leerProductosVariedad } from '../../servicios/Productos';
-import { leerVariedades, leerVariedadesProducto } from '../../servicios/Variedades';
 import { leerClientes } from '../../servicios/Clientes';
-import { leerEmpresa } from '../../servicios/Empresas';
+import { leerAgente } from '../../servicios/Agentes';
 import { leerDatos } from '../../servicios/comparativa';
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
+import "dayjs/locale/es";
+import dayjs from "dayjs";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { MensajeError } from '../../utilidades/TratamientoErrores'
+import { ErrorGeneral } from '../../componentes/ErrorGeneral/ErrorGeneral';
+import { MensajeInformativo } from '../../componentes/MensajeInformativo/MensajeInformativo';
+import { Checkbox, FormControlLabel } from '@mui/material';
+
 
 export default function ComparativasPagina() {
+
   const [open, setOpen] = useState(false);
-  const [productos, setProductos] = useState([]);
-  const [codprodu, setCodProdu] = useState(null);
-  const [variedades, setVariedades] = useState([]);
-  const [codvarie, setCodVarie] = useState(null);
-  const [clientes, setClientes] = useState([]);
-  const [codclien, setCodClien] = useState(null);
-  const [empresas, setEmpresas] = useState([]);
-  const [codempre, setCodEmpre] = useState([]);
   const [datosComparativa, setDatosComparativa] = useState([]);
   const [loadingComparativa, setLoadingComparativa] = useState(false); // Control de carga
   const [errorComparativa, setErrorComparativa] = useState(null);
+  const [hayMensaje, setHayMensaje] = useState(false);
   //
-  const [selectedEmpresas, setSelectedEmpresas] = useState([]);
-  const [error, setError] = useState(false);
+  const [hayError, setHayError] = useState(false);
+  const [mensajeError, setMensajeError] = useState('');
+  //
+  const [codigoAgente, setCodigoAgente] = useState("");
+  const [nombreAgente, setNombreAgente] = useState("");
 
-  const obtenerProductos = async (codvarie) => {
-    if(codvarie) {
-      const { data: productosLeidos } = await leerProductosVariedad(codvarie);
-      setProductos(productosLeidos);
-      return;
+  const [hcodigoAgente, sethCodigoAgente] = useState("");
+  const [hnombreAgente, sethNombreAgente] = useState("");
+  //
+  const [checked, setChecked] = useState(false);
+
+
+
+  //
+
+
+  const [date, setDate] = useState(dayjs());
+  const [hDate, setHDate] = useState(dayjs());
+
+  const handleDateChange = (newDate) => {
+    if (newDate) {
+      setDate(newDate); // mantenerlo como dayjs
     }
-    const { data: productosLeidos } = await leerProductos();
-    setProductos(productosLeidos);
   };
 
-  const obtenerVariedades = async (val) => {
-    if(val) {
-      const { data: variedadesLeidas } = await leerVariedadesProducto(val);
-      setVariedades(variedadesLeidas);
-      return;
+  const handlehDateChange = (newDate) => {
+    if (newDate) {
+      setHDate(newDate); // mantenerlo como dayjs
     }
-    const { data: variedadesLeidas } = await leerVariedades();
-    setVariedades(variedadesLeidas);
   };
 
-  const obtenerClientes = async (val) => {
-    const { data: clientesLeidos } = await leerClientes();
-    setClientes(clientesLeidos);
-  };
+  const obtenerAgente = async (e) => {
+    const nuevoCodigo = e.target.value;
+    setCodigoAgente(nuevoCodigo);
 
-  const obtenerEmpresas = async () => {
-    const { data: empresasLeidas } = await leerEmpresa();
-    setEmpresas(empresasLeidas);
-  };
-
-  const obtenDatosComparativa = async (producto, variedad, cliente, empresas) => {
-    try {
-      if (selectedEmpresas.length < 2) {
-        setError(true);
-      } else {
-        setError(false);
-        setOpen(false);//cerramos el modal
-        setLoadingComparativa(true); // Indicar que está cargando
-        setErrorComparativa(null); // Resetear errores previos
-        const payload = { producto, variedad, cliente, empresas };
-        const { data: datos } = await leerDatos(payload);
-        setDatosComparativa(datos);
+    if (nuevoCodigo) {
+      try {
+        const agenteLeido = await leerAgente(nuevoCodigo);
+        setNombreAgente(agenteLeido.nomagent || "");
+        setMensajeError('')
+        setHayError(false)
+      } catch (error) {
+        setMensajeError(MensajeError(error))
+        setHayError(true)
+        //setCodigoAgente(null);
+        setNombreAgente(''); // limpiar si hay error
       }
+    } else {
+      setNombreAgente(""); // limpiar si se borra el código
+    }
+  };
+
+  const obtenerhAgente = async (e) => {
+    const nuevoCodigo = e.target.value;
+    sethCodigoAgente(nuevoCodigo);
+
+    if (nuevoCodigo) {
+      try {
+        const agenteLeido = await leerAgente(nuevoCodigo);
+        sethNombreAgente(agenteLeido.nomagent || "");
+        setMensajeError('')
+        setHayError(false)
+      } catch (error) {
+        setMensajeError(MensajeError(error))
+        setHayError(true)
+        //setCodigoAgente(null);
+        sethNombreAgente(''); // limpiar si hay error
+      }
+    } else {
+      sethNombreAgente(""); // limpiar si se borra el código
+    }
+  };
+
+
+  const obtenDatosComparativa = async () => {
+    try {
+      setHayError(false);
+      setOpen(false);
+      setLoadingComparativa(true);
+      setErrorComparativa(null);
+
+      const payload = {
+        dateFormat: date.format("DD-MM-YYYY"),
+        hDateFormat: hDate.format("DD-MM-YYYY"),
+        codagent: codigoAgente,
+        hcodagent: hcodigoAgente,
+        anyoAnterior: checked
+      };
+
+      const { data: datos } = await leerDatos(payload);
+      setDatosComparativa(datos);
+
     } catch (error) {
       setErrorComparativa(error.message || 'Error al obtener los datos');
     } finally {
@@ -76,48 +123,29 @@ export default function ComparativasPagina() {
     }
   };
 
-  const handleChangeProducto = (e, value) => {
-    // Actualiza el estado
-    setCodProdu(value?.codprodu || null);
-    
-    // Evento adicional (por ejemplo, un log)
-    obtenerVariedades(value?.codprodu || null)
-  };
 
-  const handleChangeVariedad = (e, value) => {
-    // Actualiza el estado
-    setCodVarie(value?.codvarie || null)
-    
-    // Evento adicional (por ejemplo, un log)
-    obtenerProductos(value?.codvarie || null)
-  };
-
-  const handleChangeCliente = (e, value) => {
-    setCodClien(value?.codclien || null)
-  };
 
   const openModalComparativa = () => {
-     // Reiniciar todos los estados relevantes
-  setCodProdu(null);
-  setCodVarie(null);
-  setCodClien(null); // Restablecer cliente a null
-  setCodEmpre([]);
-  setSelectedEmpresas([]);
-  setError(false);
-
-    obtenerProductos(null);
-    obtenerVariedades(null);
-    obtenerClientes(null);
-    obtenerEmpresas();
+    setHayError(false);
+    setCodigoAgente(null);
+    setNombreAgente('');
+    sethCodigoAgente(null);
+    sethNombreAgente('');
+    setDate(dayjs());
+    setHDate(null);
+    setChecked(false);
 
     setOpen(true)
   }
 
   useEffect(() => {
-    obtenerProductos(null);
-    obtenerVariedades(null);
-    obtenerClientes(null);
-    obtenerEmpresas();
+    setCodigoAgente(null);
+    setNombreAgente('');
+    sethCodigoAgente(null);
+    sethNombreAgente('');
+    setDate(dayjs());
+    setHDate(null);
+    setChecked(false);
   }, []);
 
   return (
@@ -130,7 +158,7 @@ export default function ComparativasPagina() {
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   Comparativas
                 </Typography>
-                <IconButton size="large" onClick={ openModalComparativa } sx={{ backgroundColor: 'lightblue', color: 'black' }}>
+                <IconButton size="large" onClick={openModalComparativa} sx={{ backgroundColor: 'lightblue', color: 'black' }}>
                   <Tooltip title="Nueva comparativa">
                     <AddIcon />
                   </Tooltip>
@@ -148,61 +176,117 @@ export default function ComparativasPagina() {
             )}
           </Grid>
         </Grid>
+        <ErrorGeneral hayError={hayError} mensajeError={mensajeError} cerrarError={() => setHayError(false)} />
+        <MensajeInformativo hayMensaje={hayMensaje} mensaje={MensajeError} cerrarMensaje={() => setHayMensaje(false)} />
       </MenuLateral>
 
       <Dialog open={open} onClose={() => setOpen(false)} fullWidth maxWidth="md">
         <DialogTitle>Nueva Comparativa</DialogTitle>
         <DialogContent>
           <Grid container spacing={2}>
-            {/* Producto */}
+            {/* checkbox */}
+            <Grid item xs={12} md={8}></Grid>
             <Grid item xs={12} md={4}>
-              <Autocomplete
-                options={productos}
-                getOptionLabel={(option) => option.nomprodu || ''}
-                onChange={ handleChangeProducto }
-                renderInput={(params) => <TextField {...params} label="Producto" />}
-              />
-            </Grid>
-            {/* Variedad */}
-            <Grid item xs={12} md={4}>
-              <Autocomplete
-                options={variedades}
-                getOptionLabel={(option) => option.nomvarie || ''}
-                onChange={ handleChangeVariedad }
-                renderInput={(params) => <TextField {...params} label="Variedad" />}
-              />
-            </Grid>
-            {/* Cliente */}
-            <Grid item xs={12} md={4}>
-              <Autocomplete
-                options={clientes}
-                getOptionLabel={(option) => option.nomclien || ''}
-                onChange={ handleChangeCliente }
-                renderInput={(params) => <TextField {...params} label="Cliente" />}
-              />
-            </Grid>
-            {/* Empresas */}
-            <Grid item xs={12}>
-              <Autocomplete
-                multiple
-                options={empresas}
-                getOptionLabel={(option) => option.nomempre || ''}
-                onChange={(e, value) => {setCodEmpre(value || []); setSelectedEmpresas(value || [])}}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    label="Empresas"
-                    error={error}
-                    helperText={error ? 'Selecciona al menos dos empresas.' : ''}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={checked}
+                    onChange={(e) => setChecked(e.target.checked)}
+                    color="primary"
                   />
-                )}
+                }
+                label="Comparar con el año anterior"
+                sx={{ marginLeft: "2.98%" }} // 🔧 Forzar alineación
               />
             </Grid>
+            {/* Calendario */}
+            <Grid item xs={12} md={6}>
+              <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">
+                <DatePicker
+                  value={date}
+                  label="DESDE FECHA"
+                  onChange={handleDateChange}
+                  views={["day", "month", "year"]}
+                  slotProps={{
+                    textField: {
+                      fullWidth: true,
+                      margin: "normal", // mejora espaciado vertical
+                      sx: { minHeight: 80 } // previene corte del label
+                    }
+                  }}
+                />
+              </LocalizationProvider>
+            </Grid>
+
+            {/* Calendario */}
+            <Grid item xs={12} md={6}>
+              <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">
+                <DatePicker
+                  value={hDate}
+                  label="HASTA FECHA"
+                  onChange={handlehDateChange}
+                  views={["day", "month", "year"]}
+                  slotProps={{
+                    textField: {
+                      fullWidth: true,
+                      margin: "normal", // mejora espaciado vertical
+                      sx: { minHeight: 80 } // previene corte del label
+                    }
+                  }}
+                />
+              </LocalizationProvider>
+            </Grid>
+
+            {/*desde agente*/}
+            <Grid item xs={12} md={3}>
+              <TextField
+                fullWidth
+                label="desde código de Agente"
+                type="number"
+                value={codigoAgente}
+                onChange={obtenerAgente}
+                margin="normal"
+              />
+            </Grid>
+
+            <Grid item xs={12} md={9}>
+              <TextField
+                fullWidth
+                label="Nombre del Agente"
+                value={nombreAgente}
+                margin="normal"
+                disabled
+              />
+            </Grid>
+
+            {/*hasta agente*/}
+            <Grid item xs={12} md={3}>
+              <TextField
+                fullWidth
+                label="Hasta código de Agente"
+                type="number"
+                value={hcodigoAgente}
+                onChange={obtenerhAgente}
+                margin="normal"
+              />
+            </Grid>
+
+            <Grid item xs={12} md={9}>
+              <TextField
+                fullWidth
+                label="Nombre del Agente"
+                value={hnombreAgente}
+                margin="normal"
+                disabled
+              />
+            </Grid>
+
+
           </Grid>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpen(false)}>Cancelar</Button>
-          <Button onClick={() => obtenDatosComparativa(codprodu, codvarie, codclien, codempre)}>Crear</Button>
+          <Button onClick={() => obtenDatosComparativa(date, hDate)}>Crear</Button>
         </DialogActions>
       </Dialog>
     </>
