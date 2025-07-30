@@ -106,8 +106,8 @@ export default function ComparativasPagina() {
       setErrorComparativa(null);
 
       const payload = {
-        dateFormat: date.format("DD-MM-YYYY"),
-        hDateFormat: hDate.format("DD-MM-YYYY"),
+        dateFormat: date.format("YYYY-MM-DD"),
+        hDateFormat: hDate.format("YYYY-MM-DD"),
         codagent: codigoAgente,
         hcodagent: hcodigoAgente,
         anyoAnterior: checked

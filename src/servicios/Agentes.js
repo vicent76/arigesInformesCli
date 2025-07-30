@@ -9,6 +9,6 @@ export const leerAgente = async (codagent) => {
     const url_base = ent.API_URL
     const url = `${url_base}/api/agentes/${codagent}/${empresa}`
     let result = await axios.get(url);
-    return result.data[0];
+    return result.data;
 }
 

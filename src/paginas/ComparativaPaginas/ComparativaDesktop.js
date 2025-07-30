@@ -35,6 +35,12 @@ export default function ComparativaDesktop({ datosComparativa }) {
 // Llamamos a la función para mover el panel
 requestAnimationFrame(movePanelToRight);
  */
+ let json = JSON.stringify({ Comparativa: datosComparativa }, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'datosReporte.json';
+  link.click();
   if (hasRendered.current) return; // Evita múltiples ejecuciones
 
   let STI_KEY = "6vJhGtLLLz2GNviWmUTrhSqnOItdDwjBylQzQcAOiHmdDoZinxw82gXdfpNeKsa0iy3Xro1lEo20e+MLfk+OKYUzWlNppaVKtAQE9SwlWpW+sdm0zF+U4aC3U5bJqNVT8XNjDqzk6e4Fx4SaTx4pBnD1USxGkYjLCgGc8OEpZqhepOwyHN2t5lE6ZbkZUidXfrKEaZgGuDh55Nd99E1dMFjXOvmkFPABROQIgwhDSU4ikRxVlQP9P6tPf8ZbRfmmascguce5L9dAeerR67l3IQInHQKpWt92WE1/si83VWoEzH8Fe3nj2MV6mB+rrHcyXSUwRduMYuLVpw+5Kkv2Y6WXbs6HPSnxScq/N7DJntqnAurKCcTO0Hw+pX1pJMiuHQXPNsfq3TQCD0PLZcArqkMH4B/Vdqw4NscNHdsa7nz2oJOal+535YX35i1eAGrO3b7jZrvMMzyP87yFJ+vJi0kQ065gpJAmGVSyqYStE2CzS6O2XXHIvCztdg2jnbu+bfb8etIf6RP/KGQsekmdWVouJFq7RVVXN2zuIcH4YWjvsIIqc/G6i5lGtDc81VqL";
@@ -49,17 +55,15 @@ requestAnimationFrame(movePanelToRight);
 
 
   let viewer = new window.Stimulsoft.Viewer.StiViewer(options, "StiViewer", false);
-  let file = "/reports/Comparativa.mrt";
+  let file = "/reports/comparativa_agente.mrt";
   let report = new window.Stimulsoft.Report.StiReport();
   report.loadFile(file);
 
     
 
-  // Prepara los datos para el reporte
-  let datos = prepararDatos(datosComparativa);
-  let jsonString = JSON.stringify( datos );
+
   let dataSet = new window.Stimulsoft.System.Data.DataSet("Comparativa");
-  dataSet.readJson(jsonString);
+  dataSet.readJson(json);
   // Remove all connections from the report template
   report.dictionary.databases.clear();
 
@@ -129,6 +133,8 @@ setTimeout(() => {
   console.log("Se ejecuta solo una vez al montar el componente");
   hasRendered.current = true;
 }, [datosComparativa]);
+
+
 
 const prepararDatos = (datosComparativa) => {
   const empresaPrincipal = datosComparativa[0];
