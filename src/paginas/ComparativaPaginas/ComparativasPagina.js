@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { AppBar, TextField, Grid, IconButton, Toolbar, Tooltip, Typography, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { MenuLateral } from '../../componentes/MenuLateral/MenuLateral';
@@ -14,7 +14,7 @@ import { MensajeError } from '../../utilidades/TratamientoErrores'
 import { ErrorGeneral } from '../../componentes/ErrorGeneral/ErrorGeneral';
 import { MensajeInformativo } from '../../componentes/MensajeInformativo/MensajeInformativo';
 import { Checkbox, FormControlLabel } from '@mui/material';
-
+import { GeneralCtx } from '../../contextos/GeneralContext'
 
 export default function ComparativasPagina() {
 
@@ -35,6 +35,10 @@ export default function ComparativasPagina() {
   //
   const [checked, setChecked] = useState(false);
 
+  //
+  const { getSession } = useContext(GeneralCtx);
+
+  const [nomEmpre, setNomempre ] = useState("");
 
 
   //
@@ -110,7 +114,8 @@ export default function ComparativasPagina() {
         hDateFormat: hDate.format("YYYY-MM-DD"),
         codagent: codigoAgente,
         hcodagent: hcodigoAgente,
-        anyoAnterior: checked
+        anyoAnterior: checked,
+        nomEmpre: nomEmpre
       };
 
       const { data: datos } = await leerDatos(payload);
@@ -146,6 +151,9 @@ export default function ComparativasPagina() {
     setDate(dayjs());
     setHDate(null);
     setChecked(false);
+    let sesion = getSession();
+    let n = sesion.empresa.nomempre;
+    setNomempre(n);
   }, []);
 
   return (

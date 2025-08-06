@@ -3,20 +3,21 @@
   <Dictionary Ref="1" type="Dictionary" isKey="true">
     <BusinessObjects isList="true" count="0" />
     <Databases isList="true" count="1">
-      <datosReporte Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
-        <Alias>datosReporte</Alias>
+      <datosReporte_x0020__x0028_33_x0029_ Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
+        <Alias>datosReporte (33)</Alias>
         <Key />
-        <Name>datosReporte</Name>
-        <PathData>E:\node_apps\ARIGES-INFORMES\arigesInformesCli\public\reports\datosReporte.json</PathData>
-      </datosReporte>
+        <Name>datosReporte (33)</Name>
+        <PathData>C:\Users\Vicent\Downloads\datosReporte (33).json</PathData>
+      </datosReporte_x0020__x0028_33_x0029_>
     </Databases>
     <DataSources isList="true" count="1">
       <Comparativa Ref="3" type="DataTableSource" isKey="true">
         <Alias>Comparativa</Alias>
-        <Columns isList="true" count="20">
+        <Columns isList="true" count="13">
+          <value>nomempre,System.String</value>
+          <value>anyo,System.Decimal</value>
           <value>num_mes,System.Decimal</value>
           <value>nombre_mes,System.String</value>
-          <value>anyo_actual,System.Decimal</value>
           <value>total_baseimp1,System.Decimal</value>
           <value>total_baseimp2,System.Decimal</value>
           <value>total_baseimp3,System.Decimal</value>
@@ -24,21 +25,13 @@
           <value>total_baseimp5,System.Decimal</value>
           <value>total_mes_agente,System.Decimal</value>
           <value>total_mes,System.Decimal</value>
+          <value>nomagent,System.String</value>
           <value>porcentaje_agente,System.Decimal</value>
-          <value>anyo_anterior,System.Decimal</value>
-          <value>total_baseimp1_anterior,System.Decimal</value>
-          <value>total_baseimp2_anterior,System.Decimal</value>
-          <value>total_baseimp3_anterior,System.Decimal</value>
-          <value>total_baseimp4_anterior,System.Decimal</value>
-          <value>total_baseimp5_anterior,System.Decimal</value>
-          <value>total_mes_agente_anterior,System.Decimal</value>
-          <value>total_mes_anterior,System.Decimal</value>
-          <value>porcentaje_agente_anterior,System.Decimal</value>
         </Columns>
         <Dictionary isRef="1" />
-        <Key>542ecb700b1445f18688efc1ec277a30</Key>
+        <Key>8683c746b7c94d5e9d79fc0ae4f62078</Key>
         <Name>Comparativa</Name>
-        <NameInSource>datosReporte.Comparativa</NameInSource>
+        <NameInSource>datosReporte (33).Comparativa</NameInSource>
       </Comparativa>
     </DataSources>
     <Relations isList="true" count="0" />
@@ -54,17 +47,17 @@
     <Page1 Ref="4" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="6">
+      <Components isList="true" count="5">
         <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,18,4</ClientRectangle>
-          <Components isList="true" count="3">
+          <ClientRectangle>0,0.4,18,3.2</ClientRectangle>
+          <Components isList="true" count="4">
             <Text17 Ref="6" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.4,0.4,10.2,0.8</ClientRectangle>
+              <ClientRectangle>0.4,0.4,8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Tahoma,20</Font>
+              <Font>Tahoma,16</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text17</Name>
               <Page isRef="4" />
@@ -75,32 +68,47 @@
             </Text17>
             <Text66 Ref="7" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.4,2.4,17.4,0.6</ClientRectangle>
+              <ClientRectangle>0.4,1.8,17.4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Tahoma,12</Font>
+              <Font>Tahoma,8</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text66</Name>
               <Page isRef="4" />
               <Parent isRef="5" />
-              <Text>Agente selecionado: </Text>
+              <Text>Agente: {Comparativa.nomagent}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text66>
             <Text4 Ref="8" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.4,1.8,4,0.4</ClientRectangle>
+              <ClientRectangle>0.4,1.4,6.6,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Tahoma,12</Font>
+              <Font>Tahoma,8</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text4</Name>
               <Page isRef="4" />
               <Parent isRef="5" />
-              <Text>Año {Comparativa.anyo_actual}</Text>
+              <Text>Año: {Comparativa.anyo}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text4>
+            <Text11 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0.6,7.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Tahoma,11,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{Comparativa.nomempre}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
           </Components>
           <Conditions isList="true" count="0" />
           <Expressions isList="true" count="0" />
@@ -108,12 +116,12 @@
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageHeaderBand1>
-        <PageFooterBand1 Ref="9" type="PageFooterBand" isKey="true">
+        <PageFooterBand1 Ref="10" type="PageFooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,27.1,18,0.6</ClientRectangle>
           <Components isList="true" count="2">
-            <Text64 Ref="10" type="Text" isKey="true">
+            <Text64 Ref="11" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.2,0,5.4,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -122,13 +130,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text64</Name>
               <Page isRef="4" />
-              <Parent isRef="9" />
+              <Parent isRef="10" />
               <Text>{Time}</Text>
               <TextBrush>Black</TextBrush>
               <Type>SystemVariables</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text64>
-            <Text9 Ref="11" type="Text" isKey="true">
+            <Text9 Ref="12" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>12.4,0.1,5.4,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -138,7 +146,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
               <Page isRef="4" />
-              <Parent isRef="9" />
+              <Parent isRef="10" />
               <Text>{PageNofM}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
@@ -151,25 +159,9 @@
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageFooterBand1>
-        <Text15 Ref="12" type="Text" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>22.2,27.1,5.4,0.4</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <Expressions isList="true" count="0" />
-          <Font>Tahoma,8</Font>
-          <HorAlignment>Right</HorAlignment>
-          <Margins>0,0,0,0</Margins>
-          <Name>Text15</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Text>{PageNofM}</Text>
-          <TextBrush>Black</TextBrush>
-          <Type>SystemVariables</Type>
-          <VertAlignment>Bottom</VertAlignment>
-        </Text15>
         <HeaderBand1 Ref="13" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,5.2,18,0.6</ClientRectangle>
+          <ClientRectangle>0,4.4,18,0.6</ClientRectangle>
           <Components isList="true" count="4">
             <Text19 Ref="14" type="Text" isKey="true">
               <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
@@ -177,13 +169,13 @@
               <ClientRectangle>2,0,3.8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Arial,11</Font>
+              <Font>Tahoma,11</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text19</Name>
               <Page isRef="4" />
               <Parent isRef="13" />
-              <Text>TOTAL {Comparativa.anyo_actual}</Text>
+              <Text>TOTAL {Comparativa.anyo}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text19>
@@ -192,13 +184,13 @@
               <ClientRectangle>6,0,3,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Arial,11</Font>
+              <Font>Tahoma,11</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
               <Page isRef="4" />
               <Parent isRef="13" />
-              <Text>acum. {Comparativa.anyo_actual}</Text>
+              <Text>acum. {Comparativa.anyo}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text1>
@@ -207,7 +199,7 @@
               <ClientRectangle>9.2,0,2.4,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
-              <Font>Arial,11</Font>
+              <Font>Tahoma,11</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text3</Name>
@@ -240,7 +232,7 @@
         <DataBand2 Ref="18" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,6.6,18,0.4</ClientRectangle>
+          <ClientRectangle>0,5.8,18,0.4</ClientRectangle>
           <Components isList="true" count="4">
             <Text2 Ref="19" type="Text" isKey="true">
               <Border>Left;Black;1;Solid;False;4;Black</Border>
@@ -337,7 +329,7 @@
         </DataBand2>
         <FooterBand1 Ref="25" type="FooterBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,7.8,18,11.8</ClientRectangle>
+          <ClientRectangle>0,7,18,11.8</ClientRectangle>
           <Components isList="true" count="2">
             <Chart1 Ref="26" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
               <Area Ref="27" type="Stimulsoft.Report.Chart.StiPieArea" isKey="true">
@@ -468,10 +460,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>7/31/2025 10:24:03 AM</ReportChanged>
+  <ReportChanged>8/6/2025 1:49:56 PM</ReportChanged>
   <ReportCreated>1/10/2025 2:58:38 PM</ReportCreated>
   <ReportFile>E:\node_apps\ARIGES-INFORMES\arigesInformesCli\public\reports\comparativa_agente.mrt</ReportFile>
-  <ReportGuid>d570357d96f243c1b895e36458909edb</ReportGuid>
+  <ReportGuid>f72b0199a3a24d9aae1b95eaf831d4cf</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2021.3.6.0</ReportVersion>
