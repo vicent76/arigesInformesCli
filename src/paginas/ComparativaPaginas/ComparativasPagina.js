@@ -119,6 +119,7 @@ export default function ComparativasPagina() {
       };
 
       const { data: datos } = await leerDatos(payload);
+      datos.anterior = checked;
       setDatosComparativa(datos);
 
     } catch (error) {

@@ -2,38 +2,8 @@
 <StiSerializer version="1.02" type="Net" application="StiReport">
   <Dictionary Ref="1" type="Dictionary" isKey="true">
     <BusinessObjects isList="true" count="0" />
-    <Databases isList="true" count="1">
-      <datosReporte_x0020__x0028_33_x0029_ Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
-        <Alias>datosReporte (33)</Alias>
-        <Key />
-        <Name>datosReporte (33)</Name>
-        <PathData>C:\Users\Vicent\Downloads\datosReporte (33).json</PathData>
-      </datosReporte_x0020__x0028_33_x0029_>
-    </Databases>
-    <DataSources isList="true" count="1">
-      <Comparativa Ref="3" type="DataTableSource" isKey="true">
-        <Alias>Comparativa</Alias>
-        <Columns isList="true" count="13">
-          <value>nomempre,System.String</value>
-          <value>anyo,System.Decimal</value>
-          <value>num_mes,System.Decimal</value>
-          <value>nombre_mes,System.String</value>
-          <value>total_baseimp1,System.Decimal</value>
-          <value>total_baseimp2,System.Decimal</value>
-          <value>total_baseimp3,System.Decimal</value>
-          <value>total_baseimp4,System.Decimal</value>
-          <value>total_baseimp5,System.Decimal</value>
-          <value>total_mes_agente,System.Decimal</value>
-          <value>total_mes,System.Decimal</value>
-          <value>nomagent,System.String</value>
-          <value>porcentaje_agente,System.Decimal</value>
-        </Columns>
-        <Dictionary isRef="1" />
-        <Key>8683c746b7c94d5e9d79fc0ae4f62078</Key>
-        <Name>Comparativa</Name>
-        <NameInSource>datosReporte (33).Comparativa</NameInSource>
-      </Comparativa>
-    </DataSources>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
     <Relations isList="true" count="0" />
     <Report isRef="0" />
     <Resources isList="true" count="0" />
@@ -44,15 +14,15 @@
   <Key>8194d717316a496ba1e1e6153862470b</Key>
   <MetaTags isList="true" count="0" />
   <Pages isList="true" count="1">
-    <Page1 Ref="4" type="Page" isKey="true">
+    <Page1 Ref="2" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="5">
-        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+        <PageHeaderBand1 Ref="3" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,18,3.2</ClientRectangle>
           <Components isList="true" count="4">
-            <Text17 Ref="6" type="Text" isKey="true">
+            <Text17 Ref="4" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.4,0.4,8,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -60,13 +30,13 @@
               <Font>Tahoma,16</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text17</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
+              <Page isRef="2" />
+              <Parent isRef="3" />
               <Text>Comparativa Ventas por meses</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text17>
-            <Text66 Ref="7" type="Text" isKey="true">
+            <Text66 Ref="5" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.4,1.8,17.4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -74,13 +44,13 @@
               <Font>Tahoma,8</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text66</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
+              <Page isRef="2" />
+              <Parent isRef="3" />
               <Text>Agente: {Comparativa.nomagent}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text66>
-            <Text4 Ref="8" type="Text" isKey="true">
+            <Text4 Ref="6" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.4,1.4,6.6,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -88,22 +58,22 @@
               <Font>Tahoma,8</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text4</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
+              <Page isRef="2" />
+              <Parent isRef="3" />
               <Text>Año: {Comparativa.anyo}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text4>
-            <Text11 Ref="9" type="Text" isKey="true">
+            <Text11 Ref="7" type="Text" isKey="true">
               <Brush>Transparent</Brush>
-              <ClientRectangle>9.8,0.6,7.8,0.4</ClientRectangle>
+              <ClientRectangle>9.8,0.6,8,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
               <Font>Tahoma,11,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text11</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
+              <Page isRef="2" />
+              <Parent isRef="3" />
               <Text>{Comparativa.nomempre}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
@@ -113,15 +83,15 @@
           <Conditions isList="true" count="0" />
           <Expressions isList="true" count="0" />
           <Name>PageHeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
+          <Page isRef="2" />
+          <Parent isRef="2" />
         </PageHeaderBand1>
-        <PageFooterBand1 Ref="10" type="PageFooterBand" isKey="true">
+        <PageFooterBand1 Ref="8" type="PageFooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,27.1,18,0.6</ClientRectangle>
           <Components isList="true" count="2">
-            <Text64 Ref="11" type="Text" isKey="true">
+            <Text64 Ref="9" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0.2,0,5.4,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -129,14 +99,14 @@
               <Font>Tahoma,8</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text64</Name>
-              <Page isRef="4" />
-              <Parent isRef="10" />
+              <Page isRef="2" />
+              <Parent isRef="8" />
               <Text>{Time}</Text>
               <TextBrush>Black</TextBrush>
               <Type>SystemVariables</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text64>
-            <Text9 Ref="12" type="Text" isKey="true">
+            <Text9 Ref="10" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>12.4,0.1,5.4,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -145,8 +115,8 @@
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
-              <Page isRef="4" />
-              <Parent isRef="10" />
+              <Page isRef="2" />
+              <Parent isRef="8" />
               <Text>{PageNofM}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
@@ -156,60 +126,14 @@
           <Conditions isList="true" count="0" />
           <Expressions isList="true" count="0" />
           <Name>PageFooterBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
+          <Page isRef="2" />
+          <Parent isRef="2" />
         </PageFooterBand1>
-        <HeaderBand1 Ref="13" type="HeaderBand" isKey="true">
+        <HeaderBand1 Ref="11" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.4,18,0.6</ClientRectangle>
+          <ClientRectangle>0,4.4,18,0.4</ClientRectangle>
           <Components isList="true" count="4">
-            <Text19 Ref="14" type="Text" isKey="true">
-              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>2,0,3.8,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Expressions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text19</Name>
-              <Page isRef="4" />
-              <Parent isRef="13" />
-              <Text>TOTAL {Comparativa.anyo}</Text>
-              <TextBrush>Black</TextBrush>
-              <Type>Expression</Type>
-            </Text19>
-            <Text1 Ref="15" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <ClientRectangle>6,0,3,0.4</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Expressions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
-              <Page isRef="4" />
-              <Parent isRef="13" />
-              <Text>acum. {Comparativa.anyo}</Text>
-              <TextBrush>Black</TextBrush>
-              <Type>Expression</Type>
-            </Text1>
-            <Text3 Ref="16" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <ClientRectangle>9.2,0,2.4,0.4</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Expressions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text3</Name>
-              <Page isRef="4" />
-              <Parent isRef="13" />
-              <Text>% del total</Text>
-              <TextBrush>Black</TextBrush>
-              <Type>Expression</Type>
-            </Text3>
-            <Text8 Ref="17" type="Text" isKey="true">
+            <Text8 Ref="12" type="Text" isKey="true">
               <Border>Bottom;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0.6,0.4,11.2,0.2</ClientRectangle>
@@ -218,39 +142,88 @@
               <Font>Arial,8</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text8</Name>
-              <Page isRef="4" />
-              <Parent isRef="13" />
+              <Page isRef="2" />
+              <Parent isRef="11" />
               <TextBrush>Black</TextBrush>
             </Text8>
+            <Text1 Ref="13" type="Text" isKey="true">
+              <Border>Top, Left, Right;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,3.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Tahoma,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,3,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="2" />
+              <Parent isRef="11" />
+              <Text>TOTAL {Comparativa.anyo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text13 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Tahoma,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="2" />
+              <Parent isRef="11" />
+              <Text>% del total</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text12 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,3,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Tahoma,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="2" />
+              <Parent isRef="11" />
+              <Text>acum. {Comparativa.anyo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
           </Components>
           <Conditions isList="true" count="0" />
           <Expressions isList="true" count="0" />
           <Name>HeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
+          <Page isRef="2" />
+          <Parent isRef="2" />
         </HeaderBand1>
-        <DataBand2 Ref="18" type="DataBand" isKey="true">
+        <DataBand2 Ref="16" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,5.8,18,0.4</ClientRectangle>
+          <ClientRectangle>0,5.6,18,0.4</ClientRectangle>
           <Components isList="true" count="4">
-            <Text2 Ref="19" type="Text" isKey="true">
+            <Text2 Ref="17" type="Text" isKey="true">
               <Border>Left;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
-              <ClientRectangle>0.6,0,1.4,0.4</ClientRectangle>
+              <ClientRectangle>0.8,0,1.4,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Expressions isList="true" count="0" />
               <Font>Tahoma,10</Font>
-              <Margins>0,0,0,0</Margins>
+              <Margins>3,0,0,0</Margins>
               <Name>Text2</Name>
-              <Page isRef="4" />
-              <Parent isRef="18" />
+              <Page isRef="2" />
+              <Parent isRef="16" />
               <Text>{Left(ToUpperCase(Comparativa.nombre_mes), 3)}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text2>
-            <Text5 Ref="20" type="Text" isKey="true">
+            <Text5 Ref="18" type="Text" isKey="true">
               <Border>Left, Right;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>2,0,3.8,0.4</ClientRectangle>
@@ -259,23 +232,23 @@
               <Font>Tahoma,10</Font>
               <HideZeros>True</HideZeros>
               <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
+              <Margins>0,3,0,0</Margins>
               <Name>Text5</Name>
-              <Page isRef="4" />
-              <Parent isRef="18" />
+              <Page isRef="2" />
+              <Parent isRef="16" />
               <Text>{Comparativa.total_mes_agente}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="21" type="NumberFormat" isKey="true">
+              <TextFormat Ref="19" type="NumberFormat" isKey="true">
                 <DecimalDigits>2</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
-                <State>DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern, NegativeInRed</State>
+                <State>DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern</State>
               </TextFormat>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text5>
-            <Text7 Ref="22" type="Text" isKey="true">
+            <Text7 Ref="20" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>6,0,3,0.4</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -285,21 +258,21 @@
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text7</Name>
-              <Page isRef="4" />
-              <Parent isRef="18" />
+              <Page isRef="2" />
+              <Parent isRef="16" />
               <Text>{Comparativa.total_mes}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="23" type="NumberFormat" isKey="true">
+              <TextFormat Ref="21" type="NumberFormat" isKey="true">
                 <DecimalDigits>2</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
-                <State>DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern, NegativeInRed</State>
+                <State>DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern</State>
               </TextFormat>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text7>
-            <Text10 Ref="24" type="Text" isKey="true">
+            <Text10 Ref="22" type="Text" isKey="true">
               <Border>Right;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>9.2,0,2.6,0.4</ClientRectangle>
@@ -309,10 +282,17 @@
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text10</Name>
-              <Page isRef="4" />
-              <Parent isRef="18" />
-              <Text>{Comparativa.porcentaje_agente}%</Text>
+              <Page isRef="2" />
+              <Parent isRef="16" />
+              <Text>{Comparativa.porcentaje_agente}</Text>
               <TextBrush>Black</TextBrush>
+              <TextFormat Ref="23" type="NumberFormat" isKey="true">
+                <DecimalDigits>2</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <State>DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern</State>
+              </TextFormat>
               <Type>Expression</Type>
               <VertAlignment>Bottom</VertAlignment>
             </Text10>
@@ -323,120 +303,122 @@
           <Expressions isList="true" count="0" />
           <Filters isList="true" count="0" />
           <Name>DataBand2</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
+          <Page isRef="2" />
+          <Parent isRef="2" />
           <Sort isList="true" count="0" />
         </DataBand2>
-        <FooterBand1 Ref="25" type="FooterBand" isKey="true">
+        <FooterBand1 Ref="24" type="FooterBand" isKey="true">
+          <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,7,18,11.8</ClientRectangle>
-          <Components isList="true" count="2">
-            <Chart1 Ref="26" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
-              <Area Ref="27" type="Stimulsoft.Report.Chart.StiPieArea" isKey="true">
-                <BorderColor>171, 172, 173</BorderColor>
-                <Brush>White</Brush>
-                <Chart isRef="26" />
+          <ClientRectangle>0,6.8,18,11.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Chart2 Ref="25" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
+              <Area Ref="26" type="Stimulsoft.Report.Chart.StiClusteredColumnArea" isKey="true">
+                <BorderColor>Transparent</BorderColor>
+                <Brush>[255:255:255]</Brush>
+                <Chart isRef="25" />
+                <GridLinesHorRight Ref="27" type="Stimulsoft.Report.Chart.StiGridLinesHor" isKey="true">
+                  <Area isRef="26" />
+                  <Color>Silver</Color>
+                  <MinorColor>Gainsboro</MinorColor>
+                  <Visible>False</Visible>
+                </GridLinesHorRight>
+                <YAxis Ref="28" type="Stimulsoft.Report.Chart.StiYLeftAxis" isKey="true">
+                  <Area isRef="26" />
+                  <LineColor>140, 140, 140</LineColor>
+                  <Title Ref="29" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+                    <Color>140, 140, 140</Color>
+                    <Direction>BottomToTop</Direction>
+                    <Font>Tahoma,12,Bold</Font>
+                  </Title>
+                </YAxis>
+                <YRightAxis Ref="30" type="Stimulsoft.Report.Chart.StiYRightAxis" isKey="true">
+                  <Area isRef="26" />
+                  <Labels Ref="31" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+                    <Color>140, 140, 140</Color>
+                    <Font>Tahoma,8</Font>
+                    <TextAlignment>Left</TextAlignment>
+                  </Labels>
+                  <LineColor>140, 140, 140</LineColor>
+                  <Title Ref="32" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+                    <Color>140, 140, 140</Color>
+                    <Direction>TopToBottom</Direction>
+                    <Font>Tahoma,12,Bold</Font>
+                  </Title>
+                </YRightAxis>
               </Area>
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.4,1.6,12,7.2</ClientRectangle>
+              <ClientRectangle>2.4,1.6,11.8,9</ClientRectangle>
               <Conditions isList="true" count="0" />
               <ConstantLines isList="true" count="0" />
               <CustomStyleName />
               <DataRelationName isNull="true" />
-              <DataSourceName>Comparativa</DataSourceName>
               <Expressions isList="true" count="0" />
               <Filters isList="true" count="0" />
-              <Legend Ref="28" type="Stimulsoft.Report.Chart.StiLegend" isKey="true">
-                <AllowApplyStyle>False</AllowApplyStyle>
-                <BorderColor>155, 155, 155</BorderColor>
-                <Brush>[255:255:255]</Brush>
-                <Chart isRef="26" />
-                <Columns>4</Columns>
-                <Font>Arial,8</Font>
-                <HorAlignment>Center</HorAlignment>
-                <HorSpacing>14</HorSpacing>
-                <LabelsColor>140, 140, 140</LabelsColor>
-                <MarkerBorder>False</MarkerBorder>
-                <MarkerSize>7, 10</MarkerSize>
-                <TitleColor>DimGray</TitleColor>
-                <TitleFont>Arial,14,Bold</TitleFont>
-                <VertAlignment>BottomOutside</VertAlignment>
-                <VertSpacing>0</VertSpacing>
-              </Legend>
-              <MasterComponent isRef="18" />
-              <Name>Chart1</Name>
-              <Page isRef="4" />
-              <Parent isRef="25" />
+              <MasterComponent isRef="16" />
+              <Name>Chart2</Name>
+              <Page isRef="2" />
+              <Parent isRef="24" />
               <Series isList="true" count="1">
-                <Item24 Ref="29" type="Stimulsoft.Report.Chart.StiPieSeries" isKey="true">
+                <Item22 Ref="33" type="Stimulsoft.Report.Chart.StiClusteredColumnSeries" isKey="true">
                   <ArgumentDataColumn>Comparativa.nombre_mes</ArgumentDataColumn>
-                  <BorderColor>255, 255, 255</BorderColor>
-                  <Brush>[91:155:213]</Brush>
-                  <Chart isRef="26" />
+                  <BorderColor>Transparent</BorderColor>
+                  <Brush>[52:152:219]</Brush>
+                  <BrushNegative>Firebrick</BrushNegative>
+                  <Chart isRef="25" />
                   <Conditions isList="true" count="0" />
                   <Filters isList="true" count="0" />
-                  <SeriesLabels Ref="30" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
-                    <BorderColor>140, 140, 140</BorderColor>
-                    <Brush>[255:255:255]</Brush>
-                    <Chart isRef="26" />
-                    <Font>Arial,7</Font>
-                    <LabelColor>90, 90, 90</LabelColor>
+                  <SeriesLabels Ref="34" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
+                    <BorderColor>Transparent</BorderColor>
+                    <Brush>[119:255:255:255]</Brush>
+                    <Chart isRef="25" />
+                    <Font>Arial,10</Font>
+                    <LabelColor>50, 58, 69</LabelColor>
                     <MarkerSize>8, 6</MarkerSize>
                     <ValueTypeSeparator>-</ValueTypeSeparator>
-                    <Width>10</Width>
+                    <Width>0</Width>
                   </SeriesLabels>
                   <ShowShadow>False</ShowShadow>
-                  <Title>Series 1</Title>
-                  <ValueDataColumn>Comparativa.porcentaje_agente</ValueDataColumn>
-                </Item24>
+                  <Title>Tot. agente</Title>
+                  <TrendLines isList="true" count="0" />
+                  <ValueDataColumn>Comparativa.total_mes_agente</ValueDataColumn>
+                </Item22>
               </Series>
-              <SeriesLabels Ref="31" type="Stimulsoft.Report.Chart.StiOutsidePieLabels" isKey="true">
-                <BorderColor>140, 140, 140</BorderColor>
-                <Brush>[255:255:255]</Brush>
-                <Chart isRef="26" />
-                <Font>Arial,7</Font>
-                <LabelColor>90, 90, 90</LabelColor>
-                <LegendValueType>ArgumentValue</LegendValueType>
-                <LineColor>105, 105, 105</LineColor>
-                <MarkerSize>2, 5</MarkerSize>
-                <MarkerVisible>True</MarkerVisible>
+              <SeriesLabels Ref="35" type="Stimulsoft.Report.Chart.StiOutsideEndAxisLabels" isKey="true">
+                <AllowApplyStyle>False</AllowApplyStyle>
+                <BorderColor>Transparent</BorderColor>
+                <Brush>[119:255:255:255]</Brush>
+                <Chart isRef="25" />
+                <Font>Arial,10</Font>
+                <Format>N</Format>
+                <LabelColor>50, 58, 69</LabelColor>
+                <MarkerSize>6, 4</MarkerSize>
+                <PreventIntersection>True</PreventIntersection>
                 <ValueTypeSeparator>-</ValueTypeSeparator>
                 <Width>0</Width>
               </SeriesLabels>
-              <SeriesLabelsConditions isList="true" count="1">
-                <value>White,Argument,String,EqualTo,,Circle,0</value>
-              </SeriesLabelsConditions>
+              <SeriesLabelsConditions isList="true" count="0" />
               <Sort isList="true" count="0" />
               <Strips isList="true" count="0" />
-              <Style Ref="32" type="Stimulsoft.Report.Chart.StiStyle22" isKey="true">
+              <Style Ref="36" type="Stimulsoft.Report.Chart.StiStyle29" isKey="true">
                 <Conditions isList="true" count="0" />
                 <Name />
               </Style>
-              <Title Ref="33" type="Stimulsoft.Report.Chart.StiChartTitle" isKey="true">
-                <Brush>[140:140:140]</Brush>
-                <Font>Tahoma,12,Bold</Font>
-                <Text>COMPARATIVA</Text>
-              </Title>
-            </Chart1>
-            <Text6 Ref="34" type="Text" isKey="true">
-              <Border>Top;Black;1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>0.6,0,11.2,0.6</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Expressions isList="true" count="0" />
-              <Font>Arial,8</Font>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text6</Name>
-              <Page isRef="4" />
-              <Parent isRef="25" />
-              <TextBrush>Black</TextBrush>
-            </Text6>
+              <Table Ref="37" type="Stimulsoft.Report.Chart.StiChartTable" isKey="true">
+                <DataCells Ref="38" type="Stimulsoft.Report.Chart.StiChartTableDataCells" isKey="true">
+                  <Font>Tahoma,8</Font>
+                  <TextColor>140, 140, 140</TextColor>
+                </DataCells>
+                <Format isNull="true" />
+                <GridLineColor>Transparent</GridLineColor>
+              </Table>
+            </Chart2>
           </Components>
           <Conditions isList="true" count="0" />
           <Expressions isList="true" count="0" />
           <Name>FooterBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
+          <Page isRef="2" />
+          <Parent isRef="2" />
         </FooterBand1>
       </Components>
       <Conditions isList="true" count="0" />
@@ -460,10 +442,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>8/6/2025 1:49:56 PM</ReportChanged>
+  <ReportChanged>8/8/2025 12:35:12 PM</ReportChanged>
   <ReportCreated>1/10/2025 2:58:38 PM</ReportCreated>
   <ReportFile>E:\node_apps\ARIGES-INFORMES\arigesInformesCli\public\reports\comparativa_agente.mrt</ReportFile>
-  <ReportGuid>f72b0199a3a24d9aae1b95eaf831d4cf</ReportGuid>
+  <ReportGuid>4dbea1a518a24b20b191bee346451467</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2021.3.6.0</ReportVersion>
