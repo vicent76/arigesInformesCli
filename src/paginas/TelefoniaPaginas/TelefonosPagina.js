@@ -3,7 +3,7 @@ import { AppBar, TextField, Grid, IconButton, Toolbar, Tooltip, Typography, Dial
 import AddIcon from '@mui/icons-material/Add';
 import { MenuLateral } from '../../componentes/MenuLateral/MenuLateral';
 import TelefonosDesktop from './TelefonosDesktop';
-import { leerClientes, leerCliente, leerTelefonos } from '../../servicios/Clientes';
+import { leerCliente, leerTelefonos } from '../../servicios/Clientes';
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
 import "dayjs/locale/es";
 import dayjs from "dayjs";
@@ -11,8 +11,8 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { MensajeError } from '../../utilidades/TratamientoErrores'
 import { ErrorGeneral } from '../../componentes/ErrorGeneral/ErrorGeneral';
 import { MensajeInformativo } from '../../componentes/MensajeInformativo/MensajeInformativo';
-import { Checkbox, FormControlLabel } from '@mui/material';
 import { GeneralCtx } from '../../contextos/GeneralContext'
+import { leerDatos } from '../../servicios/comparativa';
 
 export default function TelefonosPagina() {
 
@@ -61,7 +61,7 @@ export default function TelefonosPagina() {
     if (nuevoCodigo) {
       try {
         const clienteLeido = await leerCliente(nuevoCodigo);
-        setNombreCliente(clienteLeido.nomagent || "");
+        setNombreCliente(clienteLeido.nomclien || "");
         setMensajeError('')
         setHayError(false)
       } catch (error) {
@@ -82,7 +82,7 @@ export default function TelefonosPagina() {
     if (nuevoCodigo) {
       try {
         const clienteLeido = await leerCliente(nuevoCodigo);
-        sethNombreCliente(clienteLeido.nomagent || "");
+        sethNombreCliente(clienteLeido.nomclien || "");
         setMensajeError('')
         setHayError(false)
       } catch (error) {
@@ -147,6 +147,7 @@ export default function TelefonosPagina() {
     let sesion = getSession();
     let n = sesion.empresa.nomempre;
     setNomempre(n);
+    obtenDatosTelefonos();
   }, []);
 
   return (

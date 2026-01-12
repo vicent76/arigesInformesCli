@@ -133,7 +133,7 @@ export const MenuLateral = (props) => {
                                     </ListItem>
                                 </List>
 
-                                <ListItem key='Comparativa' disablePadding onClick={() => { navigate('Comparativas') }}>
+                                <ListItem key='Comparativa' disablePadding onClick={() => { navigate('/comparativa') }}>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <BarChartIcon />
@@ -141,7 +141,7 @@ export const MenuLateral = (props) => {
                                         <ListItemText> Comparativa </ListItemText>
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key='Telefonia' disablePadding onClick={() => { navigate('Telefonia') }}>
+                                <ListItem key='Telefonia' disablePadding onClick={() => { navigate('/telefonia') }}>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <PhoneIcon />
