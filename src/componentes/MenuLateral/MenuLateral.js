@@ -21,6 +21,7 @@ import { TipoPantalla } from '../../utilidades/ControlPantalla';
 
 //
 import BarChartIcon from '@mui/icons-material/BarChart';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const drawerWidth = 230;
 
@@ -132,12 +133,20 @@ export const MenuLateral = (props) => {
                                     </ListItem>
                                 </List>
 
-                                <ListItem key='Comparativa' disablePadding onClick={() => { navigate('/comparativa') }}>
+                                <ListItem key='Comparativa' disablePadding onClick={() => { navigate('Comparativas') }}>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <BarChartIcon />
                                         </ListItemIcon>
                                         <ListItemText> Comparativa </ListItemText>
+                                    </ListItemButton>
+                                </ListItem>
+                                <ListItem key='Telefonia' disablePadding onClick={() => { navigate('Telefonia') }}>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <PhoneIcon />
+                                        </ListItemIcon>
+                                        <ListItemText> Telefonía </ListItemText>
                                     </ListItemButton>
                                 </ListItem>
                                 <List>
