@@ -1,167 +1,207 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import {  Grid, IconButton, ListItemText } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import {  Home } from '@mui/icons-material';
+import {
+    Box,
+    Drawer,
+    AppBar,
+    CssBaseline,
+    Toolbar,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemIcon,
+    IconButton,
+    Tooltip,
+    Typography,
+    Collapse
+} from '@mui/material';
+import {
+    Home,
+    ExitToApp,
+    Person,
+    BarChart,
+    Phone,
+    PhoneDisabled,
+    Menu as MenuIcon,
+    Description
+} from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import PersonIcon from '@mui/icons-material/Person';
-import { GeneralCtx } from '../../contextos/GeneralContext'
+import { GeneralCtx } from '../../contextos/GeneralContext';
 import { leerVersion } from '../../servicios/ApiLib';
 import { TipoPantalla } from '../../utilidades/ControlPantalla';
 
-//
-import BarChartIcon from '@mui/icons-material/BarChart';
-import PhoneIcon from '@mui/icons-material/Phone';
+const drawerWidth = 60;
 
-const drawerWidth = 230;
+export const MenuLateral = ({ children }) => {
+    const navigate = useNavigate();
+    const { getSession, deleteSession } = useContext(GeneralCtx);
 
-export const MenuLateral = (props) => {
-    const navigate = useNavigate()
+    const [sesion, setSesion] = useState();
+    const [version, setVersion] = useState('0.0.0');
+    const [drOpen, setDrOpen] = useState(false);
+    const [tipoPantalla, setTipoPantalla] = useState('desktop');
 
-    const { getSession } = useContext(GeneralCtx)
-    const [sesion, setSesion] = useState()
-    const [drVariant, setDrVariant] = useState('temporary')
-    const [drOpen, setDrOpen] = useState(false)
-    const [version, setVersion] = useState('0.0.0')
-    const [tipoPantalla, setTipoPantalla] = useState('desktop')
-    let session = {}
-    const handleDrOpen = () => {
-        if (drOpen) {
-            // ya está abierto y lo cerramos
-            setDrVariant('temporary')
-            setDrOpen(false)
-        } else {
-            // no está abierto, lo abrimos
-            setDrVariant('permanent')
-            setDrOpen(true)
-        }
-    }
-
-    const handleClose = () => {
-        navigate('/')
-    }
-
-    const consultarVersion = async () => {
-        const { data: versionData } = await leerVersion()
-        setVersion(versionData.version)
-    }
+    // Estados de submenú
+    const [openInformes, setOpenInformes] = useState(true);
 
     useEffect(() => {
-        // Comprobación de que hay una sesión activa
-        session = getSession()
-        if (!session) navigate('/')
-        setSesion(session)
-        consultarVersion()
-        setTipoPantalla(TipoPantalla())
-    }, [])
+        const session = getSession();
+        if (!session) navigate('/');
+        setSesion(session);
+
+        const init = async () => {
+            const { data } = await leerVersion();
+            setVersion(data.version);
+            setTipoPantalla(TipoPantalla());
+        };
+        init();
+    }, []);
+
+    const handleLogout = () => {
+        deleteSession();
+        navigate('/');
+    };
+
+    const MenuItem = ({ icon, label, onClick, openSubmenu, setOpenSubmenu }) => (
+        <Tooltip title={label} placement="right">
+            <ListItem disablePadding sx={{ justifyContent: 'center' }}>
+                <ListItemButton
+                    onClick={onClick || (() => setOpenSubmenu(!openSubmenu))}
+                    sx={{ justifyContent: 'center' }}
+                >
+                    <ListItemIcon sx={{ minWidth: 'unset', justifyContent: 'center' }}>
+                        {icon}
+                    </ListItemIcon>
+                </ListItemButton>
+            </ListItem>
+        </Tooltip>
+    );
+
+    const TreeItem = ({ icon, label, onClick, isLast }) => (
+        <Tooltip title={label} placement="right">
+            <ListItem disablePadding>
+                <ListItemButton
+                    onClick={onClick}
+                    sx={{ pl: 4, position: 'relative' }}
+                >
+                    {/* Línea vertical */}
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            left: 16,
+                            top: 0,
+                            bottom: isLast ? '50%' : 0,
+                            width: '2px',
+                            bgcolor: 'rgba(0,0,0,0.3)',
+                        }}
+                    />
+                    {/* Línea horizontal */}
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            left: 16,
+                            top: '50%',
+                            width: 20,
+                            height: '2px',
+                            bgcolor: 'rgba(0,0,0,0.3)',
+                        }}
+                    />
+                    <ListItemIcon sx={{ minWidth: 30 }}>{icon}</ListItemIcon>
+                </ListItemButton>
+            </ListItem>
+        </Tooltip>
+    );
 
     return (
-        <div>
-            <Box sx={{ display: 'flex' }}>
-                <CssBaseline />
-                <Grid container>
-                    <Grid item xs={12}>
-                        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-                            <Toolbar>
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    color="inherit"
-                                    aria-label="menu"
-                                    sx={{ mr: 2 }}
-                                    onClick={handleDrOpen}
-                                >
-                                    <MenuIcon />
-                                </IconButton>
-                                {tipoPantalla === 'mobile' ?
-                                    ''
-                                    :
-                                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                        AriAgroWeb  VRS: {version}
-                                    </Typography>
-                                }
+        <Box sx={{ display: 'flex' }}>
+            <CssBaseline />
 
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    color="inherit"
-                                    aria-label="menu"
-                                >
-                                    <PersonIcon />
-                                    <Typography ml={1}>{sesion ? sesion.usuario.nomusu : ''}</Typography>
-                                </IconButton>
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    color="inherit"
-                                    aria-label="menu"
-                                    onClick={handleClose}
-                                >
-                                    <ExitToAppIcon />
-                                </IconButton>
-                            </Toolbar>
-                        </AppBar>
-                        <Drawer
-                            variant={drVariant}
-                            sx={{
-                                width: drawerWidth,
-                                flexShrink: 0,
-                                [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-                            }}
-                            open={drOpen}
-                        >
-                            <Toolbar />
-                            <Box sx={{ overflow: 'auto' }}>
-                                <List>
-                                    <ListItem key='Inicio' disablePadding onClick={() => { navigate('/inicio') }}>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                <Home />
-                                            </ListItemIcon>
-                                            <ListItemText> Inicio </ListItemText>
-                                        </ListItemButton>
-                                    </ListItem>
-                                </List>
+            {/* AppBar */}
+            <AppBar position="fixed" sx={{ zIndex: t => t.zIndex.drawer + 1 }}>
+                <Toolbar>
+                    {tipoPantalla === 'mobile' && (
+                        <IconButton color="inherit" onClick={() => setDrOpen(!drOpen)}>
+                            <MenuIcon />
+                        </IconButton>
+                    )}
+                    <Typography sx={{ flexGrow: 1 }}>
+                        Ariges Informes VRS: {version}
+                    </Typography>
+                    <IconButton color="inherit">
+                        <Person />
+                        <Typography ml={1}>{sesion?.usuario?.nomusu}</Typography>
+                    </IconButton>
+                    <IconButton color="inherit" onClick={handleLogout}>
+                        <ExitToApp />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
 
-                                <ListItem key='Comparativa' disablePadding onClick={() => { navigate('/comparativa') }}>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <BarChartIcon />
-                                        </ListItemIcon>
-                                        <ListItemText> Comparativa </ListItemText>
-                                    </ListItemButton>
-                                </ListItem>
-                                <ListItem key='Telefonia' disablePadding onClick={() => { navigate('/telefonia') }}>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <PhoneIcon />
-                                        </ListItemIcon>
-                                        <ListItemText> Telefonía </ListItemText>
-                                    </ListItemButton>
-                                </ListItem>
-                                <List>
-                                </List>
-                            </Box>
-                        </Drawer>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Box component="main" sx={{ flexGrow: 1, p: 5 }} marginTop={5}>
-                            {props.children}
-                        </Box>
-                    </Grid>
-                </Grid>
+            {/* Drawer */}
+            <Drawer
+                variant={tipoPantalla === 'mobile' ? 'temporary' : 'permanent'}
+                open={tipoPantalla === 'mobile' ? drOpen : true}
+                onClose={() => setDrOpen(false)}
+                sx={{
+                    width: drawerWidth,
+                    '& .MuiDrawer-paper': {
+                        width: drawerWidth,
+                        overflowX: 'hidden',
+                    },
+                }}
+            >
+                <Toolbar />
+                <List>
+                    <MenuItem
+                        icon={<Home fontSize="large" />}
+                        label="Inicio"
+                        onClick={() => navigate('/inicio')}
+                    />
+
+                    {/* Informes */}
+                    <MenuItem
+                        icon={<Description fontSize="large" />}
+                        label="Informes"
+                        openSubmenu={openInformes}
+                        setOpenSubmenu={setOpenInformes}
+                    />
+                    <Collapse in={openInformes}>
+                        <List disablePadding>
+                            <TreeItem
+                                icon={<BarChart fontSize="small" />}
+                                label="Comparativa de ventas"
+                                onClick={() => navigate(`/comparativa/?reload=${Date.now()}`)}
+                                isLast={false}
+                            />
+                            <TreeItem
+                                icon={<Phone fontSize="small" />}
+                                label="Plazos pendientes de telefonía"
+                                onClick={() => navigate(`/telefonosPlazos`)}
+                                isLast={false}
+                            />
+                            <TreeItem
+                                icon={<PhoneDisabled fontSize="small" />}
+                                label="Plazos pendientes de telefonía"
+                                onClick={() => navigate(`/telefonosVencidos`)}
+                                isLast
+                            />
+                        </List>
+                    </Collapse>
+                </List>
+            </Drawer>
+
+            {/* Contenido */}
+            <Box
+                component="main"
+                sx={{
+                    flexGrow: 1,
+                    p: 5,
+                    mt: '64px',
+                    ml: tipoPantalla === 'mobile' ? 0 : `${drawerWidth}px`,
+                }}
+            >
+                {children}
             </Box>
-        </div>
-    )
-}
+        </Box>
+    );
+};
 

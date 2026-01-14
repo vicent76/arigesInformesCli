@@ -38,7 +38,7 @@ export default function ComparativasPagina() {
   //
   const { getSession } = useContext(GeneralCtx);
 
-  const [nomEmpre, setNomempre ] = useState("");
+  const [nomEmpre, setNomempre] = useState("");
 
 
   //
@@ -160,7 +160,7 @@ export default function ComparativasPagina() {
   return (
     <>
       <MenuLateral>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className='fondoImagenLogin'>
           <Grid item xs={12}>
             <AppBar position="static" color="default">
               <Toolbar>

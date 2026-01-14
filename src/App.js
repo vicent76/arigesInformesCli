@@ -8,8 +8,8 @@ import { InicioPagina } from './paginas/InicioPagina/InicioPagina';
 
 //
 import ComparativasPagina from './paginas/ComparativaPaginas/ComparativasPagina';
-import TelefonosPagina from './paginas/TelefoniaPaginas/TelefonosPagina';
-
+import TelefonosPlazosPagina from './paginas/TelefoniaPaginas/TelefonosPlazosPagina';
+import TelefonosVencidosPagina from './paginas/TelefoniaPaginas/TelefonosVencidosPagina';
 
 const queryClient = new QueryClient()
 
@@ -22,7 +22,8 @@ function App() {
             <Route path='/' element={<LoginPagina />} />
             <Route path="/inicio" element={<InicioPagina />} />
             <Route path="/comparativa" element={<ComparativasPagina />} />
-            <Route path="/telefonia" element={<TelefonosPagina />} />
+            <Route path="/telefonosPlazos" element={<TelefonosPlazosPagina />} />
+            <Route path="/telefonosVencidos" element={<TelefonosVencidosPagina />} />
 
           </Routes>
           <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />

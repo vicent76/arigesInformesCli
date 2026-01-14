@@ -1,102 +1,15 @@
 {
   "ReportVersion": "2025.4.3",
-  "ReportGuid": "82b651d64d0174f7389b91cd12361b0f",
+  "ReportGuid": "21c6e46d274e3453485336d95610d844",
   "ReportName": "Report",
   "ReportAlias": "Report",
   "ReportFile": "informe_telefonos.mrt",
   "ReportCreated": "/Date(0+0100)/",
-  "ReportChanged": "/Date(1768236973000+0100)/",
+  "ReportChanged": "/Date(1768386235000+0100)/",
   "EngineVersion": "EngineV2",
   "ReportUnit": "Centimeters",
   "ScriptLanguage": "CSharp",
   "CalculationMode": "Interpretation",
-  "Dictionary": {
-    "DataSources": {
-      "0": {
-        "Ident": "StiDataTableSource",
-        "Name": "Telefonos",
-        "Alias": "Telefonos",
-        "Columns": {
-          "0": {
-            "Name": "IdTelefono",
-            "NameInSource": "IdTelefono",
-            "Alias": "IdTelefono",
-            "Type": "System.String"
-          },
-          "1": {
-            "Name": "ImportePlazo",
-            "NameInSource": "ImportePlazo",
-            "Alias": "ImportePlazo",
-            "Type": "System.Decimal"
-          },
-          "2": {
-            "Name": "Observaciones",
-            "NameInSource": "Observaciones",
-            "Alias": "Observaciones",
-            "Type": "System.String"
-          },
-          "3": {
-            "Name": "PlazosMeses",
-            "NameInSource": "PlazosMeses",
-            "Alias": "PlazosMeses",
-            "Type": "System.Decimal"
-          },
-          "4": {
-            "Name": "PlazosOrigen",
-            "NameInSource": "PlazosOrigen",
-            "Alias": "PlazosOrigen",
-            "Type": "System.Decimal"
-          },
-          "5": {
-            "Name": "codclien",
-            "NameInSource": "codclien",
-            "Alias": "codclien",
-            "Type": "System.Decimal"
-          },
-          "6": {
-            "Name": "modelo",
-            "NameInSource": "modelo",
-            "Alias": "modelo",
-            "Type": "System.Decimal"
-          },
-          "7": {
-            "Name": "modeloNombre",
-            "NameInSource": "modeloNombre",
-            "Alias": "modeloNombre",
-            "Type": "System.String"
-          },
-          "8": {
-            "Name": "nomclien",
-            "NameInSource": "nomclien",
-            "Alias": "nomclien",
-            "Type": "System.String"
-          },
-          "9": {
-            "Name": "operador",
-            "NameInSource": "operador",
-            "Alias": "operador",
-            "Type": "System.Decimal"
-          },
-          "10": {
-            "Name": "operadorNombre",
-            "NameInSource": "operadorNombre",
-            "Alias": "operadorNombre",
-            "Type": "System.String"
-          }
-        },
-        "NameInSource": "datosTelefonos.Telefonos"
-      }
-    },
-    "Databases": {
-      "0": {
-        "Ident": "StiJsonDatabase",
-        "Name": "datosTelefonos",
-        "Alias": "datosTelefonos",
-        "PathData": "E:\\node_apps\\ARIGES-INFORMES\\arigesInformesCli\\public\\reports\\datosTelefonos.json",
-        "HeadersString": "YyoQVHvZXeyY3LY5ASN05g=="
-      }
-    }
-  },
   "Pages": {
     "0": {
       "Ident": "StiPage",
@@ -122,7 +35,7 @@
             "0": {
               "Ident": "StiText",
               "Name": "Text17",
-              "ClientRectangle": "0.2,0.4,8,0.6",
+              "ClientRectangle": "0.2,0.4,8,0.8",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -130,23 +43,6 @@
                 "Value": "Ventas a plazos pendientes"
               },
               "Font": "Tahoma;16;;",
-              "Border": ";;;;;;;solid:Black",
-              "Brush": "solid:",
-              "TextBrush": "solid:Black",
-              "Type": "Expression"
-            },
-            "1": {
-              "Ident": "StiText",
-              "Name": "Text11",
-              "ClientRectangle": "19.4,0.6,8,0.4",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "{Comparativa.nomempre}"
-              },
-              "VertAlignment": "Center",
-              "Font": "Tahoma;11;Bold;",
               "Border": ";;;;;;;solid:Black",
               "Brush": "solid:",
               "TextBrush": "solid:Black",
@@ -206,7 +102,7 @@
           "Ident": "StiHeaderBand",
           "Name": "HeaderBand1",
           "CanGrow": true,
-          "ClientRectangle": "0,3,27.7,0.4",
+          "ClientRectangle": "0,3,27.7,0.8",
           "Interaction": {
             "Ident": "StiInteraction"
           },
@@ -269,7 +165,7 @@
               "Ident": "StiText",
               "Name": "Text4",
               "Guid": "3766ca1b19494f2c7843ce456b60840f",
-              "ClientRectangle": "14,0,2.2,0.6",
+              "ClientRectangle": "14,0,1.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -287,7 +183,7 @@
               "Ident": "StiText",
               "Name": "Text6",
               "Guid": "938273f2b8f11fbed446406854a86185",
-              "ClientRectangle": "16.2,0,1.4,0.6",
+              "ClientRectangle": "16,0,1.2,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -306,7 +202,7 @@
               "Ident": "StiText",
               "Name": "Text14",
               "Guid": "983739edb6d5e289e0fb128decacbae5",
-              "ClientRectangle": "17.8,0,1.4,0.6",
+              "ClientRectangle": "17.4,0,1.4,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -360,7 +256,7 @@
               "Ident": "StiText",
               "Name": "Text16",
               "Guid": "cb9880f2e1ace582220b43ffb45a2c50",
-              "ClientRectangle": "21,0,6.4,0.6",
+              "ClientRectangle": "20.6,0,6.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -378,7 +274,7 @@
               "Ident": "StiText",
               "Name": "Text15",
               "Guid": "160e5e88424f43ea8f792ed30396f83d",
-              "ClientRectangle": "19.4,0,1.4,0.6",
+              "ClientRectangle": "19,0,1.4,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -399,7 +295,7 @@
           "Ident": "StiDataBand",
           "Name": "DataBand2",
           "CanGrow": true,
-          "ClientRectangle": "0,4.2,27.7,0.4",
+          "ClientRectangle": "0,4.6,27.7,0.4",
           "Interaction": {
             "Ident": "StiBandInteraction"
           },
@@ -509,7 +405,7 @@
               "Ident": "StiText",
               "Name": "Text18",
               "Guid": "206a86c13ebf8391fb647d93a73882a9",
-              "ClientRectangle": "14,0,2.2,0.4",
+              "ClientRectangle": "14,0,1.8,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -535,7 +431,7 @@
               "Ident": "StiText",
               "Name": "Text19",
               "Guid": "76bd215d1361340248785c16592f7855",
-              "ClientRectangle": "16.4,0,1.2,0.4",
+              "ClientRectangle": "16,0,1.2,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -568,7 +464,7 @@
               "Ident": "StiText",
               "Name": "Text20",
               "Guid": "ab20487f05790c2a73051612f0f40a87",
-              "ClientRectangle": "17.8,0,1.4,0.4",
+              "ClientRectangle": "17.4,0,1.4,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -601,7 +497,7 @@
               "Ident": "StiText",
               "Name": "Text21",
               "Guid": "64ef955eb912f616c27e26fc66d270e7",
-              "ClientRectangle": "19.4,0,1.4,0.4",
+              "ClientRectangle": "19,0,1.4,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -638,7 +534,7 @@
               "Guid": "ae928bd667a5f3e5e235517b6708074a",
               "CanGrow": true,
               "GrowToHeight": true,
-              "ClientRectangle": "21,0,6.4,0.4",
+              "ClientRectangle": "20.6,0,6.8,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -653,6 +549,7 @@
               "TextOptions": {
                 "WordWrap": true
               },
+              "LineSpacing": 1.2,
               "Type": "Expression"
             }
           },
@@ -663,7 +560,7 @@
           "Ident": "StiFooterBand",
           "Name": "FooterBand1",
           "CanGrow": true,
-          "ClientRectangle": "0,5.4,27.7,0",
+          "ClientRectangle": "0,5.8,27.7,0",
           "Interaction": {
             "Ident": "StiInteraction"
           },

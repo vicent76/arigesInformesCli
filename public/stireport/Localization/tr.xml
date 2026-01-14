@@ -72,6 +72,7 @@
     <AdapterDataViews>DataViews 'dan Veri</AdapterDataViews>
     <AdapterDB2Connection>IBM DB2 Connection'dan Veri</AdapterDB2Connection>
     <AdapterDBaseFiles>dBase 'den Veri</AdapterDBaseFiles>
+    <AdapterDbUserSource>Kullanıcı Kaynağından Veri</AdapterDbUserSource>
     <AdapterFirebirdConnection>Firebird Connection'dan Veri</AdapterFirebirdConnection>
     <AdapterInformixConnection>Informix Bağlantısından Veri</AdapterInformixConnection>
     <AdapterMySQLConnection>MySQL Bağlantısından Veri</AdapterMySQLConnection>
@@ -93,6 +94,40 @@
     <Post>Gönderi</Post>
     <TwoDimensional>İki-Boyutlu</TwoDimensional>
   </BarCode>
+  <Blockly>
+    <AllComponents>Tüm Bileşenler</AllComponents>
+    <AllComponentsFrom>'dan Tüm Bileşenler</AllComponentsFrom>
+    <ColorHex>Renk Altıgeni</ColorHex>
+    <ColumnName>Sütun Adı</ColumnName>
+    <DateTime>Date Time</DateTime>
+    <GetComponentByName>Bileşeni Ada Göre Al</GetComponentByName>
+    <GetCurrentValue>Güncel Değeri Al</GetCurrentValue>
+    <GetDataSourceByName>Veri Kaynağını İsme Göre Al</GetDataSourceByName>
+    <GetProperty>&gt;Özellik Al</GetProperty>
+    <GetStyleByName>Stili İsme Göre Al</GetStyleByName>
+    <GetVariable>Değişkeni Al</GetVariable>
+    <IndexOfRow>Satır İndeksi</IndexOfRow>
+    <Lists>Listeler</Lists>
+    <LocalVariables>Yerel Değişkenler</LocalVariables>
+    <Logic>Mantık</Logic>
+    <Loops>Döngüler</Loops>
+    <Math>Matematik</Math>
+    <OfDataSource>Veri Kaynağının</OfDataSource>
+    <OfObject>Nesnenin</OfObject>
+    <OpenLink>Bağlantıyı aç</OpenLink>
+    <Process>İşlem</Process>
+    <Programming>Programlama</Programming>
+    <RefreshViewer>Görüntüleyiciyi Yenile</RefreshViewer>
+    <SetCurrentValue>Mevcut Değeri Ayarla</SetCurrentValue>
+    <SetProperty>Özellik Ayarla</SetProperty>
+    <SetSqlCommand>Sql Komutunu Ayarla</SetSqlCommand>
+    <SetVariable>Değişkeni Ayarla</SetVariable>
+    <Strings>Dizeler</Strings>
+    <ThisComponent>Bu Bileşen</ThisComponent>
+    <ThisReport>Bu Rapor</ThisReport>
+    <To>Kime</To>
+    <Visuals>Görseller</Visuals>
+  </Blockly>
   <Buttons>
     <Add>Ekle</Add>
     <AddAllColumns>Tüm Sütunları Ekle</AddAllColumns>
@@ -289,9 +324,11 @@
     <StripsEditorForm>Şerit Düzenleyici Form</StripsEditorForm>
     <Style>Stil</Style>
     <Sunburst>Güneş Patlaması</Sunburst>
+    <Surface>Yüzey</Surface>
     <Treemap>Ağaç Harita</Treemap>
     <TrendLinesEditorForm>Yön Çizgisi Düzenleyici</TrendLinesEditorForm>
     <Waterfall>Şelale</Waterfall>
+    <WireframeSurface>Wireframe Yüzeyi</WireframeSurface>
   </Chart>
   <CharterMapEditor>
     <Characters>Karakterler</Characters>
@@ -406,6 +443,7 @@
     <DashboardWindowTitleNew>Yeni Gösterge Tablosu</DashboardWindowTitleNew>
     <DeleteFile>Dosya Sil</DeleteFile>
     <DoNotAskMe>Bir daha sorma</DoNotAskMe>
+    <EnglishSearchRequired>Arama sorguları için lütfen İngilizce kullanın.</EnglishSearchRequired>
     <EnterUserNameToLogin>Giriş yapmak için kullanıcı adı(e-posta) girin.</EnterUserNameToLogin>
     <ExecutionError>Yürütme hatası</ExecutionError>
     <ExpiredDate>Son Kullanma Tarihi</ExpiredDate>
@@ -627,6 +665,7 @@
     <StiCrossTitle>Çapraz-Başlık</StiCrossTitle>
     <StiDashboard>Ana Ekran</StiDashboard>
     <StiDataBand>Veri</StiDataBand>
+    <StiDataNavigatorUI>Veri Gezgini</StiDataNavigatorUI>
     <StiDatePicker>Tarih Seçici</StiDatePicker>
     <StiElectronicSignature>Elektronik İmza</StiElectronicSignature>
     <StiEmptyBand>Boş Veri</StiEmptyBand>
@@ -643,6 +682,7 @@
     <StiMap>Harita</StiMap>
     <StiMathFormula>Matematik Formülü</StiMathFormula>
     <StiMultipleSelection>Coklu Secim</StiMultipleSelection>
+    <StiNavigatorUI>Gezgin</StiNavigatorUI>
     <StiNumberBox>Sayi Kutucugu</StiNumberBox>
     <StiOnlineMap>Online Harita</StiOnlineMap>
     <StiOverlayBand>Dağılım</StiOverlayBand>
@@ -657,6 +697,7 @@
     <StiPivotSummary>Dayanak Özet</StiPivotSummary>
     <StiPivotTable>Dayanak Tablo</StiPivotTable>
     <StiProgress>İlerleme</StiProgress>
+    <StiRangeSelector>Aralık Seçici</StiRangeSelector>
     <StiRectanglePrimitive>Dikdörtgen</StiRectanglePrimitive>
     <StiRegionMap>Bölge Haritası</StiRegionMap>
     <StiReport>Rapor</StiReport>
@@ -668,6 +709,7 @@
     <StiShape>Şekil</StiShape>
     <StiSignature>İmza</StiSignature>
     <StiSingleSelection>Tek Secim</StiSingleSelection>
+    <StiSlider>Kaydırıcı</StiSlider>
     <StiSparkline>Küçük Resim</StiSparkline>
     <StiSubReport>Alt-Rapor</StiSubReport>
     <StiSystemText>Sistem Metni</StiSystemText>
@@ -708,6 +750,7 @@
     <ClearFilterFrom>'{0}' filtresini temizle</ClearFilterFrom>
     <ColorScale>Renk Skalası</ColorScale>
     <ColumnInteractions>Sütun Etkileşimleri</ColumnInteractions>
+    <CreateDataBinding>Veri Bağlama Oluştur</CreateDataBinding>
     <CustomFilter>&amp; Özel ve Filtre</CustomFilter>
     <DashboardsNotSupportedIntheWPFDesigner>Kontrol Panelleri WPF Designer'da desteklenmez.</DashboardsNotSupportedIntheWPFDesigner>
     <DataBars>Veri Çubukları</DataBars>
@@ -724,6 +767,7 @@
     <DrillDownSelected>Detaylandırma Seçildi</DrillDownSelected>
     <DrillUp>Özetle</DrillUp>
     <DuplicateField>Yinelenen Alan</DuplicateField>
+    <EditDataBinding>Veri Bağlamasını Düzenle</EditDataBinding>
     <EditExpression>İfadeyi Düzenle</EditExpression>
     <EditField>Alanı Düzenle</EditField>
     <EmptyDashboardFooter>Araç Kutusundan veya Kütüphaneden Veri Sürükle &amp; bırak</EmptyDashboardFooter>
@@ -746,6 +790,8 @@
     <NewMeasure>Yeni Ölçü</NewMeasure>
     <NoRanges>Aralık Yok</NoRanges>
     <NoResult>Sonuç Yok</NoResult>
+    <NResult>{0} sonuç</NResult>
+    <NResults>{0} sonuç</NResults>
     <NSelected>{0} seçildi</NSelected>
     <Nulls>(Boşlar)</Nulls>
     <NumberFilters>Numara Filtreleri</NumberFilters>
@@ -913,6 +959,7 @@
   </Dialogs>
   <Editor>
     <AllowSQLFormatting>SQL Biçimlendirmesine İzin Ver</AllowSQLFormatting>
+    <AutomaticallyGeneratedExpression>Bu otomatik olarak oluşturulmuş bir ifadedir.</AutomaticallyGeneratedExpression>
     <BetweenMetrics>1 ile 10 arasında seçilebilir.</BetweenMetrics>
     <CantFind>Aradığınız veri bulunamadı.</CantFind>
     <CollapseToDefinitions>Tanımlara Daralt</CollapseToDefinitions>
@@ -1086,6 +1133,7 @@
     <MultipleFiles>Birden Çok Dosya</MultipleFiles>
     <NoMoreThan>Daha Fazlası Yok</NoMoreThan>
     <OpenAfterExport>Dışa Aktardıktan Sonra Aç</OpenAfterExport>
+    <Ordered>Sıralı</Ordered>
     <PdfACompliance>PDF / A Uyumu</PdfACompliance>
     <PrintingReport>Yazdırma Raporu</PrintingReport>
     <RemoveEmptySpaceAtBottom>Sayfanın Altındaki Boş Alanı Kaldır</RemoveEmptySpaceAtBottom>
@@ -1256,7 +1304,7 @@
     <AddLevel>Seviye Ekle</AddLevel>
     <AssignExpression>İfadeyi Ata</AssignExpression>
     <BreakIfTrue>True(Doğru) ise Kes</BreakIfTrue>
-    <BreakIfTrueToolTip>Geçerli olanın yerine getirilmesi durumunda koşul işlemeyi kes</BreakIfTrueToolTip>
+    <BreakIfTrueToolTip>Geçerli olanın yerine getirilmesi durumunda koşul işlemeyi kes.</BreakIfTrueToolTip>
     <ChangeBorder>Kenarlığı Değiştir...</ChangeBorder>
     <ChangeFont>Fontu Değiştir...</ChangeFont>
     <ComponentIsEnabled>Bileşen Aktif</ComponentIsEnabled>
@@ -1278,6 +1326,7 @@
     <AccessToken>Erişim token ı</AccessToken>
     <AccountKey>Hesap Anahtarı</AccountKey>
     <AccountName>Hesap Adı</AccountName>
+    <AnyoneWithTheLink>Linke Sahip Olan Herkes</AnyoneWithTheLink>
     <AuthorizationCode>Yetkilendirme Kodu</AuthorizationCode>
     <BlobContentType>Blob İçerik Türü</BlobContentType>
     <BlobName>Blob Adı</BlobName>
@@ -1295,6 +1344,7 @@
     <FirebirdEdit>Firebird Bağlantısını Düzenle</FirebirdEdit>
     <FirebirdNew>Yeni Firebird Bağlantısı</FirebirdNew>
     <FirstRowIsHeader>İlk Satır Üst Kısım</FirstRowIsHeader>
+    <GeneralAccess>Genel Erişim</GeneralAccess>
     <GetAuthorizationCode>Yetkilendirme kodunu al</GetAuthorizationCode>
     <GetTokens>Token Al</GetTokens>
     <GisEdit>GIS Verilerisi Düzenle</GisEdit>
@@ -1333,6 +1383,7 @@
     <RefreshToken>Token ı Yenile</RefreshToken>
     <RelationDirection>Bağlantı Yönlendirme:</RelationDirection>
     <ReportConnections>Rapor Bağlantıları</ReportConnections>
+    <Restricted>Kısıtlı</Restricted>
     <SelectData>Veri Seç</SelectData>
     <ServiceAccountKeyFile>Hizmet Hesabı Anahtar Dosyası</ServiceAccountKeyFile>
     <SpreadsheetId>E-Tablo Kimliği</SpreadsheetId>
@@ -1365,6 +1416,7 @@
     <CompilingReport>Rapor Derleme</CompilingReport>
     <CopyPropertyName>Özellik Adını Kopyala</CopyPropertyName>
     <DockingPanels>Paneller</DockingPanels>
+    <Four>Dört</Four>
     <HtmlPreview>HTML Önizlemesi</HtmlPreview>
     <JsPreview>JS Önizlemesi</JsPreview>
     <labelPleaseSelectTypeOfInterface>Lütfen, arayüz türünü seçin</labelPleaseSelectTypeOfInterface>
@@ -1462,6 +1514,8 @@
     <SortItems>Öğeleri Sırala</SortItems>
     <Synchronize>Senkronize</Synchronize>
     <SynchronizeHint>Veri Deposu'nun içeriğini ve Sözlüğün içeriğini senkronize eder</SynchronizeHint>
+    <TableEdit>Tabloyu Düzenle</TableEdit>
+    <TableNew>Yeni Tablo</TableNew>
     <TextDropDataFileHere>Buraya Veri Dosyasını Bırakın</TextDropDataFileHere>
     <TextDropFileHere>Buraya Dosyayı Bırakın</TextDropFileHere>
     <TextDropImageHere>Resim Dosyasını BurayaBırakın</TextDropImageHere>
@@ -1505,6 +1559,7 @@
     <SampleText>Örnek Metin</SampleText>
     <TextFormat>Metin Biçimi</TextFormat>
     <Time>Saat</Time>
+    <TimeFormat>Zaman Formatı</TimeFormat>
     <title>Biçim</title>
     <UseAbbreviation>Kısaltma Kullan</UseAbbreviation>
     <UseGroupSeparator>Grup Ayırıcıyı Kullan</UseGroupSeparator>
@@ -1691,6 +1746,7 @@
     <pageExpression>İfade</pageExpression>
     <pageSummary>Özet</pageSummary>
     <pageSystemVariable>Sistem Değişkeni</pageSystemVariable>
+    <RunningAverage>Çalışan Ortalama</RunningAverage>
     <RunningTotal>Çalışma Toplam</RunningTotal>
     <SummaryRunning>Özet Çalışma</SummaryRunning>
     <SummaryRunningByColumn>Kolon</SummaryRunningByColumn>
@@ -1959,6 +2015,7 @@
     <StiPdfDigitalSignatureElement>Bu öğe rapor PDF'e aktarilirken dijital imza ve sertifika öğeleri için yer belirlemek icin kullanılir.</StiPdfDigitalSignatureElement>
     <StiPivotTableElement>Pivot tablo elemanı, bir tablo olarak yapılandırılmış veri gösterimi için kullanılır.</StiPivotTableElement>
     <StiProgressElement>Eleman, giriş verilerinin oranını gösterir. Farklı modlarda sunulabilir - pasta, çörek ve çubuk grafiklerdir.</StiProgressElement>
+    <StiRangeSelectorElement>Bu bileşen, bir ölçek veya zaman çizelgesinde bir değer aralığı seçmek için kullanılır. Kullanıcıların aralığın minimum ve maksimum sınırlarını görsel olarak tanımlamasına olanak tanır.</StiRangeSelectorElement>
     <StiRectanglePrimitive>Bu bileşen dikdörtgenler çıkarmak için kullanılır.</StiRectanglePrimitive>
     <StiRegionMapElement> Bu öğe, coğrafi olarak hedeflenmiş verileri görüntülemek için kullanılır.</StiRegionMapElement>
     <StiReportSummaryBand>Bu grup, raporların tamamında özet çıktıları için kullanılır. Bir raporun sonunda bir kez çıktı verilir.</StiReportSummaryBand>
@@ -2119,6 +2176,8 @@
     <ReportOpen>Tasarımcıda bir rapor açın.</ReportOpen>
     <ReportPreview>Düzenlenen bir raporu görüntüleyende önizleyin.</ReportPreview>
     <ReportSave>Düzenlenmiş raporu kaydedin.</ReportSave>
+    <ScriptEvalAccess1>Bu belge Script Eval kullanmaktadır. Belge güvenilir bir kaynaktan geliyorsa, erişmek için "Aç" düğmesine tıklayabilirsiniz.</ScriptEvalAccess1>
+    <ScriptEvalAccess2>Belgenin kaynağından emin değilseniz ancak yine de görüntülemek istiyorsanız, "Güvenli modda aç" düğmesine tıklayabilirsiniz. Bu durumda, Script Eval yok sayılır ve çalıştırılmaz.</ScriptEvalAccess2>
     <SelectAll>Geçerli sayfadaki tüm bileşenleri seçin.</SelectAll>
     <SelectUILanguage>UI dilini seçin.</SelectUILanguage>
     <SendToBack>Seçilen bileşeni diğer bileşenlere göre arkaya taşıyın.</SendToBack>
@@ -2293,6 +2352,7 @@
     <menuEditDataTransformationNew>Yeni Veri Dönüşümü...</menuEditDataTransformationNew>
     <menuEditDelete>&amp;Sil</menuEditDelete>
     <menuEditEdit>Düzenle</menuEditEdit>
+    <menuEditEditInDesigner>Tasarımcıda Düzenle</menuEditEditInDesigner>
     <menuEditFunctionNew>Yeni Fonksiyon...</menuEditFunctionNew>
     <menuEditImportRelations>İçe Aktarım İlişkileri...</menuEditImportRelations>
     <menuEditPaste>&amp;Yapıştır </menuEditPaste>
@@ -2486,6 +2546,7 @@
     <AuthUserNameOrPasswordIsNotCorrect>Kullanıcı adı (E-posta) veya şifre yanlış!</AuthUserNameOrPasswordIsNotCorrect>
     <AuthUserNameShouldLookLikeAnEmailAddress>Kullanıcı adı E-posta adresine benzer olmalıdır!</AuthUserNameShouldLookLikeAnEmailAddress>
     <AuthWorkspaceNameAlreadyInUse>Çalışma alanı adı zaten kullanımda!</AuthWorkspaceNameAlreadyInUse>
+    <CertificateNotFound>Sertifika Bulunamadı!</CertificateNotFound>
     <CommandTimeOut>Komutu işlemek için bekleme süresi doldu!</CommandTimeOut>
     <Congratulations>Tebrikler!</Congratulations>
     <DeveloperInformation>Geliştirici Bilgileri</DeveloperInformation>
@@ -2729,6 +2790,7 @@
     <LinearScaleBarCategory>Doğrusal Ölçek Çubuğu</LinearScaleBarCategory>
     <LinearScaleCategory>Doğrusal Ölçek</LinearScaleCategory>
     <ListBoxCategory>Liste Kutusu</ListBoxCategory>
+    <MacroDataCategory>Makro Verileri</MacroDataCategory>
     <MainCategory>Ana</MainCategory>
     <MarkerCategory>İşaretleyici</MarkerCategory>
     <MathFormulaCategory>Matematik Formülü</MathFormulaCategory>
@@ -3102,9 +3164,19 @@
     <StiDashboardContentAlignmentRight>Sağ</StiDashboardContentAlignmentRight>
     <StiDashboardContentAlignmentStretchX>X'i Uzat</StiDashboardContentAlignmentStretchX>
     <StiDashboardContentAlignmentStretchXY>XY'yi Uzat</StiDashboardContentAlignmentStretchXY>
+    <StiDataJoinTypeCross>Çapraz</StiDataJoinTypeCross>
+    <StiDataJoinTypeFull>Tam</StiDataJoinTypeFull>
+    <StiDataJoinTypeInner>İç</StiDataJoinTypeInner>
+    <StiDataJoinTypeLeft>Sol</StiDataJoinTypeLeft>
+    <StiDataJoinTypeRight>Sağ</StiDataJoinTypeRight>
     <StiDateSelectionModeAutoRange>Otomatik Aralıklandır</StiDateSelectionModeAutoRange>
     <StiDateSelectionModeRange>Aralık</StiDateSelectionModeRange>
     <StiDateSelectionModeSingle>Tek</StiDateSelectionModeSingle>
+    <StiDateTimeStepAggregationAverage>Ortalama</StiDateTimeStepAggregationAverage>
+    <StiDateTimeStepAggregationCount>Sayım</StiDateTimeStepAggregationCount>
+    <StiDateTimeStepAggregationMax>Maksimum</StiDateTimeStepAggregationMax>
+    <StiDateTimeStepAggregationMin>Minimum</StiDateTimeStepAggregationMin>
+    <StiDateTimeStepAggregationSum>Toplam</StiDateTimeStepAggregationSum>
     <StiDateTimeTypeDate>Tarih</StiDateTimeTypeDate>
     <StiDateTimeTypeDateAndTime>Tarih Saat</StiDateTimeTypeDateAndTime>
     <StiDateTimeTypeTime>Saat</StiDateTimeTypeTime>
@@ -3170,6 +3242,8 @@
     <StiFilterDataTypeString>Dizi</StiFilterDataTypeString>
     <StiFilterEngineReportEngine>Rapor Motoru</StiFilterEngineReportEngine>
     <StiFilterEngineSQLQuery>SQL Sorgu</StiFilterEngineSQLQuery>
+    <StiFilterInclusionModeAlways>Her Zaman</StiFilterInclusionModeAlways>
+    <StiFilterInclusionModeSelectionOnly>Sadece Seçim</StiFilterInclusionModeSelectionOnly>
     <StiFilterItemArgument>Bağımsız Değişken</StiFilterItemArgument>
     <StiFilterItemExpression>İfade</StiFilterItemExpression>
     <StiFilterItemValue>Değer</StiFilterItemValue>
@@ -3231,6 +3305,8 @@
     <StiImageRotationRotate180>Rotate 180° Döndür</StiImageRotationRotate180>
     <StiImageRotationRotate90CCW>90° Saate Ters Yönde Döndür</StiImageRotationRotate90CCW>
     <StiImageRotationRotate90CW>90° Saat Yönünde Döndür</StiImageRotationRotate90CW>
+    <StiIndicatorValueTypeValue>Değer</StiIndicatorValueTypeValue>
+    <StiIndicatorValueTypeValueTarget>Değer / Hedef</StiIndicatorValueTypeValueTarget>
     <StiInteractionOnClick>Yok</StiInteractionOnClick>
     <StiInteractionOnClickApplyFilter>Filtreyi Uygula</StiInteractionOnClickApplyFilter>
     <StiInteractionOnClickDrillDown>Detaylandır</StiInteractionOnClickDrillDown>
@@ -3294,6 +3370,16 @@
     <StiMarkerTypeStar7>7 Yıldız</StiMarkerTypeStar7>
     <StiMarkerTypeStar8>8 Yıldız</StiMarkerTypeStar8>
     <StiMarkerTypeTriangle>Üçgen</StiMarkerTypeTriangle>
+    <StiNavigatorButtonVisibilityCancel>İptal</StiNavigatorButtonVisibilityCancel>
+    <StiNavigatorButtonVisibilityDelete>Sil</StiNavigatorButtonVisibilityDelete>
+    <StiNavigatorButtonVisibilityEdit>Düzenle</StiNavigatorButtonVisibilityEdit>
+    <StiNavigatorButtonVisibilityFirst>İlk</StiNavigatorButtonVisibilityFirst>
+    <StiNavigatorButtonVisibilityInsert>Ekle</StiNavigatorButtonVisibilityInsert>
+    <StiNavigatorButtonVisibilityLast>Son</StiNavigatorButtonVisibilityLast>
+    <StiNavigatorButtonVisibilityNext>Sonraki</StiNavigatorButtonVisibilityNext>
+    <StiNavigatorButtonVisibilityPost>Gönder</StiNavigatorButtonVisibilityPost>
+    <StiNavigatorButtonVisibilityPrior>Önceki</StiNavigatorButtonVisibilityPrior>
+    <StiNavigatorButtonVisibilityRefresh>Yenile</StiNavigatorButtonVisibilityRefresh>
     <StiNestedFactorHigh>Yüksek</StiNestedFactorHigh>
     <StiNestedFactorLow>Düşük</StiNestedFactorLow>
     <StiNestedFactorNormal>Normal</StiNestedFactorNormal>
@@ -3324,6 +3410,8 @@
     <StiOrientationVertical>Dikey</StiOrientationVertical>
     <StiPageOrientationLandscape>Yatay</StiPageOrientationLandscape>
     <StiPageOrientationPortrait>Dikey</StiPageOrientationPortrait>
+    <StiParametersDisplayModeDialog>İletişim Kutusu</StiParametersDisplayModeDialog>
+    <StiParametersDisplayModePanel>Panel</StiParametersDisplayModePanel>
     <StiPdfDigitalSignatureAppearanceTypeDraw>Çiz</StiPdfDigitalSignatureAppearanceTypeDraw>
     <StiPdfDigitalSignatureAppearanceTypeImage>Resim</StiPdfDigitalSignatureAppearanceTypeImage>
     <StiPdfDigitalSignatureAppearanceTypeNone>Yok</StiPdfDigitalSignatureAppearanceTypeNone>
@@ -3376,6 +3464,10 @@
     <StiProgressElementModeCircle>Daire</StiProgressElementModeCircle>
     <StiProgressElementModeDataBars>VeriÇubukları</StiProgressElementModeDataBars>
     <StiProgressElementModePie>Pasta</StiProgressElementModePie>
+    <StiProgressValueTypeNone>Hiçbiri</StiProgressValueTypeNone>
+    <StiProgressValueTypePercentage>Yüzde</StiProgressValueTypePercentage>
+    <StiProgressValueTypeValue>Değer</StiProgressValueTypeValue>
+    <StiProgressValueTypeValueTarget>Değer / Hedef</StiProgressValueTypeValueTarget>
     <StiQRCodeBodyShapeTypeCircle>Çember</StiQRCodeBodyShapeTypeCircle>
     <StiQRCodeBodyShapeTypeCircular>Dairesel</StiQRCodeBodyShapeTypeCircular>
     <StiQRCodeBodyShapeTypeDiamond>Elmas</StiQRCodeBodyShapeTypeDiamond>
@@ -3396,6 +3488,9 @@
     <StiQRCodeEyeBallShapeTypeZebraVertical>Zebra Dikey</StiQRCodeEyeBallShapeTypeZebraVertical>
     <StiRadarStyleXFCircle>Daire</StiRadarStyleXFCircle>
     <StiRadarStyleXFPolygon>Poligon</StiRadarStyleXFPolygon>
+    <StiRangeSelectorSnapModeNone>Hiçbiri</StiRangeSelectorSnapModeNone>
+    <StiRangeSelectorSnapModeStep>Adım</StiRangeSelectorSnapModeStep>
+    <StiRangeSelectorSnapModeTick>Tik</StiRangeSelectorSnapModeTick>
     <StiReportCacheModeAuto>Otomatik</StiReportCacheModeAuto>
     <StiReportCacheModeOff>Kapalı</StiReportCacheModeOff>
     <StiReportCacheModeOn>Açık</StiReportCacheModeOn>
@@ -3421,6 +3516,7 @@
     <StiSeriesLabelsValueTypeSeriesTitleArgument>Seri Başlığı - Bağımsız Değişken</StiSeriesLabelsValueTypeSeriesTitleArgument>
     <StiSeriesLabelsValueTypeSeriesTitleValue>Seri Başlığı - Değişken</StiSeriesLabelsValueTypeSeriesTitleValue>
     <StiSeriesLabelsValueTypeTag>Etiket</StiSeriesLabelsValueTypeTag>
+    <StiSeriesLabelsValueTypeTotal>Toplam</StiSeriesLabelsValueTypeTotal>
     <StiSeriesLabelsValueTypeValue>Değişken</StiSeriesLabelsValueTypeValue>
     <StiSeriesLabelsValueTypeValueArgument>Değişken - Bağımsız Değişken</StiSeriesLabelsValueTypeValueArgument>
     <StiSeriesLabelsValueTypeWeight>Ağırlık</StiSeriesLabelsValueTypeWeight>
@@ -3691,6 +3787,7 @@
     <Advanced>İleri Seviye</Advanced>
     <AggregateFunction>Toplama İşlevi</AggregateFunction>
     <AggregateFunctions>Toplama İşlevleri</AggregateFunctions>
+    <Aggregation>Toplama</Aggregation>
     <Alias>Diğer Ad</Alias>
     <Alignment>Hizalama</Alignment>
     <AllowApplyBorderColor>AKenarlık Rengi Uygulamasına İzin Ver</AllowApplyBorderColor>
@@ -3703,6 +3800,8 @@
     <AllowExpressions>İfadelere İzin Ver</AllowExpressions>
     <AllowHtmlTags>HTML Etiketlerine İzin Ver</AllowHtmlTags>
     <AllowNull>Boşluğa izin ver</AllowNull>
+    <AllowScriptsInExpressions>İfadelerde Komut Dosyalarına İzin Ver</AllowScriptsInExpressions>
+    <AllowScriptsToRun>Komut Dosyalarının Çalıştırılmasına İzin Ver</AllowScriptsToRun>
     <AllowSeries>Serilere İzin Ver</AllowSeries>
     <AllowSeriesElements>Seri Öğelerine İzin Ver</AllowSeriesElements>
     <AllowSorting>Sıralamaya İzin Ver</AllowSorting>
@@ -3902,6 +4001,7 @@
     <DataBarsNegative>Veri Çubukları Negatif</DataBarsNegative>
     <DataBarsOverlapped>Veri Çubukları Üst Üste Bindi</DataBarsOverlapped>
     <DataBarsPositive>Veri Çubukları Pozitif</DataBarsPositive>
+    <DataBinding>Veri Bağlama</DataBinding>
     <DataBindings>Veri Bağlantıları</DataBindings>
     <DataCells>Veri Hücreler</DataCells>
     <DataColor>Veri Reng</DataColor>
@@ -3992,6 +4092,7 @@
     <ExportAsImage>Resim olarak dışa aktar</ExportAsImage>
     <ExportSettings>Ayarları Dışa Aktar</ExportSettings>
     <Expression>İfade</Expression>
+    <Extended>Genişletilmiş</Extended>
     <ExtensionDigit>Dahili Rakam</ExtensionDigit>
     <EyeBallBrush>Yuvarlar Göz Fırçası</EyeBallBrush>
     <EyeBallShape>Yuvarlar Göz Şekli</EyeBallShape>
@@ -4000,8 +4101,10 @@
     <FaqPage>SSS Sayfası</FaqPage>
     <Field>Alan</Field>
     <FieldIs>Alan</FieldIs>
+    <Fields>Alanlar</Fields>
     <Fifth>Beşinci</Fifth>
     <File>Dosya </File>
+    <FileId>Dosya ID</FileId>
     <Fill>Dolgu</Fill>
     <FillColor>Dolgu Rengi</FillColor>
     <Filter>Filtre</Filter>
@@ -4010,6 +4113,7 @@
     <FilterMode>Filtre Modu</FilterMode>
     <FilterOn>Filtre Açık</FilterOn>
     <Filters>Filtreler</Filters>
+    <FiltersTarget>Filtre Hedefi</FiltersTarget>
     <First>Birinci</First>
     <FirstTabOffset>İlk Sekme Ofseti</FirstTabOffset>
     <FixedHeight>Sabit Yükseklik</FixedHeight>
@@ -4144,6 +4248,7 @@
     <ImageURL> Resim URL'si</ImageURL>
     <ImageVertAlignment>Görüntü Dikey Hizalama</ImageVertAlignment>
     <ImportRelations>İlişkileri İçe Aktar </ImportRelations>
+    <InclusionMode>Dahil Etme Modu</InclusionMode>
     <Increment>Artış</Increment>
     <Indent>Girinti </Indent>
     <Indicator>Gösterge</Indicator>
@@ -4172,6 +4277,7 @@
     <Item>Öğe</Item>
     <ItemHeight>Öğe Yüksekliği</ItemHeight>
     <Items>Öğeler</Items>
+    <JoinType>Birleşim Türü</JoinType>
     <KeepChildTogether>Alt Öğeleri Birleştir</KeepChildTogether>
     <KeepCrossTabTogether>Çapraz Sekmeyi Birleştir</KeepCrossTabTogether>
     <KeepDetails>Ayrıntıları Koru</KeepDetails>
@@ -4287,6 +4393,7 @@
     <MaximumValue>Maksimum Değer</MaximumValue>
     <MaxLength>Maksimum Uzunluk</MaxLength>
     <MaxNumberOfLines>Maksimum Satır Sayısı</MaxNumberOfLines>
+    <MaxSelectedItems>Maksimum Seçili Öğeler</MaxSelectedItems>
     <MaxSize>Maksimum Boyut</MaxSize>
     <MaxValue>Maksimum Değer</MaxValue>
     <MaxWidth>Maksimum Genişlik</MaxWidth>
@@ -4315,6 +4422,7 @@
     <Multiline>Çok Satırlı</Multiline>
     <MultipleFactor>Çoklu Faktör</MultipleFactor>
     <MultipleInitialization>Çoklu Başlatma</MultipleInitialization>
+    <MyFunction>Fonksiyonum</MyFunction>
     <Name>Ad </Name>
     <NameDataColumn>Ad Veri Sütunu</NameDataColumn>
     <NameInSource>Kaynaktaki İsim</NameInSource>
@@ -4350,6 +4458,7 @@
     <OnDataManipulation>Veri İşleminde</OnDataManipulation>
     <OnePointZoom>Bir Nokta Yakınlaştırma</OnePointZoom>
     <OnHover>Vurguluyken</OnHover>
+    <OnlineMapAdminLevel>İdari Seviye</OnlineMapAdminLevel>
     <OnlyText>Yalnızca Metin</OnlyText>
     <OnSelect>Seçili iken</OnSelect>
     <Opacity>Opaklık</Opacity>
@@ -4373,6 +4482,7 @@
     <ParameterAlignment>Parametre Hizalaması</ParameterAlignment>
     <Parameters>Parametreler</Parameters>
     <ParametersDateFormat>Tari Formatı Parametlerleri</ParametersDateFormat>
+    <ParametersDisplayMode>Parametre Görüntüleme Modu</ParametersDisplayMode>
     <ParametersOrientation>Parametrelerin Oryantasyonu</ParametersOrientation>
     <ParameterWidth>Parametre Genişliği</ParameterWidth>
     <ParentColumns>Üst Sütunlar</ParentColumns>
@@ -4388,6 +4498,7 @@
     <Placeholder>Yer Tutucu</Placeholder>
     <Placement>Yerleşim </Placement>
     <PlaceOnToolbox>Araç Kutusuna Yerleştirin</PlaceOnToolbox>
+    <Platform>Platform</Platform>
     <PointAtCenter>Merkez Nokta</PointAtCenter>
     <Position>Konum</Position>
     <Positive>Pozitif</Positive>
@@ -4399,6 +4510,7 @@
     <PreviewSettings>Önizleme Ayarları</PreviewSettings>
     <Printable>Yazdırılabilir</Printable>
     <PrintAtBottom>Altta Yazdır</PrintAtBottom>
+    <PrintDialogType>Yazdırma İletişim Kutusu Türü</PrintDialogType>
     <PrinterName>Yazıcı Adı</PrinterName>
     <PrinterSettings>Yazıcı Ayarları</PrinterSettings>
     <PrintHeadersFootersFromPreviousPage>Önceki Sayfadaki Üst ve Alt Kısımları Yazdır</PrintHeadersFootersFromPreviousPage>
@@ -4490,8 +4602,11 @@
     <Scale>Ölçek</Scale>
     <ScaleHor>Yatay Ölçek</ScaleHor>
     <ScriptLanguage>Script Dili</ScriptLanguage>
+    <ScriptTimeout>Komut Dosyası Zaman Aşımı</ScriptTimeout>
     <ScrollTime>Kaydırma Zamanı</ScrollTime>
     <Second>Saniye</Second>
+    <SegmentCount>Segment Sayısı</SegmentCount>
+    <SegmentIndex>Segment Endeksi</SegmentIndex>
     <SegmentPerHeight>Yükseklik Başına Segment</SegmentPerHeight>
     <SegmentPerWidth>Genişlik Başına Segment</SegmentPerWidth>
     <SelectedBackColor>Seçilmiş Arka Renk</SelectedBackColor>
@@ -4591,6 +4706,7 @@
     <SkipValues>Değerleri Atla</SkipValues>
     <SkipValuesObj>Değerleri Atla</SkipValuesObj>
     <Smoothing>Yumuşatma</Smoothing>
+    <SnapMode>Snap Modu</SnapMode>
     <Sort>Sıralama</Sort>
     <SortBy>...ile Sırala</SortBy>
     <SortDirection>Yön Sırala</SortDirection>
@@ -4604,6 +4720,7 @@
     <Spacing>Boşluk</Spacing>
     <Sparkline>Sparkline</Sparkline>
     <SqlCommand>Sql Komutu</SqlCommand>
+    <Standard>Standart</Standard>
     <StartAngle>Başlangıç ​​Açısı</StartAngle>
     <StartCap>Başlığı Başlat</StartCap>
     <StartColor>Başlatma Rengi</StartColor>
@@ -4965,6 +5082,8 @@
     <Charts>Grafikler</Charts>
     <Checking>Kontrol Ediliyor...</Checking>
     <ClickForMoreDetails>Daha Fazla Detay için Tıklayın</ClickForMoreDetails>
+    <ClickHereToCreateNewCondition>yeni bir durum yaratmak</ClickHereToCreateNewCondition>
+    <ClickHereToCreateNewField>yeni bir alan yaratmak</ClickHereToCreateNewField>
     <CollapseAll>Tümünü Daralt</CollapseAll>
     <Collection>Koleksiyon</Collection>
     <CompilationAccess>Derleme Erişimi</CompilationAccess>
@@ -4976,8 +5095,11 @@
     <CreateNewReportPageForm>Yeni bir rapor oluşturun, sayfa ekleyin, form ekleyin</CreateNewReportPageForm>
     <CreatingReport>Rapor Oluşturuluyor</CreatingReport>
     <CrossBands>Çapraz </CrossBands>
+    <CustomRange>Özel Aralık</CustomRange>
+    <DashboardOnly>Sadece Pano ve Veri Dönüştürme</DashboardOnly>
     <Dialogs>Diyaloglar</Dialogs>
     <EditStyles>Stilleri Düzenle</EditStyles>
+    <EnableCacheAllDataMode>'Tüm Veri Önbelleği' modunu etkinleştir</EnableCacheAllDataMode>
     <Enhancements>Donanım</Enhancements>
     <EnterDataManually>Verileri manuel olarak girin</EnterDataManually>
     <Errors>Hatalar</Errors>
@@ -5022,6 +5144,7 @@
     <LabelNestedLevel> İç İçe Seviye:</LabelNestedLevel>
     <LabelPassword>Şifre:</LabelPassword>
     <LabelPixels>Pikseller:</LabelPixels>
+    <LabelPlatform>Platform .NET ise C#, JS ise JavaScript kullanılacaktır.</LabelPlatform>
     <LabelQueryTimeout> Sorgu Zaman Aşımı:</LabelQueryTimeout>
     <LabelSystemVariable>Sistem Değişkeni:</LabelSystemVariable>
     <LabelTableOfContentsHint>Lütfen içindekiler tablosunun oluşturulması gereken bileşenleri kontrol edin. Bir bileşen, bir başlık düzeyine eşittir.</LabelTableOfContentsHint>
@@ -5055,6 +5178,7 @@
     <RestartDesigner>Rapor tasarımcısını yeniden başlatmanız gerekiyor</RestartDesigner>
     <SaveReportPagesOrFormsFromReport> Raporu, sayfaları veya formları kaydedin</SaveReportPagesOrFormsFromReport>
     <SavingReport>Raporun Kaydediyor</SavingReport>
+    <ScriptEvalAccess>Script Eval Erişimi</ScriptEvalAccess>
     <SecondPass>İkinci Geçiş</SecondPass>
     <Shapes>Şekiller </Shapes>
     <ShowOnParametersPanel>Parametreleri Panelde Göster</ShowOnParametersPanel>
@@ -5066,6 +5190,7 @@
     <StiGradientBrush>Gradyan</StiGradientBrush>
     <StiHatchBrush>Kapak</StiHatchBrush>
     <StiSolidBrush>Koyu</StiSolidBrush>
+    <StoresPrintingOutputToAFile>Çıktıyı Dosyaya Kaydediyor</StoresPrintingOutputToAFile>
     <StoreUserFirstLastNameInReportAuthor>Kullanıcının Adını ve Soyadını 'Rapor Yazarı'na kaydet</StoreUserFirstLastNameInReportAuthor>
     <StoreUserNameInReportAuthor>'Kullanıcı Adı'nı 'Rapor Yazarı'na kaydet</StoreUserNameInReportAuthor>
     <StyleBad>Kötü</StyleBad>
@@ -5244,10 +5369,12 @@
     <UseBrush>Fırça Kullan</UseBrush>
   </Signature>
   <StimulAI>
+    <AskStimulAI>Stimul AI'ya Sor</AskStimulAI>
     <ChangedWithAI>Stimul AI ile değiştirildi</ChangedWithAI>
     <CheckExpressionSuccess>Belirtilen ifadede herhangi bir sorun bulunamadı.</CheckExpressionSuccess>
     <CheckQuery>Sorguyu Kontrol Et</CheckQuery>
     <CheckWithStimulAI>Stimul AI ile kontrol et</CheckWithStimulAI>
+    <ClickToPreview>Önizleme için tıklayın</ClickToPreview>
     <ConnectionStringExampleWithAI>Stimul AI ile bağlantı dizesi örneği</ConnectionStringExampleWithAI>
     <ConnectionStringTesting>Bağlantı dizesi testi</ConnectionStringTesting>
     <ExplainQuery>Sorguyu Açıkla</ExplainQuery>
@@ -5271,6 +5398,7 @@
     <LineRoman>Geçerli satır numarasını Roma rakamlarıyla döndürür.</LineRoman>
     <LineThrough>Geçerli satır numarasını döndürür (1'den başlar). Sayı hesaplanırken, tüm gruplamalar yoksayılır ve numaralandırma yazdırmanın başından itibaren başlar.</LineThrough>
     <PageCopyNumber>Sayfanın geçerli bir kopyasını döndürür (1'den başlar).</PageCopyNumber>
+    <PageLine>Sayfadaki mevcut satır numarasını döndürür (1'den başlar).</PageLine>
     <PageNofM>"N'nin geçerli sayfa numarası ve M'nin bir raporun TotalPageCount'u olduğu" M'nin N Sayfasını "gösteren yerelleştirilmiş bir dize döndürür. </PageNofM>
     <PageNofMThrough>"N'nin geçerli sayfa numarası ve M'nin bir raporun TotalPageCount'u olduğu" M'nin Sayfa Sayfası "nı gösteren yerel bir dize döndürür. PageNofMThrough hesaplanırken, ResetPageNumber'ın tüm özellikleri yoksayılır ve numaralandırma bir raporun başından başlar.</PageNofMThrough>
     <PageNumber>Geçerli sayfa numarasını döndürür (1'den başlar).</PageNumber>
@@ -5400,6 +5528,7 @@
     <Title>Stimulsoft Demosuna Hoş Geldiniz</Title>
   </WelcomeScreen>
   <Wizards>
+    <AIGeneratedReport>AI ile Üretilmiş Rapor</AIGeneratedReport>
     <BlankDashboard>Boş Kontrol Paneli</BlankDashboard>
     <BlankForm>Boş Form</BlankForm>
     <BlankReport>Boş Rapor</BlankReport>
@@ -5415,8 +5544,10 @@
     <DataSource>Veri Kaynağı</DataSource>
     <DataSources>Veri Kaynakları</DataSources>
     <DefaultThemes>Varsayılan Temalar</DefaultThemes>
+    <Examples>Örnekler</Examples>
     <Filters>Filtreler</Filters>
     <FromReportTemplate>Rapor Şablonundan</FromReportTemplate>
+    <GenerateDataWithAI>AI ile Veri Üret</GenerateDataWithAI>
     <GetData>Veri Al</GetData>
     <groupCreateNewDashboard>Yeni Bir Pano Oluşturun</groupCreateNewDashboard>
     <groupCreateNewPageOrForm>Yeni Bir Sayfa veya Form Oluşturun</groupCreateNewPageOrForm>
@@ -5467,8 +5598,10 @@
     <RunWizard>Sihirbazı Çalıştır</RunWizard>
     <SelectColumns>Sütunları Seç</SelectColumns>
     <SelectTemplate>Şablon</SelectTemplate>
+    <SelectTypeOfLayout>Lütfen bir düzen türü seçin</SelectTypeOfLayout>
     <Sort>Sırala</Sort>
     <StandardReport>Standart Rapor</StandardReport>
+    <SuggestWithAI>AI ile Öner</SuggestWithAI>
     <Themes>Şablonlar</Themes>
     <title>Yeni Rapor</title>
     <Totals>Toplamlar</Totals>

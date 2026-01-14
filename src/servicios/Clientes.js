@@ -23,3 +23,13 @@ export const leerTelefonos = () => {
     const url = `${url_base}/api/clientes/telefonos/${empresa}`
     return axios.get(url)
 }
+
+
+export const leerTelefonosVencidos = () => {
+    const sesion = getSession();
+    const empresa = sesion.empresa.ariges;
+    const ent = Entorno.gentEnv()
+    const url_base = ent.API_URL
+    const url = `${url_base}/api/clientes/telefonos/vencidos/${empresa}`
+    return axios.get(url)
+}

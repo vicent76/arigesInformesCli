@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { AppBar, TextField, Grid, IconButton, Toolbar, Tooltip, Typography, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
+import { TextField, Grid, Typography, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
 import { MenuLateral } from '../../componentes/MenuLateral/MenuLateral';
-import TelefonosDesktop from './TelefonosDesktop';
+import TelefonosDesktop from './TelefonosPlazosDesktop';
 import { leerCliente, leerTelefonos } from '../../servicios/Clientes';
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
 import "dayjs/locale/es";
@@ -12,9 +11,8 @@ import { MensajeError } from '../../utilidades/TratamientoErrores'
 import { ErrorGeneral } from '../../componentes/ErrorGeneral/ErrorGeneral';
 import { MensajeInformativo } from '../../componentes/MensajeInformativo/MensajeInformativo';
 import { GeneralCtx } from '../../contextos/GeneralContext'
-import { leerDatos } from '../../servicios/comparativa';
 
-export default function TelefonosPagina() {
+export default function TelefonosPlazosPagina() {
 
   const [open, setOpen] = useState(false);
   const [datosTelefonos, setDatosTelefonos] = useState([]);
@@ -33,7 +31,7 @@ export default function TelefonosPagina() {
   //
   const { getSession } = useContext(GeneralCtx);
 
-  const [nomEmpre, setNomempre ] = useState("");
+  const [nomEmpre, setNomempre] = useState("");
 
 
   //
@@ -153,21 +151,8 @@ export default function TelefonosPagina() {
   return (
     <>
       <MenuLateral>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <AppBar position="static" color="default">
-              <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  Telefonos
-                </Typography>
-                <IconButton size="large" onClick={openModalTelefonos} sx={{ backgroundColor: 'lightblue', color: 'black' }}>
-                  <Tooltip title="Nueva telefonos">
-                    <AddIcon />
-                  </Tooltip>
-                </IconButton>
-              </Toolbar>
-            </AppBar>
-          </Grid>
+        <Grid container spacing={2} className='fondoImagenLogin'>
+
           <Grid item xs={12}>
             {loadingTelefonos ? (
               <Typography>Cargando datos de telefonos...</Typography>
@@ -188,7 +173,7 @@ export default function TelefonosPagina() {
           <Grid container spacing={2}>
             {/* checkbox */}
             <Grid item xs={12} md={8}></Grid>
-            
+
             {/* Calendario */}
             <Grid item xs={12} md={6}>
               <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">

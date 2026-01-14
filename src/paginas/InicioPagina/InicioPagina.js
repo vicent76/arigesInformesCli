@@ -9,17 +9,35 @@ export const InicioPagina = () => {
   return (
     <>
       <MenuLateral>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Paper variant='outlined' sx={tipoPantalla === 'mobile' ? { padding: 2 } : { padding: 10 }}>
-              <Typography variant='h3'> Ariges Informes </Typography>
-              <Typography>
-                Bienvenido a la aplicación. Para acceder a las diferentes funciones puede hacer uso del menú de parte lateral. Intentando conseguir el
-                máximo espacio de trabajo, ese menú está oculto por defecto, puede desplegarlo y ocultarlo haciendo clic en el icono <IconButton><MenuIcon /></IconButton> de la parte superior izquierda
-                de la barra de tareas.
+        <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+          alignItems="center"
+          className='fondoImagenLogin'
+          sx={{
+            minHeight: '85vh', // altura completa
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#4c21e6ff',
+            padding: 2
+          }}>
+          <Grid item xs={12} md={8} sx={{ textAlign: 'center' }}>
 
-              </Typography>
-            </Paper>
+            {/* Logo sin recuadro */}
+            {/*  <Box sx={{ mb: 3 }}>
+            <img
+              src={`${process.env.PUBLIC_URL}/logo192.png`}
+              alt="Logo Arigasol"
+              style={{ maxWidth: '150px', height: 'auto' }}
+            />
+          </Box> */}
+
+            <Typography variant='h3' gutterBottom>Ariges Informes</Typography>
+            <Typography sx={{ maxWidth: 700, margin: '0 auto' }} variant='h6'>
+              Bienvenido a la aplicación. Para acceder a las diferentes funciones puede hacer uso del menú lateral.
+            </Typography>
           </Grid>
         </Grid>
       </MenuLateral>
