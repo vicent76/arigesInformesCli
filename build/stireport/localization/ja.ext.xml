@@ -84,6 +84,8 @@
     <StiComponentBoundsAreOutOfBandShort>コンポーネントが部分的にバンド外にあります。</StiComponentBoundsAreOutOfBandShort>
     <StiComponentExpressionCheckLong>'{1}'の{0}プロパティの式は評価できません！</StiComponentExpressionCheckLong>
     <StiComponentExpressionCheckShort>式を評価できません！</StiComponentExpressionCheckShort>
+    <StiComponentNameIsSystemVariableCheckLong>コンポーネント名 '{0}' がシステム変数名と競合しています。このシステム変数を使用する式は正しく機能しません。参照がコンポーネント参照に置き換えられるためです。</StiComponentNameIsSystemVariableCheckLong>
+    <StiComponentNameIsSystemVariableCheckShort>コンポーネント名がシステム変数名と競合しています。</StiComponentNameIsSystemVariableCheckShort>
     <StiComponentResourceCheckLong>コンポーネント '{1}'に指定されたリソース '{0}'がレポート辞書に見つかりませんでした。</StiComponentResourceCheckLong>
     <StiComponentResourceCheckShort>指定されたリソースが見つかりませんでした！</StiComponentResourceCheckShort>
     <StiComponentStyleIsNotFoundCheckAtPageLong>'{0}'ページに指定されたスタイルが存在しません。</StiComponentStyleIsNotFoundCheckAtPageLong>
@@ -142,6 +144,8 @@
     <StiNoNameComponentCheckShort>コンポーネントに名前がありません。</StiNoNameComponentCheckShort>
     <StiNoNamePageCheckLong>'{0}'インデックスを持つページの名前が指定されていません。ページの名前が指定されていない場合、レポートエンジンはレポートをコンパイルしません。</StiNoNamePageCheckLong>
     <StiNoNamePageCheckShort>ページに名前がありません。</StiNoNamePageCheckShort>
+    <StiPageLineAndDoublePassCheckLong>システム変数 PageLine を使用するには、レポートエンジンのダブルパスが必要です。</StiPageLineAndDoublePassCheckLong>
+    <StiPageLineAndDoublePassCheckShort>PageLine を使用するにはダブルパスが必要です！</StiPageLineAndDoublePassCheckShort>
     <StiPanelInEngineV1CheckLong>'{0}'パネルは、EngineV1が使用されているレポートにあります。このコンポーネントはEngineV1では使用できません。したがって、レポートツールはコンテナコンポーネントとしてレンダリングしようとします。しかしPanelコンポーネントはContainerと比較してより多くの機能を持ち、不正なレポートレンダリングを引き起こす可能性があります。</StiPanelInEngineV1CheckLong>
     <StiPanelInEngineV1CheckShort>EngineV1のパネル</StiPanelInEngineV1CheckShort>
     <StiPrintHeadersAndFootersFromPreviousPageLong>'{0}'ページのPrintHeadersAndFootersFromPreviousPageプロパティがtrueに設定されています。しかし最初の唯一のページでは意味がありません。</StiPrintHeadersAndFootersFromPreviousPageLong>
@@ -275,6 +279,28 @@
     <Strikeout>このFontがフォントを通過する水平線を指定するかどうかを示す値</Strikeout>
     <Underline>このフォントに下線が引かれているかどうかを示す値</Underline>
   </Font>
+  <Parser>
+    <DivisionByZero>ゼロによる除算。</DivisionByZero>
+    <ExpressionIsEmpty>式が空です。</ExpressionIsEmpty>
+    <FieldMethodOrPropertyNotFound>フィールド、メソッド、またはプロパティが見つかりません: '{0}'。</FieldMethodOrPropertyNotFound>
+    <FunctionHasInvalidArgument>関数 '{0}' の引数 '{1}' が無効です。'{2}' から '{3}' への変換ができません。</FunctionHasInvalidArgument>
+    <FunctionNotFound>関数が見つかりません: '{0}'。</FunctionNotFound>
+    <FunctionNotYetImplemented>関数 '{0}' はまだ実装されていません。</FunctionNotYetImplemented>
+    <IntegralConstantIsTooLarge>整数定数が大きすぎます。</IntegralConstantIsTooLarge>
+    <ItemDoesNotContainDefinition>'{0}' に '{1}' の定義が含まれていません。</ItemDoesNotContainDefinition>
+    <LeftParenthesisExpected>( が必要です。</LeftParenthesisExpected>
+    <MethodHasInvalidArgument>メソッド '{0}' の引数 '{1}' が無効です。'{2}' から '{3}' への変換ができません。</MethodHasInvalidArgument>
+    <NameDoesNotExistInCurrentContext>名前 '{0}' は現在のコンテキストに存在しません。</NameDoesNotExistInCurrentContext>
+    <NoMatchingOverloadedMethod>'{0}({1})' に一致するオーバーロードされたメソッドがありません。</NoMatchingOverloadedMethod>
+    <NoOverloadForMethodTakesNArguments>メソッド '{0}' に '{1}' 個の引数を取るオーバーロードはありません。</NoOverloadForMethodTakesNArguments>
+    <OperatorCannotBeAppliedToOperands>演算子 '{0}' は、型 '{1}' と型 '{2}' のオペランドに適用できません。</OperatorCannotBeAppliedToOperands>
+    <RightParenthesisExpected>) が必要です。</RightParenthesisExpected>
+    <SyntaxError>構文エラー。</SyntaxError>
+    <TheTypeOrNamespaceNotExistInTheNamespace>型または名前空間 '{0}' は、名前空間 '{1}' に存在しません。</TheTypeOrNamespaceNotExistInTheNamespace>
+    <UnexpectedEndOfExpression>予期しない式の終端。</UnexpectedEndOfExpression>
+    <UnknownInternalError>不明な内部エラー。</UnknownInternalError>
+    <UnprocessedLexemesRemain>構文エラー - 未処理の字句が残っています。</UnprocessedLexemesRemain>
+  </Parser>
   <Publish>
     <ActionDesign>デザイン</ActionDesign>
     <ActionExport>エクスポート</ActionExport>
@@ -1072,6 +1098,7 @@
     <IconAlignment>コンポーネントに表示されるアイコンの配置。</IconAlignment>
     <IconBrush>コンポーネントのアイコンブラシ。</IconBrush>
     <IconSet>コンポーネントで使用されるアイコンのセット。</IconSet>
+    <InclusionMode>この要素がフィルターに適用されるモードを指定します。</InclusionMode>
     <Interaction>このコンポーネントの対話オプション</Interaction>
     <Left>コンポーネントの左位置</Left>
     <Linked>コンテナへのオブジェクトスナップがオンになっていることを示す値</Linked>
@@ -1079,6 +1106,7 @@
     <Margin>このコンポーネントと別のコンポーネントのマージンの間のスペースを指定します。</Margin>
     <Margins>余白（左、右、上、下）</Margins>
     <MasterComponent>マスターコンポーネント</MasterComponent>
+    <MaxSelectedItems>選択可能な項目の最大数を制限します。0 に設定すると無制限に選択できます。</MaxSelectedItems>
     <MaxSize>最大サイズ</MaxSize>
     <MinSize>最小サイズ</MinSize>
     <MouseEnterEvent>ユーザーがレポートビューアのコンポーネントの領域にマウスを置いたときに発生</MouseEnterEvent>
@@ -1896,6 +1924,7 @@
     <ExportSettings>エクスポート設定</ExportSettings>
     <GlobalizationStrings>グローバリゼーション文字列で構成されるコレクション</GlobalizationStrings>
     <NumberOfPass>レポート生成時にレポートジェネレータが作成するパスの数</NumberOfPass>
+    <ParametersDisplayMode>パラメータパネルの表示モード： Panel - ビューア内のパネルにパラメータを表示、Dialog - ダイアログウィンドウで表示します。</ParametersDisplayMode>
     <ParametersOrientation>パラメータのパネル方向を示す値</ParametersOrientation>
     <ParameterWidth>Gets or sets a width in pixels of a parameter in the viewer. The default value is used if a zero value is specified.</ParameterWidth>
     <PreviewMode>レポートのプレビューモード</PreviewMode>
@@ -1916,7 +1945,7 @@
     <RequestParameters>ユーザーがレポートをレンダリングする前にパラメータを要求するか、デフォルト値のパラメータを使用してレポートをレンダリングするかを示す値を取得または設定します。</RequestParameters>
     <ScriptLanguage>現在のスクリプト言語</ScriptLanguage>
     <StopBeforePage>ページ番号　このページに達すると、レポートのレンダリングが停止</StopBeforePage>
-    <StoreImagesInResources>レポートのイメージがアセンブリリソースとして格納されることを示す値</StoreImagesInResources>
+    <StoreImagesInResources>レポートのイメージがリソースとして格納されることを示す値</StoreImagesInResources>
     <Styles>スタイルで構成されるコレクション</Styles>
   </StiReport>
   <StiReportControl>
@@ -2176,6 +2205,7 @@
   </StiTable>
   <StiTableElement>
     <Columns>テーブルに表示される列</Columns>
+    <FiltersTarget>フィルターが適用される対象データを取得または設定します。</FiltersTarget>
     <Group />
     <SizeMode />
     <Style>テーブルスタイル。</Style>

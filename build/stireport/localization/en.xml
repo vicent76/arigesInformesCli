@@ -72,6 +72,7 @@
     <AdapterDataViews>Data from DataViews</AdapterDataViews>
     <AdapterDB2Connection>Data from IBM DB2 Connection</AdapterDB2Connection>
     <AdapterDBaseFiles>Data from dBase Files</AdapterDBaseFiles>
+    <AdapterDbUserSource>Data from User Source</AdapterDbUserSource>
     <AdapterFirebirdConnection>Data from Firebird Connection</AdapterFirebirdConnection>
     <AdapterInformixConnection>Data from Informix Connection</AdapterInformixConnection>
     <AdapterMySQLConnection>Data from MySQL Connection</AdapterMySQLConnection>
@@ -93,6 +94,40 @@
     <Post>Post</Post>
     <TwoDimensional>Two-Dimensional</TwoDimensional>
   </BarCode>
+  <Blockly>
+    <AllComponents>All Components</AllComponents>
+    <AllComponentsFrom>All Components from</AllComponentsFrom>
+    <ColorHex>Color Hex</ColorHex>
+    <ColumnName>Column Name</ColumnName>
+    <DateTime>Date Time</DateTime>
+    <GetComponentByName>Get Component by Name</GetComponentByName>
+    <GetCurrentValue>Get Current Value</GetCurrentValue>
+    <GetDataSourceByName>Get Data Source by Name</GetDataSourceByName>
+    <GetProperty>Get Property</GetProperty>
+    <GetStyleByName>Get Style by Name</GetStyleByName>
+    <GetVariable>Get Variable</GetVariable>
+    <IndexOfRow>Index of Row</IndexOfRow>
+    <Lists>Lists</Lists>
+    <LocalVariables>Local Variables</LocalVariables>
+    <Logic>Logic</Logic>
+    <Loops>Loops</Loops>
+    <Math>Math</Math>
+    <OfDataSource>of Data Source</OfDataSource>
+    <OfObject>of Object</OfObject>
+    <OpenLink>Open Link</OpenLink>
+    <Process>Process</Process>
+    <Programming>Programming</Programming>
+    <RefreshViewer>Refresh Viewer</RefreshViewer>
+    <SetCurrentValue>Set Current Value</SetCurrentValue>
+    <SetProperty>Set Property</SetProperty>
+    <SetSqlCommand>Set Sql Command</SetSqlCommand>
+    <SetVariable>Set Variable</SetVariable>
+    <Strings>Strings</Strings>
+    <ThisComponent>This Component</ThisComponent>
+    <ThisReport>This Report</ThisReport>
+    <To>To</To>
+    <Visuals>Visuals</Visuals>
+  </Blockly>
   <Buttons>
     <Add>Add</Add>
     <AddAllColumns>Add All Columns</AddAllColumns>
@@ -286,12 +321,14 @@
     <SteppedRange>Stepped Range</SteppedRange>
     <Stock>Stock</Stock>
     <Strip>Strip</Strip>
-    <StripsEditorForm>Strips Editor Form</StripsEditorForm>
+    <StripsEditorForm>Strips Editor</StripsEditorForm>
     <Style>Style</Style>
     <Sunburst>Sunburst</Sunburst>
+    <Surface>Surface</Surface>
     <Treemap>Treemap</Treemap>
     <TrendLinesEditorForm>Trend Lines Editor</TrendLinesEditorForm>
     <Waterfall>Waterfall</Waterfall>
+    <WireframeSurface>Wireframe Surface</WireframeSurface>
   </Chart>
   <CharterMapEditor>
     <Characters>Characters</Characters>
@@ -330,7 +367,7 @@
     <HorizontalMajor>&lt;b&gt;Major&lt;/b&gt;&lt;br&gt;Display Horizontal Gridlines for Major units&lt;/br&gt;</HorizontalMajor>
     <HorizontalMajorMinor>&lt;b&gt;Major &amp;&amp; Minor Gridlines&lt;/b&gt;&lt;br&gt;Display Horizontal Gridlines for Major and Minor units&lt;/br&gt;</HorizontalMajorMinor>
     <HorizontalMinor>&lt;b&gt;Minor&lt;/b&gt;&lt;br&gt;Display Horizontal Gridlines for Minor units&lt;/br&gt;</HorizontalMinor>
-    <HorizontalNone>&lt;b&gt;None&lt;/b&gt;&lt;br&gt;Do not display Horizontal Grirdlines&lt;/br&gt;</HorizontalNone>
+    <HorizontalNone>&lt;b&gt;None&lt;/b&gt;&lt;br&gt;Do not display Horizontal Gridlines&lt;/br&gt;</HorizontalNone>
     <InsideBaseLabels>Inside Base</InsideBaseLabels>
     <InsideEndLabels>Inside End</InsideEndLabels>
     <Labels>Series Labels</Labels>
@@ -406,6 +443,7 @@
     <DashboardWindowTitleNew>New Dashboard</DashboardWindowTitleNew>
     <DeleteFile>Delete File</DeleteFile>
     <DoNotAskMe>Do not ask me again</DoNotAskMe>
+    <EnglishSearchRequired>Please use English for search queries.</EnglishSearchRequired>
     <EnterUserNameToLogin>Enter User Name (email) to log in.</EnterUserNameToLogin>
     <ExecutionError>Execution error</ExecutionError>
     <ExpiredDate>Expired Date</ExpiredDate>
@@ -627,6 +665,7 @@
     <StiCrossTitle>Cross-Title</StiCrossTitle>
     <StiDashboard>Dashboard</StiDashboard>
     <StiDataBand>Data</StiDataBand>
+    <StiDataNavigatorUI>Data Navigator</StiDataNavigatorUI>
     <StiDatePicker>Date Picker</StiDatePicker>
     <StiElectronicSignature>Electronic Signature</StiElectronicSignature>
     <StiEmptyBand>Empty Data</StiEmptyBand>
@@ -643,6 +682,7 @@
     <StiMap>Map</StiMap>
     <StiMathFormula>Math Formula</StiMathFormula>
     <StiMultipleSelection>Multiple Selection</StiMultipleSelection>
+    <StiNavigatorUI>Navigator</StiNavigatorUI>
     <StiNumberBox>Number Box</StiNumberBox>
     <StiOnlineMap>Online Map</StiOnlineMap>
     <StiOverlayBand>Overlay</StiOverlayBand>
@@ -657,6 +697,7 @@
     <StiPivotSummary>Pivot Summary</StiPivotSummary>
     <StiPivotTable>Pivot Table</StiPivotTable>
     <StiProgress>Progress</StiProgress>
+    <StiRangeSelector>Range Selector</StiRangeSelector>
     <StiRectanglePrimitive>Rectangle</StiRectanglePrimitive>
     <StiRegionMap>Region Map</StiRegionMap>
     <StiReport>Report</StiReport>
@@ -668,6 +709,7 @@
     <StiShape>Shape</StiShape>
     <StiSignature>Signature</StiSignature>
     <StiSingleSelection>Single Selection</StiSingleSelection>
+    <StiSlider>Slider</StiSlider>
     <StiSparkline>Sparkline</StiSparkline>
     <StiSubReport>Sub-Report</StiSubReport>
     <StiSystemText>System Text</StiSystemText>
@@ -708,6 +750,7 @@
     <ClearFilterFrom>Clear Filter from '{0}'</ClearFilterFrom>
     <ColorScale>Color Scale</ColorScale>
     <ColumnInteractions>Column Interactions</ColumnInteractions>
+    <CreateDataBinding>Create Data Binding</CreateDataBinding>
     <CustomFilter>Custom &amp;Filter...</CustomFilter>
     <DashboardsNotSupportedIntheWPFDesigner>Dashboards are not supported in the WPF Designer.</DashboardsNotSupportedIntheWPFDesigner>
     <DataBars>Data Bars</DataBars>
@@ -724,6 +767,7 @@
     <DrillDownSelected>Drill-Down Selected</DrillDownSelected>
     <DrillUp>Drill Up</DrillUp>
     <DuplicateField>Duplicate Field</DuplicateField>
+    <EditDataBinding>Edit Data Binding</EditDataBinding>
     <EditExpression>Edit Expression</EditExpression>
     <EditField>Edit Field</EditField>
     <EmptyDashboardFooter>Drag &amp; drop component from ToolBox or data from Dictionary</EmptyDashboardFooter>
@@ -746,6 +790,8 @@
     <NewMeasure>New Measure</NewMeasure>
     <NoRanges>No Ranges</NoRanges>
     <NoResult>No Result</NoResult>
+    <NResult>{0} result</NResult>
+    <NResults>{0} results</NResults>
     <NSelected>{0} selected</NSelected>
     <Nulls>(Nulls)</Nulls>
     <NumberFilters>Number Filters</NumberFilters>
@@ -913,6 +959,7 @@
   </Dialogs>
   <Editor>
     <AllowSQLFormatting>Allow SQL Formatting</AllowSQLFormatting>
+    <AutomaticallyGeneratedExpression>This is an automatically generated expression.</AutomaticallyGeneratedExpression>
     <BetweenMetrics>Between 1 and 10 metrics can be selected.</BetweenMetrics>
     <CantFind>Cannot find the data you're searching for.</CantFind>
     <CollapseToDefinitions>C&amp;ollapse to Definitions</CollapseToDefinitions>
@@ -1086,6 +1133,7 @@
     <MultipleFiles>Multiple Files</MultipleFiles>
     <NoMoreThan>No More Than</NoMoreThan>
     <OpenAfterExport>Open After Export</OpenAfterExport>
+    <Ordered>Ordered</Ordered>
     <PdfACompliance>PDF/A Compliance</PdfACompliance>
     <PrintingReport>Printing Report</PrintingReport>
     <RemoveEmptySpaceAtBottom>Remove Empty Space at Bottom of Page</RemoveEmptySpaceAtBottom>
@@ -1256,7 +1304,7 @@
     <AddLevel>Add Level</AddLevel>
     <AssignExpression>Assign Expression</AssignExpression>
     <BreakIfTrue>Break if True</BreakIfTrue>
-    <BreakIfTrueToolTip>Breaks condition processing if current one is fulfilled</BreakIfTrueToolTip>
+    <BreakIfTrueToolTip>Breaks condition processing if current one is fulfilled.</BreakIfTrueToolTip>
     <ChangeBorder>Change Border...</ChangeBorder>
     <ChangeFont>Change Font...</ChangeFont>
     <ComponentIsEnabled>Component is Enabled</ComponentIsEnabled>
@@ -1278,6 +1326,7 @@
     <AccessToken>Access token</AccessToken>
     <AccountKey>Account Key</AccountKey>
     <AccountName>Account Name</AccountName>
+    <AnyoneWithTheLink>Anyone with the Link</AnyoneWithTheLink>
     <AuthorizationCode>Authorization Code</AuthorizationCode>
     <BlobContentType>Blob Content Type</BlobContentType>
     <BlobName>Blob Name</BlobName>
@@ -1295,6 +1344,7 @@
     <FirebirdEdit>Edit Firebird Connection</FirebirdEdit>
     <FirebirdNew>New Firebird Connection</FirebirdNew>
     <FirstRowIsHeader>First Row is Header</FirstRowIsHeader>
+    <GeneralAccess>General Access</GeneralAccess>
     <GetAuthorizationCode>Get authorization code</GetAuthorizationCode>
     <GetTokens>Get tokens</GetTokens>
     <GisEdit>Edit GIS Data</GisEdit>
@@ -1333,6 +1383,7 @@
     <RefreshToken>Refresh token</RefreshToken>
     <RelationDirection>Relation Direction:</RelationDirection>
     <ReportConnections>Report Connections</ReportConnections>
+    <Restricted>Restricted</Restricted>
     <SelectData>Select Data</SelectData>
     <ServiceAccountKeyFile>Service Account Key File</ServiceAccountKeyFile>
     <SpreadsheetId>Spreadsheet Id</SpreadsheetId>
@@ -1365,6 +1416,7 @@
     <CompilingReport>Compiling Report</CompilingReport>
     <CopyPropertyName>Copy Property Name</CopyPropertyName>
     <DockingPanels>Panels</DockingPanels>
+    <Four>Four</Four>
     <HtmlPreview>HTML Preview</HtmlPreview>
     <JsPreview>JS Preview</JsPreview>
     <labelPleaseSelectTypeOfInterface>Please, select type of interface</labelPleaseSelectTypeOfInterface>
@@ -1462,6 +1514,8 @@
     <SortItems>Sort Items</SortItems>
     <Synchronize>Synchronize</Synchronize>
     <SynchronizeHint>Synchronizes contents of the Data Store and contents of the Dictionary</SynchronizeHint>
+    <TableEdit>Edit Table</TableEdit>
+    <TableNew>New Table</TableNew>
     <TextDropDataFileHere>Drop Data File Here</TextDropDataFileHere>
     <TextDropFileHere>Drop File Here</TextDropFileHere>
     <TextDropImageHere>Drop Image File Here</TextDropImageHere>
@@ -1505,6 +1559,7 @@
     <SampleText>Sample Text</SampleText>
     <TextFormat>Text Format</TextFormat>
     <Time>Time</Time>
+    <TimeFormat>Time Format</TimeFormat>
     <title>Format</title>
     <UseAbbreviation>Use Abbreviation</UseAbbreviation>
     <UseGroupSeparator>Use Group Separator</UseGroupSeparator>
@@ -1691,6 +1746,7 @@
     <pageExpression>Expression</pageExpression>
     <pageSummary>Summary</pageSummary>
     <pageSystemVariable>System Variable</pageSystemVariable>
+    <RunningAverage>Running Average</RunningAverage>
     <RunningTotal>Running Total</RunningTotal>
     <SummaryRunning>Summary Running</SummaryRunning>
     <SummaryRunningByColumn>Column</SummaryRunningByColumn>
@@ -1959,6 +2015,7 @@
     <StiPdfDigitalSignatureElement>This component is used to specify a space for the digital signature and fields from the certificate when exporting to PDF.</StiPdfDigitalSignatureElement>
     <StiPivotTableElement>The pivot table element is used for the structured data representation as a table.</StiPivotTableElement>
     <StiProgressElement>The element displays the ratio of the input data. It can be presented in different modes - a pie, donut, bars.</StiProgressElement>
+    <StiRangeSelectorElement>This component is used to select a range of values on a scale or timeline. It allows users to visually define the minimum and maximum limits of the range.</StiRangeSelectorElement>
     <StiRectanglePrimitive>This component is used to output rectangles.</StiRectanglePrimitive>
     <StiRegionMapElement>This element is used to display data that is geographically targeted.</StiRegionMapElement>
     <StiReportSummaryBand>This band is used to output summaries through the entire report. It is output once in the end of a report.</StiReportSummaryBand>
@@ -2119,6 +2176,10 @@
     <ReportOpen>Open a report in the designer.</ReportOpen>
     <ReportPreview>Preview an edited report in the viewer.</ReportPreview>
     <ReportSave>Save currently edited report.</ReportSave>
+    <ScriptEvalAccess1>This document uses Script Eval. If the document is from a trusted source, you can click the "Open" button to access it.</ScriptEvalAccess1>
+    <ScriptEvalAccess2>If you're unsure about the document's source but still want to view it, you can click the "Open in safe mode" button. In this case, Script Eval will be ignored and not executed.</ScriptEvalAccess2>
+    <ScriptSecurityFullAccess>Full script access (no restrictions, potentially unsafe).</ScriptSecurityFullAccess>
+    <ScriptSecuritySafeMode>Safe script access (restricted capabilities for security).</ScriptSecuritySafeMode>
     <SelectAll>Select all components on the current page.</SelectAll>
     <SelectUILanguage>Select the UI language.</SelectUILanguage>
     <SendToBack>Move the selected component to back relative to other components.</SendToBack>
@@ -2293,6 +2354,7 @@
     <menuEditDataTransformationNew>New Data Transformation...</menuEditDataTransformationNew>
     <menuEditDelete>&amp;Delete</menuEditDelete>
     <menuEditEdit>Edit</menuEditEdit>
+    <menuEditEditInDesigner>Edit in Designer</menuEditEditInDesigner>
     <menuEditFunctionNew>New Function...</menuEditFunctionNew>
     <menuEditImportRelations>Import Relations...</menuEditImportRelations>
     <menuEditPaste>&amp;Paste</menuEditPaste>
@@ -2486,6 +2548,7 @@
     <AuthUserNameOrPasswordIsNotCorrect>The username (Email) or password is incorrect!</AuthUserNameOrPasswordIsNotCorrect>
     <AuthUserNameShouldLookLikeAnEmailAddress>The username should be similar to the Email address!</AuthUserNameShouldLookLikeAnEmailAddress>
     <AuthWorkspaceNameAlreadyInUse>The workspace name is already in use!</AuthWorkspaceNameAlreadyInUse>
+    <CertificateNotFound>Certificate Not Found!</CertificateNotFound>
     <CommandTimeOut>Waiting time of processing the command is elapsed!</CommandTimeOut>
     <Congratulations>Congratulations!</Congratulations>
     <DeveloperInformation>Developer Information</DeveloperInformation>
@@ -2551,8 +2614,8 @@
     <NotificationTitleReportExporting>Exporting report "{0}"</NotificationTitleReportExporting>
     <NotificationTitleReportRendering>Rendering report "{0}"</NotificationTitleReportRendering>
     <NotificationTitleSchedulerRunning>Running scheduler "{0}"</NotificationTitleSchedulerRunning>
-    <NotificationTransferring>The "{0}" is tranferring to "{1}".</NotificationTransferring>
-    <NotificationTransferringComplete>The "{0}" is succesfully transffered to "{1}".</NotificationTransferringComplete>
+    <NotificationTransferring>The "{0}" is transferring to "{1}".</NotificationTransferring>
+    <NotificationTransferringComplete>The "{0}" is successfully transferred to "{1}".</NotificationTransferringComplete>
     <NotificationValueIsNotCorrect>This value is not correct for the type {0}</NotificationValueIsNotCorrect>
     <OutOfRange>Out of range ("{0}")!</OutOfRange>
     <ParsingCommandException>An exception of processing the command in the specified xml: {0}</ParsingCommandException>
@@ -2729,6 +2792,7 @@
     <LinearScaleBarCategory>Linear Scale Bar</LinearScaleBarCategory>
     <LinearScaleCategory>Linear Scale</LinearScaleCategory>
     <ListBoxCategory>List Box</ListBoxCategory>
+    <MacroDataCategory>Macro Data</MacroDataCategory>
     <MainCategory>Main</MainCategory>
     <MarkerCategory>Marker</MarkerCategory>
     <MathFormulaCategory>Math Formula</MathFormulaCategory>
@@ -3102,9 +3166,19 @@
     <StiDashboardContentAlignmentRight>Right</StiDashboardContentAlignmentRight>
     <StiDashboardContentAlignmentStretchX>Stretch X</StiDashboardContentAlignmentStretchX>
     <StiDashboardContentAlignmentStretchXY>Stretch XY</StiDashboardContentAlignmentStretchXY>
+    <StiDataJoinTypeCross>Cross</StiDataJoinTypeCross>
+    <StiDataJoinTypeFull>Full</StiDataJoinTypeFull>
+    <StiDataJoinTypeInner>Inner</StiDataJoinTypeInner>
+    <StiDataJoinTypeLeft>Left</StiDataJoinTypeLeft>
+    <StiDataJoinTypeRight>Right</StiDataJoinTypeRight>
     <StiDateSelectionModeAutoRange>Auto Range</StiDateSelectionModeAutoRange>
     <StiDateSelectionModeRange>Range</StiDateSelectionModeRange>
     <StiDateSelectionModeSingle>Single</StiDateSelectionModeSingle>
+    <StiDateTimeStepAggregationAverage>Average</StiDateTimeStepAggregationAverage>
+    <StiDateTimeStepAggregationCount>Count</StiDateTimeStepAggregationCount>
+    <StiDateTimeStepAggregationMax>Max</StiDateTimeStepAggregationMax>
+    <StiDateTimeStepAggregationMin>Min</StiDateTimeStepAggregationMin>
+    <StiDateTimeStepAggregationSum>Sum</StiDateTimeStepAggregationSum>
     <StiDateTimeTypeDate>Date</StiDateTimeTypeDate>
     <StiDateTimeTypeDateAndTime>Date and Time</StiDateTimeTypeDateAndTime>
     <StiDateTimeTypeTime>Time</StiDateTimeTypeTime>
@@ -3170,6 +3244,8 @@
     <StiFilterDataTypeString>String</StiFilterDataTypeString>
     <StiFilterEngineReportEngine>Report Engine</StiFilterEngineReportEngine>
     <StiFilterEngineSQLQuery>SQL Query</StiFilterEngineSQLQuery>
+    <StiFilterInclusionModeAlways>Always</StiFilterInclusionModeAlways>
+    <StiFilterInclusionModeSelectionOnly>Selection Only</StiFilterInclusionModeSelectionOnly>
     <StiFilterItemArgument>Argument</StiFilterItemArgument>
     <StiFilterItemExpression>Expression</StiFilterItemExpression>
     <StiFilterItemValue>Value</StiFilterItemValue>
@@ -3231,6 +3307,8 @@
     <StiImageRotationRotate180>Rotate 180°</StiImageRotationRotate180>
     <StiImageRotationRotate90CCW>Rotate 90° CCW</StiImageRotationRotate90CCW>
     <StiImageRotationRotate90CW>Rotate 90° CW</StiImageRotationRotate90CW>
+    <StiIndicatorValueTypeValue>Value</StiIndicatorValueTypeValue>
+    <StiIndicatorValueTypeValueTarget>Value / Target</StiIndicatorValueTypeValueTarget>
     <StiInteractionOnClick>None</StiInteractionOnClick>
     <StiInteractionOnClickApplyFilter>Apply Filter</StiInteractionOnClickApplyFilter>
     <StiInteractionOnClickDrillDown>Drill-Down</StiInteractionOnClickDrillDown>
@@ -3294,6 +3372,16 @@
     <StiMarkerTypeStar7>Star 7</StiMarkerTypeStar7>
     <StiMarkerTypeStar8>Star 8</StiMarkerTypeStar8>
     <StiMarkerTypeTriangle>Triangle</StiMarkerTypeTriangle>
+    <StiNavigatorButtonVisibilityCancel>Cancel</StiNavigatorButtonVisibilityCancel>
+    <StiNavigatorButtonVisibilityDelete>Delete</StiNavigatorButtonVisibilityDelete>
+    <StiNavigatorButtonVisibilityEdit>Edit</StiNavigatorButtonVisibilityEdit>
+    <StiNavigatorButtonVisibilityFirst>First</StiNavigatorButtonVisibilityFirst>
+    <StiNavigatorButtonVisibilityInsert>Insert</StiNavigatorButtonVisibilityInsert>
+    <StiNavigatorButtonVisibilityLast>Last</StiNavigatorButtonVisibilityLast>
+    <StiNavigatorButtonVisibilityNext>Next</StiNavigatorButtonVisibilityNext>
+    <StiNavigatorButtonVisibilityPost>Post</StiNavigatorButtonVisibilityPost>
+    <StiNavigatorButtonVisibilityPrior>Prior</StiNavigatorButtonVisibilityPrior>
+    <StiNavigatorButtonVisibilityRefresh>Refresh</StiNavigatorButtonVisibilityRefresh>
     <StiNestedFactorHigh>High</StiNestedFactorHigh>
     <StiNestedFactorLow>Low</StiNestedFactorLow>
     <StiNestedFactorNormal>Normal</StiNestedFactorNormal>
@@ -3324,6 +3412,8 @@
     <StiOrientationVertical>Vertical</StiOrientationVertical>
     <StiPageOrientationLandscape>Landscape</StiPageOrientationLandscape>
     <StiPageOrientationPortrait>Portrait</StiPageOrientationPortrait>
+    <StiParametersDisplayModeDialog>Dialog</StiParametersDisplayModeDialog>
+    <StiParametersDisplayModePanel>Panel</StiParametersDisplayModePanel>
     <StiPdfDigitalSignatureAppearanceTypeDraw>Draw</StiPdfDigitalSignatureAppearanceTypeDraw>
     <StiPdfDigitalSignatureAppearanceTypeImage>Image</StiPdfDigitalSignatureAppearanceTypeImage>
     <StiPdfDigitalSignatureAppearanceTypeNone>None</StiPdfDigitalSignatureAppearanceTypeNone>
@@ -3376,6 +3466,10 @@
     <StiProgressElementModeCircle>Circle</StiProgressElementModeCircle>
     <StiProgressElementModeDataBars>DataBars</StiProgressElementModeDataBars>
     <StiProgressElementModePie>Pie</StiProgressElementModePie>
+    <StiProgressValueTypeNone>None</StiProgressValueTypeNone>
+    <StiProgressValueTypePercentage>Percentage</StiProgressValueTypePercentage>
+    <StiProgressValueTypeValue>Value</StiProgressValueTypeValue>
+    <StiProgressValueTypeValueTarget>Value / Target</StiProgressValueTypeValueTarget>
     <StiQRCodeBodyShapeTypeCircle>Circle</StiQRCodeBodyShapeTypeCircle>
     <StiQRCodeBodyShapeTypeCircular>Circular</StiQRCodeBodyShapeTypeCircular>
     <StiQRCodeBodyShapeTypeDiamond>Diamond</StiQRCodeBodyShapeTypeDiamond>
@@ -3396,6 +3490,9 @@
     <StiQRCodeEyeBallShapeTypeZebraVertical>Zebra Vertical</StiQRCodeEyeBallShapeTypeZebraVertical>
     <StiRadarStyleXFCircle>Circle</StiRadarStyleXFCircle>
     <StiRadarStyleXFPolygon>Polygon</StiRadarStyleXFPolygon>
+    <StiRangeSelectorSnapModeNone>None</StiRangeSelectorSnapModeNone>
+    <StiRangeSelectorSnapModeStep>Step</StiRangeSelectorSnapModeStep>
+    <StiRangeSelectorSnapModeTick>Tick</StiRangeSelectorSnapModeTick>
     <StiReportCacheModeAuto>Auto</StiReportCacheModeAuto>
     <StiReportCacheModeOff>Off</StiReportCacheModeOff>
     <StiReportCacheModeOn>On</StiReportCacheModeOn>
@@ -3412,6 +3509,8 @@
     <StiRestrictionsAllowResize>Allow Resize</StiRestrictionsAllowResize>
     <StiRestrictionsAllowSelect>Allow Select</StiRestrictionsAllowSelect>
     <StiRestrictionsNone>None</StiRestrictionsNone>
+    <StiScriptSecurityFullAccess>Full Access</StiScriptSecurityFullAccess>
+    <StiScriptSecuritySafeMode>Safe Mode</StiScriptSecuritySafeMode>
     <StiSelectionModeFirst>First</StiSelectionModeFirst>
     <StiSelectionModeFromVariable>From Variable</StiSelectionModeFromVariable>
     <StiSelectionModeNothing>Nothing</StiSelectionModeNothing>
@@ -3421,6 +3520,7 @@
     <StiSeriesLabelsValueTypeSeriesTitleArgument>Series Title - Argument</StiSeriesLabelsValueTypeSeriesTitleArgument>
     <StiSeriesLabelsValueTypeSeriesTitleValue>Series Title - Value</StiSeriesLabelsValueTypeSeriesTitleValue>
     <StiSeriesLabelsValueTypeTag>Tag</StiSeriesLabelsValueTypeTag>
+    <StiSeriesLabelsValueTypeTotal>Total</StiSeriesLabelsValueTypeTotal>
     <StiSeriesLabelsValueTypeValue>Value</StiSeriesLabelsValueTypeValue>
     <StiSeriesLabelsValueTypeValueArgument>Value - Argument</StiSeriesLabelsValueTypeValueArgument>
     <StiSeriesLabelsValueTypeWeight>Weight</StiSeriesLabelsValueTypeWeight>
@@ -3691,6 +3791,7 @@
     <Advanced>Advanced</Advanced>
     <AggregateFunction>Aggregate Function</AggregateFunction>
     <AggregateFunctions>Aggregate Functions</AggregateFunctions>
+    <Aggregation>Aggregation</Aggregation>
     <Alias>Alias</Alias>
     <Alignment>Alignment</Alignment>
     <AllowApplyBorderColor>Allow Apply Border Color</AllowApplyBorderColor>
@@ -3703,6 +3804,8 @@
     <AllowExpressions>Allow Expressions</AllowExpressions>
     <AllowHtmlTags>Allow HTML Tags</AllowHtmlTags>
     <AllowNull>Allow Null</AllowNull>
+    <AllowScriptsInExpressions>Allow Scripts In Expressions</AllowScriptsInExpressions>
+    <AllowScriptsToRun>Allow Scripts To Run</AllowScriptsToRun>
     <AllowSeries>Allow Series</AllowSeries>
     <AllowSeriesElements>Allow Series Elements</AllowSeriesElements>
     <AllowSorting>Allow Sorting</AllowSorting>
@@ -3902,6 +4005,7 @@
     <DataBarsNegative>Data Bars Negative</DataBarsNegative>
     <DataBarsOverlapped>Data Bars Overlapped</DataBarsOverlapped>
     <DataBarsPositive>Data Bars Positive</DataBarsPositive>
+    <DataBinding>Data Binding</DataBinding>
     <DataBindings>Data Bindings</DataBindings>
     <DataCells>Data Cells</DataCells>
     <DataColor>Data Color</DataColor>
@@ -3992,6 +4096,7 @@
     <ExportAsImage>Export as Image</ExportAsImage>
     <ExportSettings>Export Settings</ExportSettings>
     <Expression>Expression</Expression>
+    <Extended>Extended</Extended>
     <ExtensionDigit>Extension Digit</ExtensionDigit>
     <EyeBallBrush>Eye Ball Brush</EyeBallBrush>
     <EyeBallShape>Eye Ball Shape</EyeBallShape>
@@ -4000,8 +4105,10 @@
     <FaqPage>FAQ Page</FaqPage>
     <Field>Field</Field>
     <FieldIs>Field Is</FieldIs>
+    <Fields>Fields</Fields>
     <Fifth>Fifth</Fifth>
     <File>File</File>
+    <FileId>File ID</FileId>
     <Fill>Fill</Fill>
     <FillColor>Fill Color</FillColor>
     <Filter>Filter</Filter>
@@ -4010,6 +4117,7 @@
     <FilterMode>Filter Mode</FilterMode>
     <FilterOn>Filter On</FilterOn>
     <Filters>Filters</Filters>
+    <FiltersTarget>Filters Target</FiltersTarget>
     <First>First</First>
     <FirstTabOffset>First Tab Offset</FirstTabOffset>
     <FixedHeight>Fixed Height</FixedHeight>
@@ -4144,6 +4252,7 @@
     <ImageURL>Image URL</ImageURL>
     <ImageVertAlignment>Image Vertical Alignment</ImageVertAlignment>
     <ImportRelations>Import Relations</ImportRelations>
+    <InclusionMode>Inclusion Mode</InclusionMode>
     <Increment>Increment</Increment>
     <Indent>Indent</Indent>
     <Indicator>Indicator</Indicator>
@@ -4172,6 +4281,7 @@
     <Item>Item</Item>
     <ItemHeight>Item Height</ItemHeight>
     <Items>Items</Items>
+    <JoinType>Join Type</JoinType>
     <KeepChildTogether>Keep Child Together</KeepChildTogether>
     <KeepCrossTabTogether>Keep Cross-Tab Together</KeepCrossTabTogether>
     <KeepDetails>Keep Details</KeepDetails>
@@ -4287,6 +4397,7 @@
     <MaximumValue>Maximum Value</MaximumValue>
     <MaxLength>Max Length</MaxLength>
     <MaxNumberOfLines>Max Number of Lines</MaxNumberOfLines>
+    <MaxSelectedItems>Max Selected Items</MaxSelectedItems>
     <MaxSize>Max Size</MaxSize>
     <MaxValue>Max Value</MaxValue>
     <MaxWidth>Max Width</MaxWidth>
@@ -4315,6 +4426,7 @@
     <Multiline>Multiline</Multiline>
     <MultipleFactor>Multiple Factor</MultipleFactor>
     <MultipleInitialization>Multiple Initialization</MultipleInitialization>
+    <MyFunction>My Function</MyFunction>
     <Name>Name</Name>
     <NameDataColumn>Name Data Column</NameDataColumn>
     <NameInSource>Name in Source</NameInSource>
@@ -4350,6 +4462,7 @@
     <OnDataManipulation>On Data Manipulation</OnDataManipulation>
     <OnePointZoom>One Point Zoom</OnePointZoom>
     <OnHover>On Hover</OnHover>
+    <OnlineMapAdminLevel>Administrative level</OnlineMapAdminLevel>
     <OnlyText>Only Text</OnlyText>
     <OnSelect>On Select</OnSelect>
     <Opacity>Opacity</Opacity>
@@ -4373,6 +4486,7 @@
     <ParameterAlignment>Parameter Alignment</ParameterAlignment>
     <Parameters>Parameters</Parameters>
     <ParametersDateFormat>Parameters Date Format</ParametersDateFormat>
+    <ParametersDisplayMode>Parameters Display-Mode</ParametersDisplayMode>
     <ParametersOrientation>Parameters Orientation</ParametersOrientation>
     <ParameterWidth>Parameter Width</ParameterWidth>
     <ParentColumns>Parent Columns</ParentColumns>
@@ -4388,6 +4502,7 @@
     <Placeholder>Placeholder</Placeholder>
     <Placement>Placement</Placement>
     <PlaceOnToolbox>Place on Toolbox</PlaceOnToolbox>
+    <Platform>Platform</Platform>
     <PointAtCenter>Point at Center</PointAtCenter>
     <Position>Position</Position>
     <Positive>Positive</Positive>
@@ -4399,6 +4514,7 @@
     <PreviewSettings>Preview Settings</PreviewSettings>
     <Printable>Printable</Printable>
     <PrintAtBottom>Print at Bottom</PrintAtBottom>
+    <PrintDialogType>Print Dialog Type</PrintDialogType>
     <PrinterName>Printer Name</PrinterName>
     <PrinterSettings>Printer Settings</PrinterSettings>
     <PrintHeadersFootersFromPreviousPage>Print Headers and Footers from Previous Page</PrintHeadersFootersFromPreviousPage>
@@ -4490,8 +4606,11 @@
     <Scale>Scale</Scale>
     <ScaleHor>Scale Hor</ScaleHor>
     <ScriptLanguage>Script Language</ScriptLanguage>
+    <ScriptTimeout>Script Timeout</ScriptTimeout>
     <ScrollTime>Scroll Time</ScrollTime>
     <Second>Second</Second>
+    <SegmentCount>Segment Count</SegmentCount>
+    <SegmentIndex>Segment Index</SegmentIndex>
     <SegmentPerHeight>Segment per Height</SegmentPerHeight>
     <SegmentPerWidth>Segment per Width</SegmentPerWidth>
     <SelectedBackColor>Selected Back Color</SelectedBackColor>
@@ -4591,6 +4710,7 @@
     <SkipValues>Skip Values</SkipValues>
     <SkipValuesObj>Skip Values</SkipValuesObj>
     <Smoothing>Smoothing</Smoothing>
+    <SnapMode>Snap Mode</SnapMode>
     <Sort>Sort</Sort>
     <SortBy>Sort by</SortBy>
     <SortDirection>Sort Direction</SortDirection>
@@ -4604,6 +4724,7 @@
     <Spacing>Spacing</Spacing>
     <Sparkline>Sparkline</Sparkline>
     <SqlCommand>Sql Command</SqlCommand>
+    <Standard>Standard</Standard>
     <StartAngle>Start Angle</StartAngle>
     <StartCap>Start Cap</StartCap>
     <StartColor>Start Color</StartColor>
@@ -4965,6 +5086,8 @@
     <Charts>Charts</Charts>
     <Checking>Checking...</Checking>
     <ClickForMoreDetails>Click for More Details</ClickForMoreDetails>
+    <ClickHereToCreateNewCondition>to create new condition</ClickHereToCreateNewCondition>
+    <ClickHereToCreateNewField>to create new field</ClickHereToCreateNewField>
     <CollapseAll>Collapse All</CollapseAll>
     <Collection>Collection</Collection>
     <CompilationAccess>Compilation Access</CompilationAccess>
@@ -4976,8 +5099,11 @@
     <CreateNewReportPageForm>Create a new report, add a page, add a form</CreateNewReportPageForm>
     <CreatingReport>Creating Report</CreatingReport>
     <CrossBands>Cross</CrossBands>
+    <CustomRange>Custom Range</CustomRange>
+    <DashboardOnly>Dashboard and Data Transformation Only</DashboardOnly>
     <Dialogs>Dialogs</Dialogs>
     <EditStyles>Edit Styles</EditStyles>
+    <EnableCacheAllDataMode>Enable 'Cache All Data' mode</EnableCacheAllDataMode>
     <Enhancements>Enhancements</Enhancements>
     <EnterDataManually>Enter data manually</EnterDataManually>
     <Errors>Errors</Errors>
@@ -5022,6 +5148,7 @@
     <LabelNestedLevel>Nested Level:</LabelNestedLevel>
     <LabelPassword>Password:</LabelPassword>
     <LabelPixels>Pixels:</LabelPixels>
+    <LabelPlatform>If the platform is .NET, a C # script will be used. If the platform is JS, then JavaScript will be used.</LabelPlatform>
     <LabelQueryTimeout>Query Timeout:</LabelQueryTimeout>
     <LabelSystemVariable>System Variable:</LabelSystemVariable>
     <LabelTableOfContentsHint>Please, check the components which should form the table of contents. One component is equal to one heading level.</LabelTableOfContentsHint>
@@ -5055,6 +5182,8 @@
     <RestartDesigner>You need to restart the report designer</RestartDesigner>
     <SaveReportPagesOrFormsFromReport>Save the report, pages or forms</SaveReportPagesOrFormsFromReport>
     <SavingReport>Saving Report</SavingReport>
+    <ScriptEvalAccess>Script Eval Access</ScriptEvalAccess>
+    <ScriptSecurity>Script Security</ScriptSecurity>
     <SecondPass>Second Pass</SecondPass>
     <Shapes>Shapes</Shapes>
     <ShowOnParametersPanel>Show on Parameters Panel</ShowOnParametersPanel>
@@ -5066,6 +5195,7 @@
     <StiGradientBrush>Gradient</StiGradientBrush>
     <StiHatchBrush>Hatch</StiHatchBrush>
     <StiSolidBrush>Solid</StiSolidBrush>
+    <StoresPrintingOutputToAFile>Stores Printing Output to a File</StoresPrintingOutputToAFile>
     <StoreUserFirstLastNameInReportAuthor>Store User's First and Last Name in 'Report Author'</StoreUserFirstLastNameInReportAuthor>
     <StoreUserNameInReportAuthor>Store 'User Name' in 'Report Author'</StoreUserNameInReportAuthor>
     <StyleBad>Bad</StyleBad>
@@ -5242,10 +5372,12 @@
     <UseBrush>Use Brush</UseBrush>
   </Signature>
   <StimulAI>
+    <AskStimulAI>Ask Stimul AI</AskStimulAI>
     <ChangedWithAI>Changed with Stimul AI</ChangedWithAI>
     <CheckExpressionSuccess>No issues were found in the specified expression.</CheckExpressionSuccess>
     <CheckQuery>Check Query</CheckQuery>
     <CheckWithStimulAI>Check with Stimul AI</CheckWithStimulAI>
+    <ClickToPreview>Click to Preview</ClickToPreview>
     <ConnectionStringExampleWithAI>Connection string sample with Stimul AI</ConnectionStringExampleWithAI>
     <ConnectionStringTesting>Connection string testing</ConnectionStringTesting>
     <ExplainQuery>Explain Query</ExplainQuery>
@@ -5269,6 +5401,7 @@
     <LineRoman>Returns the current line number in Roman numerals.</LineRoman>
     <LineThrough>Returns the current line number (starts from 1). When calculating the number, all groupings are ignored and numbering starts from the beginning of printing.</LineThrough>
     <PageCopyNumber>Return a number of a current copy of a page (starts from 1).</PageCopyNumber>
+    <PageLine>Returns the current line number on a page (starts from 1).</PageLine>
     <PageNofM>Returns a localized string, showing "Page N of M" where N is the current page number and M is the TotalPageCount of a report.</PageNofM>
     <PageNofMThrough>Returns a localized string, showing "Page N of M" where N is the current page number and M is the TotalPageCount of a report. When calculating the PageNofMThrough, all properties ResetPageNumber are ignored and numbering starts from the beginning of a report.</PageNofMThrough>
     <PageNumber>Returns the current page number (starts from 1).</PageNumber>
@@ -5398,6 +5531,7 @@
     <Title>Welcome to Stimulsoft Demo</Title>
   </WelcomeScreen>
   <Wizards>
+    <AIGeneratedReport>AI-generated Report</AIGeneratedReport>
     <BlankDashboard>Blank Dashboard</BlankDashboard>
     <BlankForm>Blank Form</BlankForm>
     <BlankReport>Blank Report</BlankReport>
@@ -5413,8 +5547,10 @@
     <DataSource>Data Source</DataSource>
     <DataSources>Data Sources</DataSources>
     <DefaultThemes>Default Themes</DefaultThemes>
+    <Examples>Examples</Examples>
     <Filters>Filters</Filters>
     <FromReportTemplate>From Report Template</FromReportTemplate>
+    <GenerateDataWithAI>Generate Data with AI</GenerateDataWithAI>
     <GetData>Get Data</GetData>
     <groupCreateNewDashboard>Create a New Dashboard</groupCreateNewDashboard>
     <groupCreateNewPageOrForm>Create a New Page or Form</groupCreateNewPageOrForm>
@@ -5465,8 +5601,10 @@
     <RunWizard>Run Wizard</RunWizard>
     <SelectColumns>Select Columns</SelectColumns>
     <SelectTemplate>Template</SelectTemplate>
+    <SelectTypeOfLayout>Please select a type of layout</SelectTypeOfLayout>
     <Sort>Sort</Sort>
     <StandardReport>Standard Report</StandardReport>
+    <SuggestWithAI>Suggest with AI</SuggestWithAI>
     <Themes>Themes</Themes>
     <title>New Report</title>
     <Totals>Totals</Totals>
