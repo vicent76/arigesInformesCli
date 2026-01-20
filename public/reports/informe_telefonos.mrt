@@ -1,15 +1,102 @@
 {
   "ReportVersion": "2025.4.3",
-  "ReportGuid": "21c6e46d274e3453485336d95610d844",
+  "ReportGuid": "8c7437be242c3b66e4dda494f9e1943f",
   "ReportName": "Report",
   "ReportAlias": "Report",
   "ReportFile": "informe_telefonos.mrt",
   "ReportCreated": "/Date(0+0100)/",
-  "ReportChanged": "/Date(1768386235000+0100)/",
+  "ReportChanged": "/Date(1768922447000+0100)/",
   "EngineVersion": "EngineV2",
   "ReportUnit": "Centimeters",
   "ScriptLanguage": "CSharp",
   "CalculationMode": "Interpretation",
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "Telefonos",
+        "Alias": "Telefonos",
+        "Columns": {
+          "0": {
+            "Name": "IdTelefono",
+            "NameInSource": "IdTelefono",
+            "Alias": "IdTelefono",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "ImportePlazo",
+            "NameInSource": "ImportePlazo",
+            "Alias": "ImportePlazo",
+            "Type": "System.Decimal"
+          },
+          "2": {
+            "Name": "Observaciones",
+            "NameInSource": "Observaciones",
+            "Alias": "Observaciones",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "PlazosMeses",
+            "NameInSource": "PlazosMeses",
+            "Alias": "PlazosMeses",
+            "Type": "System.Decimal"
+          },
+          "4": {
+            "Name": "PlazosOrigen",
+            "NameInSource": "PlazosOrigen",
+            "Alias": "PlazosOrigen",
+            "Type": "System.Decimal"
+          },
+          "5": {
+            "Name": "codclien",
+            "NameInSource": "codclien",
+            "Alias": "codclien",
+            "Type": "System.Decimal"
+          },
+          "6": {
+            "Name": "modelo",
+            "NameInSource": "modelo",
+            "Alias": "modelo",
+            "Type": "System.Decimal"
+          },
+          "7": {
+            "Name": "modeloNombre",
+            "NameInSource": "modeloNombre",
+            "Alias": "modeloNombre",
+            "Type": "System.String"
+          },
+          "8": {
+            "Name": "nomclien",
+            "NameInSource": "nomclien",
+            "Alias": "nomclien",
+            "Type": "System.String"
+          },
+          "9": {
+            "Name": "operador",
+            "NameInSource": "operador",
+            "Alias": "operador",
+            "Type": "System.Decimal"
+          },
+          "10": {
+            "Name": "operadorNombre",
+            "NameInSource": "operadorNombre",
+            "Alias": "operadorNombre",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "datosTelefonos.Telefonos"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiJsonDatabase",
+        "Name": "datosTelefonos",
+        "Alias": "datosTelefonos",
+        "PathData": "E:\\node_apps\\ARIGES-INFORMES\\arigesInformesCli\\public\\reports\\datosTelefonos.json",
+        "HeadersString": "YyoQVHvZXeyY3LY5ASN05g=="
+      }
+    }
+  },
   "Pages": {
     "0": {
       "Ident": "StiPage",
@@ -123,14 +210,13 @@
             "1": {
               "Ident": "StiText",
               "Name": "Text1",
-              "ClientRectangle": "0.2,0,1.2,0.6",
+              "ClientRectangle": "0.2,0,0.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
                 "Value": "Cod."
               },
-              "HorAlignment": "Right",
               "VertAlignment": "Center",
               "Font": "Tahoma;11;;",
               "Border": ";;;;;;;solid:0,0,0",
@@ -147,7 +233,7 @@
             "2": {
               "Ident": "StiText",
               "Name": "Text13",
-              "ClientRectangle": "7.4,0,2,0.6",
+              "ClientRectangle": "7,0,2,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -165,12 +251,12 @@
               "Ident": "StiText",
               "Name": "Text4",
               "Guid": "3766ca1b19494f2c7843ce456b60840f",
-              "ClientRectangle": "14,0,1.8,0.6",
+              "ClientRectangle": "13.2,0,1.2,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "Operador"
+                "Value": "Opdor."
               },
               "VertAlignment": "Center",
               "Font": "Tahoma;11;;",
@@ -183,12 +269,12 @@
               "Ident": "StiText",
               "Name": "Text6",
               "Guid": "938273f2b8f11fbed446406854a86185",
-              "ClientRectangle": "16,0,1.2,0.6",
+              "ClientRectangle": "14.6,0,0.6,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "Plazos"
+                "Value": "Pl."
               },
               "HorAlignment": "Right",
               "VertAlignment": "Center",
@@ -202,12 +288,12 @@
               "Ident": "StiText",
               "Name": "Text14",
               "Guid": "983739edb6d5e289e0fb128decacbae5",
-              "ClientRectangle": "17.4,0,1.4,0.6",
+              "ClientRectangle": "16.8,0,1,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "Paga."
+                "Value": "Pag."
               },
               "HorAlignment": "Right",
               "VertAlignment": "Center",
@@ -220,7 +306,7 @@
             "6": {
               "Ident": "StiText",
               "Name": "Text12",
-              "ClientRectangle": "1.6,0,5.6,0.6",
+              "ClientRectangle": "1.2,0,5.6,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -238,7 +324,7 @@
               "Ident": "StiText",
               "Name": "Text3",
               "Guid": "51248e9d3c946a5b6e5a454ab7e9c521",
-              "ClientRectangle": "9.6,0,4.2,0.6",
+              "ClientRectangle": "9.2,0,3.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -256,7 +342,7 @@
               "Ident": "StiText",
               "Name": "Text16",
               "Guid": "cb9880f2e1ace582220b43ffb45a2c50",
-              "ClientRectangle": "20.6,0,6.8,0.6",
+              "ClientRectangle": "21.2,0,6.2,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -272,14 +358,52 @@
             },
             "9": {
               "Ident": "StiText",
-              "Name": "Text15",
-              "Guid": "160e5e88424f43ea8f792ed30396f83d",
-              "ClientRectangle": "19,0,1.4,0.6",
+              "Name": "Text11",
+              "Guid": "706dee92cb9b742ab4c53d595fe2e79b",
+              "ClientRectangle": "18,0,0.8,0.6",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
-                "Value": "Letra"
+                "Value": "Pen."
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": "Tahoma;11;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
+              "Name": "Text23",
+              "Guid": "fde003936c545948faf7ac538cf068df",
+              "ClientRectangle": "19,0,2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Imp Pend."
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": "Tahoma;11;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "11": {
+              "Ident": "StiText",
+              "Name": "Text15",
+              "Guid": "bfaec7b9a39bc2ee1af2dfc6f616557a",
+              "ClientRectangle": "15.4,0,1.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Cuota"
               },
               "HorAlignment": "Right",
               "VertAlignment": "Center",
@@ -305,14 +429,13 @@
             "0": {
               "Ident": "StiText",
               "Name": "Text2",
-              "ClientRectangle": "0.2,0,1.2,0.4",
+              "ClientRectangle": "0.2,0,0.8,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
               "Text": {
                 "Value": "{Telefonos.codclien}"
               },
-              "HorAlignment": "Right",
               "VertAlignment": "Bottom",
               "Font": "Tahoma;10;;",
               "Border": ";;;;;;;solid:0,0,0",
@@ -329,7 +452,7 @@
             "1": {
               "Ident": "StiText",
               "Name": "Text5",
-              "ClientRectangle": "1.6,0,5.6,0.4",
+              "ClientRectangle": "1.2,0,5.6,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -361,7 +484,7 @@
             "2": {
               "Ident": "StiText",
               "Name": "Text7",
-              "ClientRectangle": "7.4,0,2,0.4",
+              "ClientRectangle": "7,0,2,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -379,7 +502,7 @@
             "3": {
               "Ident": "StiText",
               "Name": "Text10",
-              "ClientRectangle": "9.6,0,4.2,0.4",
+              "ClientRectangle": "9.2,0,3.8,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -405,7 +528,7 @@
               "Ident": "StiText",
               "Name": "Text18",
               "Guid": "206a86c13ebf8391fb647d93a73882a9",
-              "ClientRectangle": "14,0,1.8,0.4",
+              "ClientRectangle": "13.2,0,1.2,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -431,7 +554,7 @@
               "Ident": "StiText",
               "Name": "Text19",
               "Guid": "76bd215d1361340248785c16592f7855",
-              "ClientRectangle": "16,0,1.2,0.4",
+              "ClientRectangle": "14.6,0,0.6,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -464,7 +587,7 @@
               "Ident": "StiText",
               "Name": "Text20",
               "Guid": "ab20487f05790c2a73051612f0f40a87",
-              "ClientRectangle": "17.4,0,1.4,0.4",
+              "ClientRectangle": "16.8,0,1,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -495,9 +618,99 @@
             },
             "7": {
               "Ident": "StiText",
+              "Name": "Text22",
+              "Guid": "ae928bd667a5f3e5e235517b6708074a",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "21.2,0,6.2,0.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Telefonos.Observaciones}"
+              },
+              "VertAlignment": "Bottom",
+              "Font": "Tahoma;;;",
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "LineSpacing": 1.2,
+              "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiText",
+              "Name": "Text24",
+              "Guid": "85a27e6f87708cba925533fc65e68d1f",
+              "ClientRectangle": "18,0,0.8,0.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Telefonos.PlazosOrigen - Telefonos.PlazosMeses}"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Bottom",
+              "Font": "Tahoma;10;;",
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Margins": {
+                "Left": 3,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 1,
+                "DecimalSeparator": ",",
+                "DecimalDigits": 0,
+                "GroupSeparator": ".",
+                "State": "DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern"
+              },
+              "Type": "Expression"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "Text25",
+              "Guid": "02cb86146a8f1280b4c58613083882a5",
+              "ClientRectangle": "19,0,2,0.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{ (Telefonos.PlazosOrigen - Telefonos.PlazosMeses) * Telefonos.ImportePlazo }"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Bottom",
+              "Font": "Tahoma;10;;",
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Margins": {
+                "Left": 3,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "TextFormat": {
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 1,
+                "DecimalSeparator": ",",
+                "DecimalDigits": 2,
+                "GroupSeparator": ".",
+                "State": "DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern"
+              },
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
               "Name": "Text21",
-              "Guid": "64ef955eb912f616c27e26fc66d270e7",
-              "ClientRectangle": "19,0,1.4,0.4",
+              "Guid": "837f438e5c9aba78c3f4987d1c70f196",
+              "ClientRectangle": "15.4,0,1.2,0.4",
               "Interaction": {
                 "Ident": "StiInteraction"
               },
@@ -517,39 +730,13 @@
                 "Bottom": 0
               },
               "TextFormat": {
-                "Ident": "StiCurrencyFormatService",
+                "Ident": "StiNumberFormatService",
+                "NegativePattern": 1,
                 "DecimalSeparator": ",",
                 "DecimalDigits": 2,
                 "GroupSeparator": ".",
-                "State": "DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, PositivePattern, NegativePattern, CurrencySymbol",
-                "NegativePattern": 8,
-                "PositivePattern": 3,
-                "Symbol": "€"
+                "State": "DecimalDigits, DecimalSeparator, GroupSeparator, GroupSize, NegativePattern"
               },
-              "Type": "Expression"
-            },
-            "8": {
-              "Ident": "StiText",
-              "Name": "Text22",
-              "Guid": "ae928bd667a5f3e5e235517b6708074a",
-              "CanGrow": true,
-              "GrowToHeight": true,
-              "ClientRectangle": "20.6,0,6.8,0.4",
-              "Interaction": {
-                "Ident": "StiInteraction"
-              },
-              "Text": {
-                "Value": "{Telefonos.Observaciones}"
-              },
-              "VertAlignment": "Bottom",
-              "Font": "Tahoma;;;",
-              "Border": ";;;;;;;solid:0,0,0",
-              "Brush": "solid:",
-              "TextBrush": "solid:Black",
-              "TextOptions": {
-                "WordWrap": true
-              },
-              "LineSpacing": 1.2,
               "Type": "Expression"
             }
           },
