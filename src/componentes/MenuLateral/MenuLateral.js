@@ -184,6 +184,12 @@ export const MenuLateral = ({ children }) => {
                                 onClick={() => navigate(`/telefonosVencidos`)}
                                 isLast
                             />
+                            <TreeItem
+                                icon={<Person fontSize="small" />}
+                                label="Clientes"
+                                onClick={() => navigate(`/clientes`)}
+                                isLast
+                            />
                         </List>
                     </Collapse>
                 </List>

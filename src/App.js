@@ -10,6 +10,7 @@ import { InicioPagina } from './paginas/InicioPagina/InicioPagina';
 import ComparativasPagina from './paginas/ComparativaPaginas/ComparativasPagina';
 import TelefonosPlazosPagina from './paginas/TelefoniaPaginas/TelefonosPlazosPagina';
 import TelefonosVencidosPagina from './paginas/TelefoniaPaginas/TelefonosVencidosPagina';
+import { ClientePagina } from './paginas/clientesPagina/ClientePagina';
 
 const queryClient = new QueryClient()
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/comparativa" element={<ComparativasPagina />} />
             <Route path="/telefonosPlazos" element={<TelefonosPlazosPagina />} />
             <Route path="/telefonosVencidos" element={<TelefonosVencidosPagina />} />
+            <Route path="/clientes" element={<ClientePagina />} />
 
           </Routes>
           <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
