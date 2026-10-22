@@ -6,7 +6,6 @@ import { MenuLateral } from '../../componentes/MenuLateral/MenuLateral';
 import TelefonosPlazosDesktop from './TelefonosPlazosDesktop';
 import TelefonosPlazosGrid from './TelefonosPlazosGrid';
 import { leerTelefonos } from '../../servicios/Clientes';
-import { GeneralCtx } from '../../contextos/GeneralContext';
 import { ErrorGeneral } from '../../componentes/ErrorGeneral/ErrorGeneral';
 import { MensajeInformativo } from '../../componentes/MensajeInformativo/MensajeInformativo';
 import { MensajeError } from '../../utilidades/TratamientoErrores';
@@ -21,7 +20,6 @@ export default function TelefonosPlazosPagina() {
   const [mensajeError, setMensajeError] = useState('');
   const [mostrarReporte, setMostrarReporte] = useState(false);
 
-  const { getSession } = useContext(GeneralCtx);
 
   // Cargar datos de teléfonos
   const obtenDatosTelefonos = async () => {

@@ -187,7 +187,7 @@ export const MenuLateral = ({ children }) => {
                             <TreeItem
                                 icon={<Person fontSize="small" />}
                                 label="Clientes"
-                                onClick={() => navigate(`/clientes`)}
+                                onClick={() => navigate(`/clientes/?reload=${Date.now()}`)}
                                 isLast
                             />
                         </List>

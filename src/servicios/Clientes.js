@@ -28,9 +28,9 @@ export const leerCliente = async (codclien) => {
     const empresa = sesion.empresa.ariges;
     const ent = Entorno.gentEnv()
     const url_base = ent.API_URL
-    const url = `${url_base}/api/clientes/codigo/${codclien}/${empresa}`
+    const url = `${url_base}/api/clientes/codigo/${empresa}/${codclien}`
     let result = await axios.get(url);
-    return result.data[0];
+    return result.data;
 }
 
 
@@ -51,5 +51,14 @@ export const leerTelefonosVencidos = () => {
     const ent = Entorno.gentEnv()
     const url_base = ent.API_URL
     const url = `${url_base}/api/clientes/telefonos/vencidos/${empresa}`
+    return axios.get(url)
+}
+
+export const leerTelefonosCliente = (codclien) => {
+    const sesion = getSession();
+    const empresa = sesion.empresa.ariges;
+    const ent = Entorno.gentEnv()
+    const url_base = ent.API_URL
+    const url = `${url_base}/api/clientes/telefonos/cliente/${empresa}/${codclien}`
     return axios.get(url)
 }
