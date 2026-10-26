@@ -25,6 +25,7 @@ import { EventSeatSharp } from '@mui/icons-material';
 import { Alert, CircularProgress } from '@mui/material';
 
 import TelefonosClienteGrid from './TelefonosClienteGrid';
+import DocumentosCliente from './DocumentosCliente';
 import { buscarClientes, leerCliente, leerTelefonosCliente } from '../../servicios/Clientes';
 
 
@@ -77,6 +78,10 @@ export const ClientePagina = () => {
     const [datosTelefonos, setDatosTelefonos] = useState([]);
     const [loadingTelefonos, setLoadingTelefonos] = useState(false);
     const [errorTelefonos, setErrorTelefonos] = useState(null);
+    //
+    const [datosOfertas, setDatosOfertas] = useState([]);
+    const [loadingOfertas, setLoadingOfertas] = useState(false);
+    const [errorOfertas, setErrorOfertas] = useState(null);
     //
     const [tabActual, setTabActual] = useState(0);
     //
@@ -303,7 +308,6 @@ export const ClientePagina = () => {
                     >
                         <Tab sx={{ fontWeight: 'bolder' }} label="Datos del cliente" />
                         <Tab sx={{ fontWeight: 'bolder' }} label="Telefonos" />
-                        <Tab sx={{ fontWeight: 'bolder' }} label="Documentos" />
                     </Tabs>
 
                     {hayError && (
@@ -524,7 +528,14 @@ export const ClientePagina = () => {
 
                                     </Box>
                                 </Grid>
-
+                                <Grid item xs={12} md={12}>
+                                    <Box sx={{ p: 3 }}>
+                                        <Typography variant="h6">
+                                            Documentos
+                                        </Typography>
+                                        <DocumentosCliente />
+                                    </Box>
+                                </Grid>
                             </Grid>
                         </Box>
                     )}
@@ -551,15 +562,6 @@ export const ClientePagina = () => {
                                     datosTelefonos={datosTelefonos}
                                 />
                             )}
-                        </Box>
-                    )}
-
-                    {/* PESTAÑA 3: DOCUMENTOS */}
-                    {tabActual === 2 && (
-                        <Box sx={{ p: 3 }}>
-                            <Typography variant="h6">
-                                Documentos
-                            </Typography>
                         </Box>
                     )}
 
