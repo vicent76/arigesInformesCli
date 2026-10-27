@@ -1,31 +1,36 @@
 import React, { useState } from 'react';
+import moment from 'moment';
 
 import {
     Box,
     Radio,
     RadioGroup,
     FormControlLabel,
-    TextField
+    TextField,
+    Alert
 } from '@mui/material';
 
 import { DataGrid } from '@mui/x-data-grid';
 
-export default function DocumentosCliente() {
+export default function DocumentosCliente({
+    documentos = {},
+    loadingDocumentos = {},
+    erroresDocumentos = {},
+    onCerrarError = () => { }
+}) {
+
 
     const [tipoDocumento, setTipoDocumento] = useState('ofertas');
-    const [documentos, setDocumentos] = useState({
-        ofertas: [],
-        pedidos: [],
-        albaranes: [],
-        facturas: []
-    });
+    //
+    const cargando = loadingDocumentos[tipoDocumento] ?? false;
+    const error = erroresDocumentos[tipoDocumento] ?? null;
     //
     const columnasDocumentos = {
 
         ofertas: [
-            { field: 'numero', headerName: 'Nº Oferta', width: 120 },
-            { field: 'fecha', headerName: 'Fecha', width: 120 },
-            { field: 'fechaentrega', headerName: 'Fecha entrega', width: 120 },
+            { field: 'numoferta', headerName: 'Nº Oferta', width: 120 },
+            { field: 'fechaoferta', headerName: 'Fecha',  renderCell: (params) => formatearFecha(params.value), width: 120 },
+            { field: 'fechaentrega', headerName: 'Fecha entrega',  renderCell: (params) => formatearFecha(params.value), width: 120 },
             { field: 'aceptado', headerName: 'Aceptado', width: 120 },
             { field: 'referencia', headerName: 'Referencia', flex: 1 },
             { field: 'importe', headerName: 'Importe', width: 120, type: 'number' }
@@ -56,7 +61,17 @@ export default function DocumentosCliente() {
         ]
     };
 
-    //
+
+    const formatearFecha = (fecha) => {
+        if (!fecha) return '';
+
+        const fechaMoment = moment(fecha);
+
+        return fechaMoment.isValid()
+            ? fechaMoment.format('DD/MM/YYYY')
+            : '';
+    };
+
     const obtenerFechaHoy = () => {
         const fecha = new Date();
 
@@ -66,6 +81,7 @@ export default function DocumentosCliente() {
 
         return `${year}-${month}-${day}`;
     };
+    //
     const [fecha, setFecha] = useState(obtenerFechaHoy);
 
     const handleChange = (event) => {
@@ -142,6 +158,15 @@ export default function DocumentosCliente() {
                 InputLabelProps={{ shrink: true }}
                 sx={{ width: 170 }} />
         </Box>
+            {error && (
+                <Alert
+                    severity="error"
+                    sx={{ mt: 2 }}
+                    onClose={() => onCerrarError(tipoDocumento)}
+                >
+                    {error}
+                </Alert>
+            )}
             <Box
                 sx={{
                     width: '100%',
@@ -150,9 +175,10 @@ export default function DocumentosCliente() {
                 }}
             >
                 <DataGrid
-                    rows={documentos[tipoDocumento]}
+                    rows={documentos[tipoDocumento] ?? []}
                     columns={columnasDocumentos[tipoDocumento]}
                     getRowId={(row) => row.id}
+                    loading={cargando}
                     initialState={{
                         pagination: {
                             paginationModel: {
@@ -183,6 +209,6 @@ export default function DocumentosCliente() {
                     }}
                 />
             </Box>
-            </>
+        </>
     );
 }

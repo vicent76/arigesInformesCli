@@ -23,13 +23,12 @@ import { MensajeInformativo } from '../../componentes/MensajeInformativo/Mensaje
 import { useNavigate } from 'react-router-dom';
 import { EventSeatSharp } from '@mui/icons-material';
 import { Alert, CircularProgress } from '@mui/material';
+import { leerOfertasCliente } from '../../servicios/ofertas';
 
 import TelefonosClienteGrid from './TelefonosClienteGrid';
 import DocumentosCliente from './DocumentosCliente';
+
 import { buscarClientes, leerCliente, leerTelefonosCliente } from '../../servicios/Clientes';
-
-
-var logindata = {};
 
 export const ClientePagina = () => {
 
@@ -131,6 +130,7 @@ export const ClientePagina = () => {
 
             // Los teléfonos tienen su propio tratamiento de errores
             obtenDatosTelefonos(codclien);
+            obtenDatosOfertas(codclien);
 
             return true;
 
@@ -227,25 +227,55 @@ export const ClientePagina = () => {
         }
     };
 
-    const componerIban = (cliente) => {
+    // Cargar datos de las ofertas
+    const obtenDatosOfertas = async (codclien) => {
 
-        if (!cliente) return '';
+        setLoadingOfertas(true);
+        setErrorOfertas(null);
+        setDatosOfertas([]);
 
-        const iban = String(cliente.iban ?? '').trim().toUpperCase();
-        const banco = String(cliente.codbanco ?? '').padStart(4, '0');
-        const sucursal = String(cliente.codsucur ?? '').padStart(4, '0');
-        const dc = String(cliente.digcontr ?? '').padStart(2, '0');
-        const cuenta = String(cliente.cuentaba ?? '').padStart(10, '0');
+        try {
 
-        if (!/^ES\d{2}$/.test(iban) ||
-            !cliente.codbanco ||
-            !cliente.codsucur ||
-            !cliente.digcontr ||
-            !cliente.cuentaba) {
-            return '';
+            const respuesta = await leerOfertasCliente(codclien);
+
+            const datos = Array.isArray(respuesta)
+                ? respuesta
+                : respuesta?.data;
+
+            if (!Array.isArray(datos)) {
+                throw new Error(
+                    'La API no ha devuelto un listado válido de ofertas'
+                );
+            }
+
+            const datosConId = datos.map((item, index) => ({
+                ...item,
+                id: item.numoferta ?? index
+            }));
+
+            setDatosOfertas(datosConId);
+
+        } catch (error) {
+
+            console.error('Error al obtener ofertas:', error);
+
+            const mensaje =
+                error?.response?.data?.message ||
+                error?.response?.data?.error ||
+                error?.message ||
+                'Error al obtener las ofertas';
+
+            setErrorOfertas(
+                typeof mensaje === 'string'
+                    ? mensaje
+                    : 'Error al obtener las ofertas'
+            );
+
+        } finally {
+
+            setLoadingOfertas(false);
+
         }
-
-        return `ES${iban}${banco}${sucursal}${dc}${cuenta}`;
     };
 
 
@@ -533,7 +563,31 @@ export const ClientePagina = () => {
                                         <Typography variant="h6">
                                             Documentos
                                         </Typography>
-                                        <DocumentosCliente />
+                                        <DocumentosCliente
+                                            documentos={{
+                                                ofertas: datosOfertas,
+                                                pedidos: [],
+                                                albaranes: [],
+                                                facturas: []
+                                            }}
+                                            loadingDocumentos={{
+                                                ofertas: loadingOfertas,
+                                                pedidos: false,
+                                                albaranes: false,
+                                                facturas: false
+                                            }}
+                                            erroresDocumentos={{
+                                                ofertas: errorOfertas,
+                                                pedidos: null,
+                                                albaranes: null,
+                                                facturas: null
+                                            }}
+                                            onCerrarError={(tipo) => {
+                                                if (tipo === 'ofertas') {
+                                                    setErrorOfertas(null);
+                                                }
+                                            }}
+                                        />
                                     </Box>
                                 </Grid>
                             </Grid>
